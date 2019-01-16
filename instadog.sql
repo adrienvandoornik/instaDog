@@ -1,45 +1,56 @@
 
 CREATE DATABASE Instadog;
 
+CREATE USER 'adminInstaDog' IDENTIFIED BY 'Inst@Dog';
+ GRANT SELECT, INSERT, UPDATE, DELETE ON InstaDog.* TO 'adminInstaDog'
+         WITH GRANT OPTION;
+
+
 CREATE TABLE Utilisateur (
-    id INTEGER NOT NULL ,
-    nom VARCHAR(100),
-    prenom VARCHAR(100),
-    derniereConnexion DATE,
+    id INT(100) AUTO_INCREMENT,
+    nom VARCHAR(255),
+    prenom VARCHAR(255),
+    dateConnexion VARCHAR(255),
     email VARCHAR(255),
-    motDePasse VARCHAR(100),
+    motDePasse VARCHAR(255),
+    login VARCHAR(255),
     PRIMARY KEY (id)
 
 );
 
-CREATE TABLE Article (
-    id INTEGER  NOT NULL ,
-    image URL,
-    texte VARCHAR(300),
-    PRIMARY KEY(id),
-    CONSTRAINT FK_ArticleCommentaire FOREIGN KEY (commentaireId) 
-    REFERENCES Commentaire(id)
-);
 
 CREATE TABLE Chien (
-    id INTEGER  NOT NULL,
-    surnom VARCHAR(100),
-    nomElevage VARCHAR(100),
-    dateNaissance DATE,
-    sexe VARCHAR(100),
-    race VARCHAR(100),
+    id INT(100) AUTO_INCREMENT,
+    surnom VARCHAR(255),
+    nomElevage VARCHAR(255),
+    dateAge VARCHAR(100),
+    sexe VARCHAR(255),
+    race VARCHAR(255),
+    utilisateurId INT(100),
     PRIMARY KEY (id),
-    CONSTRAINT FK_UtilisateurChien FOREIGN KEY (utilisateurId)
-    REFERENCES Utilisateur(id)
+    FOREIGN KEY (utilisateurId) REFERENCES Utilisateur(id)
 
+);
+
+
+CREATE TABLE Article (
+    id INT(100) AUTO_INCREMENT,
+    image LONGBLOB,
+    texte VARCHAR(255),
+    datePublication VARCHAR(255),
+    chienId INT(100),
+    PRIMARY KEY(id),
+    FOREIGN KEY (chienId) REFERENCES Chien(id)
 );
 
 CREATE TABLE Commentaire (
-    id INTEGER NOT NULL,
+    id INT(100) AUTO_INCREMENT,
     texte VARCHAR(300),
-    date DATE,
+    dateCommentaire VARCHAR(100),
+    utilisateurId INT(100),
+    articleId INT(100),
     PRIMARY KEY (id),
-    CONSTRAINT FK_CommentaireUtilisateur FOREIGN KEY (utilisateurLogue)
-    REFERENCES Utilisateur(id)
+    FOREIGN KEY (utilisateurId) REFERENCES Utilisateur(id),
+    FOREIGN KEY (articleId) REFERENCES Article(id)
 
 );
