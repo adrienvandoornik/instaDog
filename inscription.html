@@ -9,22 +9,10 @@
   <link rel="stylesheet" href="inscription.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    body {
-    background-color: rgb(136, 124, 124)
-  }
-  h2{
-   text-align: center;
-   }
-   
-
-   
- 
-  </style>
 </head>
 
 <body>
-
+<!-- //////HEADER//////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -60,36 +48,55 @@
  <div class="container">
  <form class="needs-validation formulaire" novalidate>
   <div class="form-row">
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationCustom01">First name</label>
       <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
         required>
-      <div class="valid-feedback">
-        Looks good!
+      <div class="valid-feedback">      
       </div>
     </div>
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
       <label for="validationCustom02">Last name</label>
       <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
         required>
       <div class="valid-feedback">
-        Looks good!
-      </div>
+       </div>
     </div>
-    <div class="col-md-4 mb-3">
-      <label for="validationCustomUsername">Email</label>
-      <div class="input-group">
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
-          aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          Please choose a username.
-        </div>
+  </div> 
+   </form>
+
+  
+
+</div>
+<div class="container botton">
+ <div>
+      <button type="button" class="btn btn-primary btn-lg btn-block botton">Block level button</button>
+     
+     <p>Pas encore menbre?</p>
+      <button type="button" class="btn btn-primary btn-lg btn-block botton">Block level button</button>
+   </div>  
+</div>
+
+<footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row borderFooter">
+      <div class="col-md-6 col-lg-4">
+        <h5 class="text-uppercase font-weight-bold">HOME</h5>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <h5 class="text-uppercase font-weight-bold">PROFIL</h5>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <h5 class="text-uppercase font-weight-bold">BOTTON</h5>
       </div>
     </div>
   </div>
- 
-  <button class="btn btn-primary" type="submit">Submit form</button>
-</form>
-</div>
+
 </body>
 </html>
