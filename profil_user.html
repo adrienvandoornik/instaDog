@@ -2,194 +2,156 @@
 <html lang="fr">
 
 <head>
-    <title>INSTADOG - La communautée des chiens</title>
+    <title>INSTADOG - Communauté de chiens</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="profil_user.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            font: 400 15px/1.8 Lato, sans-serif;
-            color: #777;
-        }
-
-        .navbar {
-            font-family: Montserrat, sans-serif;
-        }
-
-        /* Overwrite default styles of h3 and h4 */
-        h3,
-        h4 {
-            margin: 10px 0 30px 0;
-            letter-spacing: 10px;
-            font-size: 20px;
-            color: #111;
-        }
-
-        /* Remove rounded borders on input fields */
-        .form-control {
-            border-radius: 0;
-        }
-
-        /* Disable the ability to resize textareas */
-        textarea {
-            resize: none;
-        }
-
-        .jumbotron { 
-            background-color: #9e9e9e; /* Gris */
-            color: #ffffff;
-        }
-
-        .container {
-            padding: 80px 120px;
-        }
-
-        .chien {
-            border: 10px solid transparent;
-            margin-bottom: 25px;
-            width: 80%;
-            height: 80%;
-            opacity: 0.7;
-        }
-
-        .chien:hover {
-            border-color: #f1f1f1;
-        }
-
-        /* Add a dark background color with a little bit see-through */
-        .navbar {
-            margin-bottom: 0;
-            background-color: #2d2d30;
-            border: 0;
-            font-size: 11px !important;
-            letter-spacing: 4px;
-            opacity: 0.9;
-        }
-
-        /* Add a gray color to all navbar links */
-        .navbar li a,
-        .navbar .navbar-brand {
-            color: #d5d5d5 !important;
-        }
-
-        /* On hover, the links will turn white */
-        .navbar-nav li a:hover {
-            color: #fff !important;
-        }
-
-        /* The active link */
-        .navbar-nav li.active a {
-            color: #fff !important;
-            background-color: #29292c !important;
-        }
-
-        /* Remove border color from the collapsible button */
-        .navbar-default .navbar-toggle {
-            border-color: transparent;
-        }
-
-        /* Dropdown */
-        .open .dropdown-toggle {
-            color: #fff;
-            background-color: #555 !important;
-        }
-
-        /* Dropdown links */
-        .dropdown-menu li a {
-            color: #000 !important;
-        }
-
-        /* On hover, the dropdown links will turn red */
-        .dropdown-menu li a:hover {
-            background-color: red !important;
-        }
-
-        /* Add a dark background color to the footer */
-        footer {
-            background-color: #2d2d30;
-            color: #f5f5f5;
-            padding: 32px;
-        }
-
-        footer a {
-            color: #f5f5f5;
-        }
-
-        footer a:hover {
-            color: #777;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body>
-        <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                  <div class="navbar-header">
-                    <a class="navbar-brand" href="#">InstaDog</a>
-                  </div>
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">
-                      <span class="glyphicon glyphicon-home"></span>
-                    </a></li>
-                  </ul>
-                  <form class="navbar-form navbar-left" action="/action_page.php">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Search" name="search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                  </form>
-                  <ul class="nav navbar-nav navbar-right">
-                      <li><button type="button" class="btn btn-danger navbar-btn">+Chien</button></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                  </ul>
-                </div>
-              </nav>
 
-<div class="jumbotron text-center">
-    <h2>PRENOM + NOM</h2> 
-    <h6>Profil Utilisateur</h6> 
-</div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">INSTADOG</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </a></li>
+            </ul>
+            <form class="navbar-form navbar-left" action="/action_page.php">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><button type="button" class="btn btn-danger navbar-btn">+Chien</button></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h2>PRENOM + NOM</h2>
+        <h6>Profil Utilisateur</h6>
+    </div>
 
     <div class="container text-center">
-        <h3>INSTADOG</h3>
-        <p><em>We love dogs!</em></p>
-        <p>We have created a fictional website for dogs. Lorem ipsum..</p>
+        <h3>INFORMATION</h3>
+        <p><em>Votre biographie et informations</em></p>
+        <br>
+        <div class="well row">
+                <div class="col-md-6 col-lg-6">
+                    <ul>
+                        <li>Nom +bouton modifier</li>
+                        <li>Prenom +bouton modifier</li>
+                        <li>Login (Pseudo) +bouton modifier</li>
+                    </ul>   
+                </div>
+                <div class="cocol-md-6 col-lg-6">
+                    <ul>
+                        <li>Email +bouton modifier</li>
+                        <li>Mot de passe +bouton modifier</li>
+                        <li>Dernière connexion +bouton modifier</li>
+                    </ul>
+                </div>
+        </div>
+        <h3>CHIENS</h3>
+        <p><em>Votre liste de chiens</em></p>
         <br>
         <div class="row">
-          <div class="col-sm-4">
-            <img src="image/chien1.jpg" class="img-circle chien" alt="Chien1" width="255" height="255">
-            <p><strong>Chien1</strong><br><em>Type de race</em></p>
-          </div>
-          <div class="col-sm-4">
-            <img src="image/chien2.jpg" class="img-circle chien" alt="Chien2" width="255" height="255">
-            <p><strong>Chien2</strong><br><em>Type de race</em></p>
-          </div>
-          <div class="col-sm-4">
-            <img src="image/chien3.png" class="img-circle chien" alt="Ajouter un chien" width="255" height="255">
-            <p><strong>+ Ajouter un chien</strong><br><em>+ Ajouter un chien</em></p>
-          </div>
+            <div class="col-md-4 col-lg-4">
+                <img src="image/chien3.png" class="img-circle chien" alt="Ajouter un chien" width="255" height="255">
+                <p><strong>+ Ajouter un chien</strong><br><em>+ Ajouter un chien</em></p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <img src="image/chien1.jpg" class="img-circle chien" alt="Chien1" width="300" height="300">
+                <p><strong>Chien1</strong><br><em>Type de race</em></p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <img src="image/chien2.jpg" class="img-circle chien" alt="Chien2" width="255" height="255">
+                <p><strong>Chien2</strong><br><em>Type de race</em></p>
+            </div>
+        </div>
+        <div class="well row">
+                <div class="col-md-6 col-lg-6">
+                    <ul>
+                        <li>Nom +bouton modifier</li>
+                        <li>Prenom +bouton modifier</li>
+                        <li>Login (Pseudo) +bouton modifier</li>
+                    </ul>   
+                </div>
+                <div class="cocol-md-6 col-lg-6">
+                    <ul>
+                        <li>Email +bouton modifier</li>
+                        <li>Mot de passe +bouton modifier</li>
+                        <li>Dernière connexion +bouton modifier</li>
+                    </ul>
+                </div>
         </div>
     </div>
 
-<footer class="text-center">
-    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </a><br><br>
-    <p>© 2019 - <a href="https://www.instadog.ch" data-toggle="tooltip" title="instadog">www.instadog.ch</a> - Created by Adrien & Gutemberg</p>
-</footer>
+    <!-- Footer -->
+    <footer class="page-footer font-small teal pt-4">
 
-<script>
-    $(document).ready(function () {
-        // Initialize Tooltip
-        $('[data-toggle="tooltip"]').tooltip();
-    })
-</script>
+        <!-- Footer Text -->
+        <div class="container-fluid text-center text-md-left">
 
+            <!-- Grid row -->
+            <div class="row borderFooter">
+
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-4">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">HOME</h5>
+
+
+                </div>
+                <!-- Grid column -->
+
+
+                <!-- Grid column -->
+                <div class="col-md-6 col-lg-4">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">PROFIL</h5>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase font-weight-bold">BOTTON</h5>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Text -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 footerCopy">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+    <!-- Bootstrap Js CDN -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
+
 </html>
