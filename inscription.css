@@ -1,3 +1,37 @@
+
+  body {
+    background-color: rgb(136, 124, 124)
+  }
+
+  h2{
+    text-align: center;
+    }
+    
+
 .formulaire{
     align-items: center;
+}
+
+.botton{
+   justify-items: end;
+   margin: 40px 20px 20px 90px;
+   
+}
+
+
+.borderFooter {
+    border-top: 10px solid;
+    border-color: rgb(10, 10, 10);
+    background-color: black;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.footerCopy {
+    background-color: black;
+}
+
+p{
+    text-align: center;
+    font-size: 50px;
 }
