@@ -2,8 +2,7 @@
 CREATE DATABASE Instadog;
 
 CREATE USER 'adminInstaDog' IDENTIFIED BY 'Inst@Dog';
- GRANT SELECT, INSERT, UPDATE, DELETE ON InstaDog.* TO 'adminInstaDog'
-         WITH GRANT OPTION;
+ GRANT ALL PRIVILEGES ON Instadog.* TO 'adminInstaDog';
 
 
 CREATE TABLE Utilisateur (
