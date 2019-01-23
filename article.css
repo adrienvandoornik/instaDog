@@ -1,7 +1,5 @@
-
-img {
-    width: 550px;
-    height: 500px;
+body {
+    background-color: rgb(136, 124, 124)
 }
 
 .borderFooter {
@@ -15,3 +13,8 @@ img {
     background-color: black;
 }
 
+img{
+    margin: auto;
+    width: 100px;
+    height: 100px;
+}
