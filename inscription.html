@@ -9,10 +9,22 @@
   <link rel="stylesheet" href="inscription.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body {
+    background-color: rgb(136, 124, 124)
+  }
+  h2{
+   text-align: center;
+   }
+   
+
+   
+ 
+  </style>
 </head>
 
 <body>
-<!-- //////HEADER//////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -39,64 +51,102 @@
 
   <div class="container-fluid">
     <div class="jumbotron">
-      <h2>SE CONNECTER</h2>      
+      <h2>S'INSCRIRE</h2>      
     </div>
  </div>
 
- <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
- 
- <div class="container">
- <form class="needs-validation formulaire" novalidate>
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom01">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
-        required>
-      <div class="valid-feedback">      
-      </div>
-    </div>
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom02">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
-        required>
-      <div class="valid-feedback">
-       </div>
-    </div>
-  </div> 
-   </form>
-
   
 
-</div>
-<div class="container botton">
- <div>
-      <button type="button" class="btn btn-primary btn-lg btn-block botton">Block level button</button>
-     
-     <p>Pas encore menbre?</p>
-      <button type="button" class="btn btn-primary btn-lg btn-block botton">Block level button</button>
-   </div>  
-</div>
+  <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="container">
+    <form class="needs-validation formPadding" novalidate>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom01">Prénom</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+          <div class="valid-feedback">
+           
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom02">Nom</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <div class="valid-feedback">
+            
+          </div>
+        </div>
 
-<footer class="page-footer font-small teal pt-4">
-
-  <!-- Footer Text -->
-  <div class="container-fluid text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row borderFooter">
-      <div class="col-md-6 col-lg-4">
-        <h5 class="text-uppercase font-weight-bold">HOME</h5>
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom01">Email</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+          <div class="valid-feedback">
+           
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom02">Password</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <div class="valid-feedback">
+           
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom02">Login</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <div class="valid-feedback">
+            
+          </div>
+        </div>
       </div>
+      <div class="clearfix"></div>
+      
+      <button class="btn btn-primary bottonConnecter center-block" type="submit">S'Inscrire</button>
+   
+    <p>Déjà membre?</p>
+    <div>
+    <button class="btn btn-primary bottonInscrition center-block " type="submit">Se Connecter</button>
+    </div>
+    </form>
+    </div>
 
-      <div class="col-md-6 col-lg-4">
-        <h5 class="text-uppercase font-weight-bold">PROFIL</h5>
-      </div>
+    <!-- Footer//////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+  <footer class="page-footer font-small teal pt-4">
 
-      <div class="col-md-6 col-lg-4">
-        <h5 class="text-uppercase font-weight-bold">BOTTON</h5>
+    <div class="container-fluid text-center text-md-left">
+      <div class="row borderFooter">
+        <div class="col-md-4 col-lg-4">
+          <h5 class="text-uppercase font-weight-bold">HOME</h5>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5 class="text-uppercase font-weight-bold">PROFIL</h5>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5 class="text-uppercase font-weight-bold">BOTTON</h5>
+        </div>
       </div>
     </div>
-  </div>
 
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 footerCopy">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+ 
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+  <!-- Bootstrap Js CDN -->
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
+
 </html>

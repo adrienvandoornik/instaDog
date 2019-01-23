@@ -6,24 +6,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="connexion.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    body {
-    background-color: rgb(136, 124, 124)
-  }
-  h2{
-   text-align: center;
-   }
-   
-
-   
- 
-  </style>
 </head>
 
 <body>
-
+  <!-- //////HEADER//////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -31,8 +20,8 @@
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">
-          <span class="glyphicon glyphicon-home"></span>
-        </a></li>
+            <span class="glyphicon glyphicon-home"></span>
+          </a></li>
       </ul>
       <form class="navbar-form navbar-left" action="/action_page.php">
         <div class="form-group">
@@ -41,7 +30,7 @@
         <button type="submit" class="btn btn-default">RACE</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-          <li><button type="button" class="btn btn-danger navbar-btn">+Chien</button></li>
+        <li><button type="button" class="btn btn-danger navbar-btn">+Chien</button></li>
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
@@ -50,102 +39,77 @@
 
   <div class="container-fluid">
     <div class="jumbotron">
-      <h2>SE CONNECTER</h2>      
+      <h2>SE CONNECTER</h2>
     </div>
- </div>
-
-  <div class="container">
-    <h2>Inline form</h2>
-    <p>Make the viewport larger than 576px wide to see that all of the form elements are inline and left-aligned. On small screens, the form groups will stack horizontally.</p>
-    <form class="form-inline" role="form">
-      <label for="email2" class="mb-2 mr-sm-2">Email:</label>
-      <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email">
-      <label for="pwd2" class="mb-2 mr-sm-2">Password:</label>
-      <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password">
-      <div class="form-check mb-2 mr-sm-2">
-        <label class="form-check-label">
-          <input class="form-check-input "type="checkbox"> Remember me
-        </label>
-      </div>    
-    <button type="button" class="btn btn-primary mb-2">Submit</button>
-    </form>
   </div>
 
-  <form class="needs-validation" novalidate>
-    <div class="form-row">
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom01">First name</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
-          required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustom02">Last name</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
-          required>
-        <div class="valid-feedback">
-          Looks good!
-        </div>
-      </div>
-      <div class="col-md-4 mb-3">
-        <label for="validationCustomUsername">Username</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-          </div>
-          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
-            aria-describedby="inputGroupPrepend" required>
-          <div class="invalid-feedback">
-            Please choose a username.
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div class="container">
+  <form class="needs-validation formPadding" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">
-        <label for="validationCustom03">City</label>
-        <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-        <div class="invalid-feedback">
-          Please provide a valid city.
+        <label for="validationCustom01">Email</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+        <div class="valid-feedback">
+          
         </div>
       </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom04">State</label>
-        <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-        <div class="invalid-feedback">
-          Please provide a valid state.
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom02">Password</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+        <div class="valid-feedback">
+         
         </div>
       </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom05">Zip</label>
-        <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-        <div class="invalid-feedback">
-          Please provide a valid zip.
-        </div>
-      </div>
+      
     </div>
-    <div class="form-group">
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="invalidCheck" required>
-        <label class="custom-control-label" for="invalidCheck">Agree to terms and conditions</label>
-        <div class="invalid-feedback">
-          You must agree before submitting.
-        </div>
-      </div>
-    </div>
-    <button class="btn btn-primary" type="submit">Submit form</button>
+    <div class="clearfix"></div>
+    
+    <button class="btn btn-primary bottonConnecter center-block" type="submit">Se Connecter</button>
+ 
+  <p>Pas encore membre?</p>
+  <div>
+  <button class="btn btn-primary bottonInscrition center-block " type="submit">S'Inscrire</button>
+  </div>
   </form>
+ 
   
-  
+
+  </div>
+<!-- Footer//////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+  <footer class="page-footer font-small teal pt-4">
+
+    <div class="container-fluid text-center text-md-left">
+      <div class="row borderFooter">
+        <div class="col-md-4 col-lg-4">
+          <h5 class="text-uppercase font-weight-bold">HOME</h5>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5 class="text-uppercase font-weight-bold">PROFIL</h5>
+        </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h5 class="text-uppercase font-weight-bold">BOTTON</h5>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 footerCopy">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+ 
 
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
   <!-- Bootstrap Js CDN -->
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

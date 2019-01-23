@@ -40,8 +40,9 @@ p{
 
 .container{
     background-color: #eee;
-    height:auto;
+    height: auto;
     border-radius: 5px;
+   
 }
 
 .formPadding{
