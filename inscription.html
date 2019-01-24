@@ -29,43 +29,62 @@
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark justify-content-end ">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">InstaDog</a>
-      </li>
-
-    </ul>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">
-          <button type="button" class="btn btn-secondary mr-sm-3">HOME</button>
-        </a></li>
-    </ul>
-
-    <form class="form-inline" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="RACE">
-      <button class="btn btn-success btn-lg" type="submit">Search</button>
-    </form>
-
-    <button class="btn btn-success ml-auto mr-3 btn-lg">Ajouter Chien</button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-      <ul class="navbar-nav text-right">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Sign up</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Login</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
+  
+ 
+    
+     
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+     
+      <a class="navbar-brand text-light" href="https://www.jquery-az.com/" >InstaDog</a>
+     
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo-navbar" aria-controls="demo-navbar" aria-expanded="false" aria-label="Toggle navigation">
+     
+        <span class="navbar-toggler-icon"></span>
+     
+      </button>
+     
+     
+     
+      <div class="collapse navbar-collapse" id="demo-navbar">
+     
+        <ul class="navbar-nav mr-auto">
+     
+          <li class="nav-item active">
+     
+            <a class="nav-link text-light" href="https://www.jquery-az.com/">Home <span class="sr-only">(current)</span></a>
+     
+          </li>
+     
+          <li class="nav-item">
+     
+            <a class="nav-link text-light" href="https://www.jquery-az.com/bootstrap-4/">Sign In</a>
+     
+          </li>
+     
+     
+          <li class="nav-item">
+     
+            <a class="nav-link text-light" href="#">Login</a>
+     
+          </li>
+          <button type="button" class="btn btn-danger ml-4 mr-4">Ajouter Chien</button>
+        </ul>
+     
+        <form class="form-inline my-2 my-lg-0">
+         
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+     
+          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+     
+        </form>
+     
+      </div>
+     
+    </nav>
+     
+    
   <div class="container-fluid">
-    <div class="jumbotron">
+    <div class="jumbotron pt-5 pb-5">
       <h2>S'INSCRIRE</h2>
     </div>
   </div>
@@ -73,7 +92,7 @@
 
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <div class="container">
+  <div class="container containerForm">
     <form class="needs-validation formPadding" novalidate>
       <div class="form-row">
         <div class="col-md-6 mb-3">
@@ -118,16 +137,24 @@
       </div>
       <div class="clearfix"></div>
       
-      
-       
-          <button class="btn btn-primary bottonConnecter " type="submit">S'Inscrire</button>
-        
-        
-        <p>Déjà membre?</p>
-        
-        
-          <button class="btn btn-primary bottonInscrition " type="submit">Se Connecter</button>
-       
+          
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-primary bottonConnecter">S'INSCRIRE</button>
+    </div>
+  </div>
+</div>
+  <p>Déjà membre?</p>
+  
+
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-primary bottonInscrition">SE CONNECTER</button>
+    </div>
+  </div>
+</div>
       
   
     </form>
@@ -136,8 +163,11 @@
   <!-- Footer//////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
   <footer class="page-footer font-small teal pt-4">
 
-    <div class="container-fluid text-center text-md-left">
-      <div class="row borderFooter">
+    <!-- Footer Text -->
+    <div class="container-fluid">
+
+      <!-- Grid row -->
+      <div class="row text-center bg-info borderFooter pt-3 text-white">
         <div class="col-md-4 col-lg-4">
           <h5 class="text-uppercase font-weight-bold">HOME</h5>
         </div>
@@ -147,24 +177,19 @@
         </div>
 
         <div class="col-md-4 col-lg-4">
-          <h5 class="text-uppercase font-weight-bold">BOTTON</h5>
+          <h5 class="text-uppercase font-weight-bold">S'INSCRIRE</h5>
         </div>
       </div>
     </div>
 
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 footerCopy">© 2018 Copyright:
+    <div class="footer-copyright text-center py-3 footerCopy bg-info">© 2018 Copyright:
       <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
     </div>
     <!-- Copyright -->
 
   </footer>
-
-
-
-
-
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 
   <!-- Bootstrap Js CDN -->

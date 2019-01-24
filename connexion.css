@@ -9,17 +9,6 @@
     
 
 
-.borderFooter {
-    border-top: 10px solid;
-    border-color: rgb(54, 50, 50);
-    background-color: black;
-    height: 100px;
-    margin-top: 10px;
-}
-
-.footerCopy {
-    background-color: black;
-}
 
 p{
     text-align: center;
