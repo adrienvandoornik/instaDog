@@ -59,28 +59,57 @@
 
 <body>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">INSTADOG</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">
-                        <span class="glyphicon glyphicon-home"></span>
-                    </a></li>
+    <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+
+        <a class="navbar-brand text-light" href="https://www.jquery-az.com/">InstaDog</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo-navbar" aria-controls="demo-navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+
+        <div class="collapse navbar-collapse" id="demo-navbar">
+
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+
+                    <a class="nav-link text-light" href="https://www.jquery-az.com/">Home <span class="sr-only">(current)</span></a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light" href="https://www.jquery-az.com/bootstrap-4/">Sign In</a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link text-light" href="#">Login</a>
+
+                </li>
+                <button type="button" class="btn btn-danger ml-4 mr-4">Ajouter Chien</button>
             </ul>
-            <form class="navbar-form navbar-left" action="/action_page.php">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search" name="search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+
+            <form class="form-inline my-2 my-lg-0">
+
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
+
             </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><button type="button" class="btn btn-danger navbar-btn">+Chien</button></li>
-                <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login</a></li>
-            </ul>
+
         </div>
+
     </nav>
     <div id="demo" class="carousel slide" data-ride="carousel">
         <!-- The slideshow -->
@@ -89,7 +118,7 @@
                 <img src="image/chien1.jpg" alt="Los Angeles" width="1100" height="400">
             </div>
         </div>
-        
+
         <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
@@ -97,16 +126,17 @@
         <a class="carousel-control-next" href="#demo" data-slide="next">
             <span class="carousel-control-next-icon"></span>
         </a>
-        
+
     </div>
     <div class="container text-center">
+        <br>
         <div class="row justify-content-center">
             <div class="col-6">
-                <p><button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#collapseExample"
+                <p><button type="button" style="width: 36rem;" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#collapseExample"
                         aria-expanded="false" aria-controls="collapseExample">
                         Ajouter un article
                     </button></p>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapseExample" style="width: 36rem;">
                     <div class="card card-body">
                         <div class="row">
                             <form class="needs-validation formPadding" novalidate>
@@ -136,13 +166,17 @@
                     </div>
                 </div>
             </div>
-            <br><br>
+        </div>
+        <br>
+        <div class="row justify-content-center">
             <div class="col-6">
                 <div class="card text-center" style="width: 36rem;">
                     <img class="card-img-top" img src="image/chien2.png" alt="Card image cap" width="100%" height="100%">
                     <div class="card-body">
                         <h5 class="card-title">Chien 2</h5>
-                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <a href="#" class="btn btn-primary">Voir Article</a>
                     </div>
                 </div>
@@ -155,7 +189,9 @@
                     <img class="card-img-top" img src="image/chien4.png" alt="Card image cap" width="100%" height="100%">
                     <div class="card-body">
                         <h5 class="card-title">Chien 2</h5>
-                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <a href="#" class="btn btn-primary">Voir Article</a>
                     </div>
                 </div>
@@ -168,46 +204,46 @@
                     <img class="card-img-top" img src="image/chien3.jpg" alt="Card image cap" width="100%" height="100%">
                     <div class="card-body">
                         <h5 class="card-title">Chien 2</h5>
-                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <a href="#" class="btn btn-primary">Voir Article</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer -->
+    <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <footer class="page-footer font-small teal pt-4">
+
         <!-- Footer Text -->
-        <div class="container-fluid text-center text-md-left">
+        <div class="container-fluid ">
+
             <!-- Grid row -->
-            <div class="row borderFooter">
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-4">
-                    <!-- Content -->
+            <div class="row text-center bg-dark borderFooter pt-3 text-light">
+                <div class="col-md-4 col-lg-4">
                     <h5 class="text-uppercase font-weight-bold">HOME</h5>
                 </div>
-                <!-- Grid column -->
-                <!-- Grid column -->
-                <div class="col-md-6 col-lg-4">
-                    <!-- Content -->
+
+                <div class="col-md-4 col-lg-4">
                     <h5 class="text-uppercase font-weight-bold">PROFIL</h5>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <!-- Content -->
-                    <h5 class="text-uppercase font-weight-bold">BOTTON</h5>
+
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="text-uppercase font-weight-bold">S'INSCRIRE</h5>
                 </div>
-                <!-- Grid column -->
             </div>
-            <!-- Grid row-->
         </div>
-        <!-- Footer Text -->
+
+
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 footerCopy">© 2018 Copyright:
+        <div class="footer-copyright text-center py-3 footerCopy bg-dark">© 2018 Copyright:
             <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
+
     </footer>
-    <!-- Footer -->
+
 </body>
 
 </html>
