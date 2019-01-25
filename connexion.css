@@ -38,3 +38,7 @@ p{
     padding:5%;
 }
 
+.hoverHome:hover{
+    background-color: grey;
+}
+

@@ -1,32 +1,3 @@
 body {
     background-color: rgb(136, 124, 124)
 }
-
-.borderFooter {
-    border-top: 10px solid;
-    border-color: rgb(10, 10, 10);
-    background-color: black;
-    height: 100px;
-}
-
-.footerCopy {
-    background-color: black;
-}
-
-
-.square {
-    position: relative;
-    width: 50%;
-  }
-  
-  .square:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
-  
-  .content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
