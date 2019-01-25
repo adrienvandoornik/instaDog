@@ -1,13 +1,15 @@
+body {
+    color: #777;
+}
 
-  body {
-    background-color: rgb(136, 124, 124);
-  }
+.jumbotron { 
+    background-color: #525050; /* Gris */
+    color: #ffffff;
+}
 
   h2{
     text-align: center;
     }
-    
-
 
 p{
     text-align: center;
