@@ -16,35 +16,15 @@
 
   <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
-      <a class="navbar-brand text-light" href="galeriePhoto.html">InstaDog</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo-navbar" aria-controls="demo-navbar"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="demo-navbar">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link text-light" href="galeriePhoto.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="inscription.html">Sign In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="connexion.html">Login</a>
-          </li>
-          <a href="profil_user.html"><button type="button" class="btn btn-danger ml-4 mr-4">Ajouter Chien</button></a>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
+  <?php
+
+include 'header.php';
+?>
+
 
   <!-- ///Donnees du User////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center pt-5 pb-5">
         <h2>PRENOM + NOM</h2>
         <h6><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Mon Profil Utilisateur</h6>
     </div>
@@ -225,34 +205,9 @@
         </div>
         
  <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
- <footer class="page-footer font-small teal pt-4">
-
-    <!-- Footer Text -->
-    <div class="container-fluid ">
-
-      <!-- Grid row -->
-      <div class="row text-center bg-dark borderFooter pt-3 text-light">
-        <div class="col-md-4 col-lg-4">
-            <a href="galeriePhoto.html"><h5 class="text-uppercase font-weight-bold">HOME</h5></a>
-        </div>
-
-        <div class="col-md-4 col-lg-4">
-            <a href="profil_user.html"><h5 class="text-uppercase font-weight-bold">PROFIL</h5></a>
-        </div>
-
-        <div class="col-md-4 col-lg-4">
-            <a href="inscription.html"><h5 class="text-uppercase font-weight-bold">S'INSCRIRE</h5></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 footerCopy bg-dark">InstaDog © 2019 Copyright: Adrien & Gutemberg 
-      <a href="galeriePhoto.html">InstaDog.ch</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-     
+ <?php
+  include 'footer.php';
+  
+  ?>
 </body>
 </html>
