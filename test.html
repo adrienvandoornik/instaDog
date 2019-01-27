@@ -10,6 +10,25 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<style>
+.square {
+  position: relative;
+  width: 50%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+</style>
 </head>
 
 <body>
@@ -67,14 +86,18 @@
 
 <div class="clearfix"></div>
 
-<div class="container">
-	<div class="row">
-		<div class=" col-lg-6"><img class="img-responsive" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fs1.lprs1.fr%2Fimages%2F2017%2F06%2F24%2F7084110_800226966-the-sonoma-marin-fair-hosts-annual-ugliest-dog-competition-780016-01-03.jpg&f=1" /></div>
-        <div class=" col-lg-6"><img class="img-responsive" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.mouss-le-chien.com%2Fmedias%2Falbum%2Fbull-terrier.jpg&f=1" /></div>
-        <div class="col-lg-6"><img class="img-responsive " src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-TM3Jc4R5yR4%2FVgL1KCK-38I%2FAAAAAAAAAXw%2F2zQ2vtejwt0%2Fs1600%2Fsaint%252Bcourt.jpg&f=1" /></div>
-        <div class="col-lg-6"><img class="img-responsive" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fs1.lprs1.fr%2Fimages%2F2017%2F06%2F24%2F7084110_800226966-the-sonoma-marin-fair-hosts-annual-ugliest-dog-competition-780016-01-03.jpg&f=1" /></div>
-    	
-    </div>
+
+<h3>A Four Image Set</h3>
+
+<div class="square">
+  <div class="content">
+    
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-3.jpg" alt=""/></a>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-4.jpg" data-lightbox="example-set" data-title="Or press the right arrow on your keyboard."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-4.jpg" alt="" /></a>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-5.jpg" data-lightbox="example-set" data-title="The next image in the set is preloaded as you're viewing."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-5.jpg" alt="" /></a>
+      <a class="example-image-link" href="http://lokeshdhakar.com/projects/lightbox2/images/image-6.jpg" data-lightbox="example-set" data-title="Click anywhere outside the image or the X to the right to close."><img class="example-image" src="http://lokeshdhakar.com/projects/lightbox2/images/thumb-6.jpg" alt="" /></a>
+    
+  </div>
 </div>
 </body>
 </html>
