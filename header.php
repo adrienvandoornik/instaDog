@@ -15,7 +15,7 @@
           <a class="nav-link text-light" href="galeriePhoto.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="inscription.php">Sign In</a>
+          <a class="nav-link text-light" href="inscription.php">Sign Up</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="connexion.php">Login</a>

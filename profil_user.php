@@ -26,7 +26,7 @@ include 'header.php';
 
     <div class="jumbotron text-center pt-5 pb-5">
         <h2>PRENOM + NOM</h2>
-        <h6><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Mon Profil Utilisateur</h6>
+        <h6><span  aria-hidden="true"></span> Mon Profil Utilisateur</h6>
     </div>
 
     <div class="container text-center">
