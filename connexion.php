@@ -56,18 +56,16 @@ include 'header.php';
     </div>
   </div>
 </div>
-  <p>Pas encore membre?</p>
-  
+  </form>
 
+ <p>Pas encore membre?</p>
 <div class="container">
   <div class="row">
-    <div class="col text-center">
-      <button class="btn btn-primary bottonInscrition">S'INCRIRE</button>
+    <div class="col text-center mb-4">
+     <a href="inscription.php"> <button class="btn btn-primary bottonInscrition">S'INCRIRE</button></a>
     </div>
   </div>
 </div>
-  </form>
- 
   
 
   </div>

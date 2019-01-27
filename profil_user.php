@@ -76,6 +76,11 @@ include 'header.php';
                               </table>
                 </div>
         </div>
+
+
+
+        <!-- ///Mes Chiens/////////////////////////////////////////////////////////////////////////////////////////////// -->
+        
         <h3>MES CHIENS</h3>
         <p><em>Ma liste de chiens</em></p>
                 <p></p><button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">

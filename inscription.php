@@ -102,19 +102,18 @@ include 'header.php';
     </div>
   </div>
 </div>
-  <p>Déjà membre?</p>
+ 
+    </form>
+     <p>Déjà membre?</p>
   
 
 <div class="container">
   <div class="row">
-    <div class="col text-center">
-      <button class="btn btn-primary bottonInscrition">SE CONNECTER</button>
+    <div class="col text-center mb-4">
+      <a href="connexion.php"><button class="btn btn-primary bottonInscrition">SE CONNECTER</button></a>
     </div>
   </div>
 </div>
-      
-  
-    </form>
   </div>
 <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <?php
