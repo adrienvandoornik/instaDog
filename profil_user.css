@@ -7,12 +7,9 @@ body {
     color: #ffffff;
 }
 
-.chien {
-    width: 80%;
-    height: 80%;
-    opacity: 0.8;
-}
-
-.chien:hover {
-    opacity: 1;
+.square {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
 }
