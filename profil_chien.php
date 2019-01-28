@@ -16,7 +16,8 @@
         crossorigin="anonymous"></script>
     <style>
         body {
-    color: #777;
+            background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wallpaperup.com%2Fuploads%2Fwallpapers%2F2013%2F12%2F11%2F191759%2Fae5fb76ec7d4e6e611258b64cb4ed5fb.jpg&f=1");
+    
 }
 
 .jumbotron { 
@@ -30,18 +31,16 @@
       height: 100%;
   }
 
-.chien {
-    width: 80%;
-    height: 80%;
-    opacity: 0.8;
-}
-
-.chien:hover {
-    opacity: 1;
-}
 
 .carousel-inner{
-    height: 620px;
+    height: auto;
+}
+
+.text-decoration{
+    text-decoration: underline;
+}
+.container{
+    background-color: white;
 }
 </style>
 </head>
@@ -53,8 +52,8 @@
   
   <?php
 
-include 'header.php';
-?>
+    include 'header.php';
+    ?>
 
 
 
@@ -65,6 +64,10 @@ include 'header.php';
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="image/chien1.jpg" alt="Los Angeles" width="1100" height="400">
+                <div class="card-img-overlay">
+      <h4 class="card-title mt-5 ml-5">John Doe</h4>
+      
+    </div>
             </div>
         </div>
 
@@ -77,97 +80,74 @@ include 'header.php';
         </a>
 
     </div>
-    <div class="container text-center">
-        <br>
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <p><button type="button" style="width: 36rem;" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#collapseExample"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        Ajouter un article
-                    </button></p>
-                <div class="collapse" id="collapseExample" style="width: 36rem;">
+
+
+    <!-- ///deuxieme parti////////////////////////////////////////////////////////////////////////////////////////////////// -->
+   
+    <h2 class="text-center mt-4 text-decoration">Articles</h2>
+  <div class="container mt-4">
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-danger mb-3 mt-3" type="button" data-toggle="collapse" data-target="#footwear" aria-expanded="false" aria-controls="footwear">
+Ajouter un Article
+</button>
+  </div>
+  <div class="d-flex justify-content-center">
+    
+
+<div class="collapse" id="footwear" style="width: 36rem;">
                     <div class="card card-body">
-                        <div class="row">
+                        <div class="row ">
                             <form class="needs-validation formPadding" novalidate>
                                 <div class="form-row">
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-3 sm-6 text-center">
                                         <label for="validationCustom01">Texte</label>
                                         <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
                                             value="Mark" required>
                                         <div class="valid-feedback">
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                    <div class="col-md-6 mb-3 sm-6 text-center">
                                         <label for="validationCustom02">Photo</label>
                                         <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
                                             value="Otto" required>
                                         <div class="valid-feedback">
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mb-3">
+                                   
+                                                                        
+                                    <div class="container">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                        <button class="btn btn-primary bottonConnecter">VALIDER</button>
+                                        </div>
                                     </div>
-                                    <div class="col-md-6 mb-3">
-                                        <button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-plus"></span>
-                                            Ajouter un chien</button>
                                     </div>
                                 </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <br>
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="card text-center" style="width: 36rem;">
-                    <img class="card-img-top" img src="image/chien2.png" alt="Card image cap" width="100%" height="100%">
-                    <div class="card-body">
-                        <h5 class="card-title">Chien 2</h5>
-                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <a href="#" class="btn btn-primary">Voir Article</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="card text-center" style="width: 36rem;">
-                    <img class="card-img-top" img src="image/chien4.png" alt="Card image cap" width="100%" height="100%">
-                    <div class="card-body">
-                        <h5 class="card-title">Chien 2</h5>
-                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <a href="#" class="btn btn-primary">Voir Article</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br>
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <div class="card text-center" style="width: 36rem;">
-                    <img class="card-img-top" img src="image/chien3.jpg" alt="Card image cap" width="100%" height="100%">
-                    <div class="card-body">
-                        <h5 class="card-title">Chien 2</h5>
-                        <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <a href="#" class="btn btn-primary">Voir Article</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
+  </div>
+
+  <div class="container">
+  <div class="d-flex justify-content-center">
+ <div class="card mt-1 mb-4" style="width:500px">
+  <img class="card-img-top" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fkimsulli.files.wordpress.com%2F2011%2F06%2Fdog3.jpg&f=1" alt="Lights" style="width:100%" alt="Card image">
+ 
+  <div class="card-body">
+    <h4 class="card-title">Feioso</h4>
+    <p class="card-text">Some example text some example text. John Doe is an architect and engineer sdsd dffd  wewefefref  gergergerg  ergergerg ergerg gf a we t ree rger  eg</p>
+  </div>
+</div>
+</div>
+</div>
 
      <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
      <?php
-  include 'footer.php';
-  
-  ?>
+    include 'footer.php';
+
+    ?>
 
 </body>
 
