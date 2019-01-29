@@ -182,7 +182,7 @@
                             height="300">
                         <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
                         <p class="card-text">Place the content here and it will size as per the content only.</p>
-                        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary"><i
+                        <a href="profil_chien.php" class="btn btn-primary"><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>
                     </div>
                 </div>
@@ -194,7 +194,7 @@
                             height="300">
                         <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
                         <p class="card-text">Place the content here and it will size as per the content only.</p>
-                        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary"><i
+                        <a href="profil_chien.php" class="btn btn-primary"><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>
                     </div>
                 </div>
@@ -206,7 +206,7 @@
                             height="300">
                         <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
                         <p class="card-text">Place the content here and it will size as per the content only.</p>
-                        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary"><i
+                        <a href="profil_chien.php" class="btn btn-primary"><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>
                     </div>
                 </div>
