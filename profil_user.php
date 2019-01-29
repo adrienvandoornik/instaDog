@@ -30,7 +30,7 @@
         <h6><span  aria-hidden="true"></span> Mon Profil Utilisateur</h6>
     </div>
 
-    <div class="container text-center">
+    <div class="container text-center bg-white">
             <p>Mes données personnelles:</p> 
             <br>
         <div class="row">          
@@ -84,7 +84,7 @@
         
         <h3>MES CHIENS</h3>
         <p><em>Ma liste de chiens</em></p>
-                <p></p><button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <p><button type="button" class="btn btn-primary btn-lg btn-block"data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         Ajouter un chien
                 </button></p>           
             <div class="collapse" id="collapseExample">
@@ -150,7 +150,7 @@
 
  
 <div class="container">
-  <div class="row">
+  <div class="row mb-3">
   <div class="col-sm-4">
     <div class="card" >
       <div class="card-body">
