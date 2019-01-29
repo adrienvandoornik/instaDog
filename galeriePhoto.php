@@ -35,7 +35,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien1.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Pepito</p>
                 </div>
             </div>
         </a>
@@ -45,7 +45,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien2.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Rocky</p>
                 </div>
             </div>
         </a>
@@ -55,7 +55,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien3.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Nougat</p>
                 </div>
             </div>
         </a>
@@ -67,7 +67,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien4.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Charly</p>
                 </div>
             </div>
         </a>
@@ -77,7 +77,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien5.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
                 </div>
             </div>
         </a>
@@ -87,7 +87,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien1.png')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Tango</p>
                 </div>
             </div>
         </a>
@@ -99,7 +99,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien2.png')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
                 </div>
             </div>
         </a>
@@ -109,7 +109,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien6.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
                 </div>
             </div>
         </a>
@@ -119,7 +119,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien4.png')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
                 </div>
             </div>
         </a>
@@ -131,7 +131,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien7.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
                 </div>
             </div>
         </a>
@@ -141,7 +141,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien2.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
                 </div>
             </div>
         </a>
@@ -151,7 +151,7 @@ include 'header.php';
         <a href="#">
             <div class="square" style="background-image: url('image/chien4.jpg')">
                 <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;">John Doe</p>
+                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
                 </div>
             </div>
         </a>
