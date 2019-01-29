@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="profil_chien.css">
-    <link rel="stylesheet" href="instadog.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -36,6 +35,10 @@
 
 
      <!--  ///Text Profil////////////////////////////////////////////////////////////////////////////////////////////////7 -->
+     <div class="jumbotron text-center pt-5 pb-5">
+        <h2 class="title" style="font-size:3vw;">NOM DU CHIEN</h2>
+        <h6><i class="fas fa-paw"></i> Profil de mon chien</h6>
+    </div>
 
     <div id="demo" class="carousel slide" data-ride="carousel">
         <!-- The slideshow -->
@@ -44,8 +47,7 @@
                 <img src="image/chien1.jpg" alt="Los Angeles" width="1100" height="400">
                 <div class="card-img-overlay">
       <h4 class="card-title mt-5 ml-5">John Doe</h4>
-      
-    </div>
+                </div>
             </div>
         </div>
 
