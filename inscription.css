@@ -1,9 +1,15 @@
-
-
-
 .jumbotron { 
     background-color: #525050; /* Gris */
     color: #ffffff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+}
+
+.title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+    text-shadow: 2px 3px 3px #000;
+    color: aliceblue;
 }
 
   h2{
@@ -38,9 +44,6 @@ p{
 }
 
 
-
-
-
 .navbar-brand {
     font-family: 'Work Sans', sans-serif;
     font-weight:900;
@@ -54,6 +57,11 @@ p{
 .btn {
     font-family: 'Work Sans', sans-serif;
     font-weight:900;
+}
+
+.nopadding {
+    padding-right: 0px;
+    padding-left: 0px;
 }
  
 .square {
