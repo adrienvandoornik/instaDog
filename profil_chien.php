@@ -111,8 +111,9 @@ Ajouter un Article
   <div class="container mb-3">
   <div class="d-flex justify-content-center">
  <div class="card mt-1 mb-4" style="width:500px">
-  <img class="card-img-top" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fkimsulli.files.wordpress.com%2F2011%2F06%2Fdog3.jpg&f=1" alt="Lights" style="width:100%" alt="Card image">
- 
+ <a href="article.php"> 
+ <img class="card-img-top" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fkimsulli.files.wordpress.com%2F2011%2F06%2Fdog3.jpg&f=1" alt="Lights" style="width:100%" alt="Card image">
+ </a>
   <div class="card-body">
     <h4 class="card-title">Feioso</h4>
     <p class="card-text">Some example text some example text. John Doe is an architect and engineer sdsd dffd  wewefefref  gergergerg  ergergerg ergerg gf a we t ree rger  eg</p>
