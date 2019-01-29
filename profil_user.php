@@ -27,7 +27,7 @@
   <!-- ///Donnees du User////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <div class="jumbotron text-center pt-5 pb-5">
-        <h2>PRENOM + NOM</h2>
+        <h2 class="title" style="font-size:3vw;">PRENOM + NOM</h2>
         <h6><span  aria-hidden="true"></span><i class="fas fa-user-circle"></i> Mon Profil Utilisateur</h6>
     </div>
 

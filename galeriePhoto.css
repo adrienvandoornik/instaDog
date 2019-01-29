@@ -13,6 +13,11 @@
     font-family: 'Work Sans', sans-serif;
     font-weight:900;
 }
+
+.nopadding {
+    padding-right: 50px;
+    padding-left: 50px;
+}
  
 .square {
     width: 100%;
