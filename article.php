@@ -40,7 +40,7 @@
                     alt="Lights" style="width:100%" alt="Card image">
 
                 <div class="card-body">
-                    <h4 class="card-title">Feioso</h4>
+                    <h4 class="card-title"><i class="fas fa-paw"></i> Feioso</h4>
                     <p class="card-text">Some example text some example text. John Doe is an architect and engineer sdsd
                         dffd wewefefref gergergerg ergergerg ergerg gf a we t ree rger eg</p>
                 </div>
@@ -52,12 +52,13 @@
 
     <div class="container">
         <div class="container mt-5">
-            <h3>Commentaires</h3>
+            <h3><i class="fas fa-comments"></i> Commentaires</h3>
             <div class="media border p-3 bg-white">
                 <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fbusiness-round-flat-vol-1-1%2F36%2Fuser_account_profile_avatar_person_student_male-512.png&f=1"
                     alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
                 <div class="media-body">
-                    <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+                    <h4>John Doe</h4> 
+                    <small><i><i class="far fa-clock"></i> Posted on February 19, 2016</i></small>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua swded tzh j8 8k89k9 l0l k nh n gbt rtve rvx rre.</p>
                 </div>
@@ -70,10 +71,10 @@
     <div class="container mt-3">
         <form action="/action_page.php">
             <div class="form-group">
-                <label for="comment">Comment:</label>
+                <label for="comment"><i class="fas fa-comment-medical"></i> Comment:</label>
                 <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-comment-medical"></i> Submit</button>
         </form>
     </div>
 
