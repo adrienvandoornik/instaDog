@@ -1,4 +1,4 @@
-<footer class="page-footer font-small teal pt-4">
+<footer class="page-footer font-small teal">
 
     <!-- Footer Text -->
     <div class="container-fluid ">
@@ -21,7 +21,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3 footerCopy bg-dark">InstaDog © 2019 Copyright: Adrien & Gutemberg 
-      <a href="galeriePhoto.php">InstaDog.ch</a>
+      <a href="galeriePhoto.php">www.InstaDog.ch</a>
     </div>
     <!-- Copyright -->
 
