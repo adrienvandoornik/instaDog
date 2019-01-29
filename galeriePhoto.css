@@ -1,6 +1,30 @@
 
-
 body {
+    font-family: 'PT Serif', serif;
     background-image: url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapertag.com%2Fwallpaper%2Ffull%2Fd%2F7%2Fb%2F234941-widescreen-white-background-tumblr-2560x1600.jpg&f=1");
 }
  
+.square {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+    color: aliceblue;
+    text-align: justify;
+    text-shadow: 2px 3px 3px #000;
+    transition: transform .2s; /* Animation */
+    opacity: 0.8;
+}
+
+.square:hover {
+    transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    opacity: 1;
+    color: aliceblue;
+  }
+
+h4 {
+    font-family: 'PT Serif', serif;
+    color: antiquewhite;
+}
