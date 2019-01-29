@@ -1,0 +1,23 @@
+
+.jumbotron { 
+    background-color: #525050; /* Gris */
+    color: #ffffff;
+}
+
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+
+
+.carousel-inner{
+    height: auto;
+}
+
+.text-decoration{
+    text-decoration: underline;
+}
+.container{
+    background-color: white;
+}

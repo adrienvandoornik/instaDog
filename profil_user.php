@@ -137,10 +137,13 @@
                                         </div>
                                         <div class="col-md-6 mb-3">
                                         </div>
-                                    </div>
-                                        <div class="col-md-6 mb-3">
-                                                <button type="button" class="btn btn-primary btn-block">Ajouter un chien</button>
-                                            </div>
+                                    </div>                                  
+
+                                        <div class="col-mb-6 text-center">
+                                          <div class="">
+                                                <button type="button"  class="btn btn-primary btn-block">Ajouter un chien</button>
+                                          </div> 
+                                              </div>
                                     </div>
                             </div>  
                 </div>

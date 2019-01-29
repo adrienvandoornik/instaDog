@@ -79,7 +79,7 @@
 
     <!-- ///Autres Articles///////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <div class="container">
+    <div class="container mb-3">
         <h3 class="text-center mt-3 text-decoration">Autres Articles</h3>
         <div class="d-flex justify-content-center align-items-center">
 

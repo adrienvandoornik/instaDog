@@ -30,7 +30,7 @@ include 'header.php';
   </div>
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <div class="container bg-white">
+  <div class="container bg-white mb-3">
   <form class="needs-validation bg-white formPadding" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">

@@ -26,6 +26,10 @@
             </span>
             </span>Sign In</a>
         </li>
+
+        <a href="inscription.php"><button type="button" class="btn btn-success ml-4 mr-4"> S'Inscrire</button>
+        </a>
+
         <a href="profil_user.php"><button type="button" class="btn btn-danger ml-4 mr-4">
           <i class="fas fa-plus-circle"></i> Ajouter Chien</button>
         </a>

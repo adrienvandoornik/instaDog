@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="profil_user.css">
+    <link rel="stylesheet" href="profil_chien.css">
+    <link rel="stylesheet" href="instadog.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -16,33 +18,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <style>
-        body {
-            background-image: url("https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.wallpaperup.com%2Fuploads%2Fwallpapers%2F2013%2F12%2F11%2F191759%2Fae5fb76ec7d4e6e611258b64cb4ed5fb.jpg&f=1");
-    
-}
+       
 
-.jumbotron { 
-    background-color: #525050; /* Gris */
-    color: #ffffff;
-}
-
-  /* Make the image fully responsive */
-  .carousel-inner img {
-      width: 100%;
-      height: 100%;
-  }
-
-
-.carousel-inner{
-    height: auto;
-}
-
-.text-decoration{
-    text-decoration: underline;
-}
-.container{
-    background-color: white;
-}
 </style>
 </head>
 
@@ -131,7 +108,7 @@ Ajouter un Article
   </div>
   </div>
 
-  <div class="container">
+  <div class="container mb-3">
   <div class="d-flex justify-content-center">
  <div class="card mt-1 mb-4" style="width:500px">
   <img class="card-img-top" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fkimsulli.files.wordpress.com%2F2011%2F06%2Fdog3.jpg&f=1" alt="Lights" style="width:100%" alt="Card image">
