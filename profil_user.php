@@ -28,37 +28,23 @@
 
     <div class="jumbotron text-center pt-5 pb-5">
         <h2>PRENOM + NOM</h2>
-        <h6><span  aria-hidden="true"></span> Mon Profil Utilisateur</h6>
+        <h6><span  aria-hidden="true"></span><i class="fas fa-user-circle"></i> Mon Profil Utilisateur</h6>
     </div>
 
     <div class="container text-center bg-white">
-            <p>Mes données personnelles:</p> 
+            <p><i class="fas fa-id-card"></i> Mes données personnelles:</p> 
             <br>
         <div class="row">          
                 <div class="col-md-4 col-lg-4">
                         <table class="table table-hover text-left">
                                 <tbody>
                                   <tr>
-                                    <th scope="row">NOM</th>
-                                    <td>Van Doornik <button type="button" class="btn btn-link">modifier</button></td>
+                                    <th scope="row"><i class="fas fa-user-circle"></i> NOM</th>
+                                    <td>Van Doornik <button type="button" class="btn btn-link"><i class="far fa-edit"></i> modifier</button></td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">PRENOM</th>
-                                    <td>Adrien <button type="button" class="btn btn-link">modifier</button></td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                </div>
-                <div class="cocol-md-4 col-lg-4">
-                        <table class="table table-hover text-left">
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">EMAIL</th>
-                                    <td>adrien.vandoornik@gmail.com <button type="button" class="btn btn-link">modifier</button></td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">MOT DE PASSE</th>
-                                    <td>****** <button type="button" class="btn btn-link">modifier</button></td>
+                                    <th scope="row"><i class="far fa-user-circle"></i> PRENOM</th>
+                                    <td>Adrien <button type="button" class="btn btn-link"><i class="far fa-edit"></i> modifier</button></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -67,12 +53,26 @@
                         <table class="table table-hover text-left">
                                 <tbody>
                                   <tr>
-                                    <th scope="row">PSEUDO</th>
-                                    <td>Adrien421 <button type="button" class="btn btn-link">modifier</button></td>
+                                    <th scope="row"><i class="far fa-envelope"></i> EMAIL</th>
+                                    <td>adrien.vandoornik@gmail.com <button type="button" class="btn btn-link"><i class="far fa-edit"></i> modifier</button></td>
                                   </tr>
                                   <tr>
-                                    <th scope="row">DERNIERE CONNEXION</th>
-                                    <td>22/01/2019 10h37 <button type="button" class="btn btn-link">modifier</button></td>
+                                    <th scope="row"><i class="fas fa-key"></i> MOT DE PASSE</th>
+                                    <td>****** <button type="button" class="btn btn-link"><i class="far fa-edit"></i> modifier</button></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                </div>
+                <div class="cocol-md-4 col-lg-4">
+                        <table class="table table-hover text-left">
+                                <tbody>
+                                  <tr>
+                                    <th scope="row"><i class="fas fa-theater-masks"></i> PSEUDO</th>
+                                    <td>Adrien421 <button type="button" class="btn btn-link"><i class="far fa-edit"></i> modifier</button></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row"><i class="far fa-clock"></i> DERNIERE CONNEXION</th>
+                                    <td>22/01/2019 10h37 <button type="button" class="btn btn-link"><i class="far fa-edit"></i> modifier</button></td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -83,10 +83,10 @@
 
         <!-- ///Mes Chiens/////////////////////////////////////////////////////////////////////////////////////////////// -->
         
-        <h3>MES CHIENS</h3>
+        <h3><i class="fas fa-dog"></i> MES CHIENS</h3>
         <p><em>Ma liste de chiens</em></p>
                 <p><button type="button" class="btn btn-primary btn-lg btn-block"data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        Ajouter un chien
+                <i class="far fa-plus-square"></i> Ajouter un chien
                 </button></p>           
             <div class="collapse" id="collapseExample">
                 <div class="card card-body">
@@ -94,42 +94,42 @@
                                 <form class="needs-validation formPadding" novalidate>
                                     <div class="form-row">
                                         <div class="col-md-6 mb-3">
-                                            <label for="validationCustom01">Surnom</label>
+                                            <label for="validationCustom01"><i class="far fa-user-circle"></i> Surnom</label>
                                             <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
                                                 required>
                                             <div class="valid-feedback">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="validationCustom02">Nom de l'élevage</label>
+                                            <label for="validationCustom02"><i class="fas fa-dog"></i> Nom de l'élevage</label>
                                             <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
                                                 required>
                                             <div class="valid-feedback">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="validationCustom01">Âge</label>
+                                            <label for="validationCustom01"><i class="far fa-clock"></i> Âge</label>
                                             <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
                                                 required>
                                             <div class="valid-feedback">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="validationCustom02">Sexe</label>
+                                            <label for="validationCustom02"><i class="fas fa-venus"></i> Sexe</label>
                                             <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
                                                 required>
                                             <div class="valid-feedback">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="validationCustom02">Race</label>
+                                            <label for="validationCustom02"><i class="fas fa-dog"></i> Race</label>
                                             <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
                                                 required>
                                             <div class="valid-feedback">
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="validationCustom02">Photo</label>
+                                            <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label>
                                             <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto"
                                                 required>
                                             <div class="valid-feedback">
@@ -139,7 +139,7 @@
                                         </div>
                                     </div>
                                         <div class="col-md-6 mb-3">
-                                                <button type="button" class="btn btn-primary btn-block">Ajouter un chien</button>
+                                                <button type="button" class="btn btn-primary btn-block"><i class="far fa-plus-square"></i> Ajouter un chien</button>
                                             </div>
                                     </div>
                             </div>  
@@ -154,31 +154,31 @@
   <div class="row mb-3">
   <div class="col-sm-4">
     <div class="card" >
-      <div class="card-body">
+      <div class="card-body text-center">
       <img class="card-img-top" img src="image/chien1.jpg" alt="Card image cap" width="300" height="300">
-        <h5 class="card-title">Place Title Here</h5>
+        <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
         <p class="card-text">Place the content here and it will size as per the content only.</p>
-        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary">Bootstrap tutorials</a>
+        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary"><i class="fas fa-chevron-right"></i> Voir profil</a>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card" >
-      <div class="card-body">
+      <div class="card-body text-center">
       <img class="card-img-top" img src="image/chien2.png" alt="Card image cap" width="300" height="300">
-        <h5 class="card-title">Place Title Here</h5>
+        <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
         <p class="card-text">Place the content here and it will size as per the content only.</p>
-        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary">Bootstrap tutorials</a>
+        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary"><i class="fas fa-chevron-right"></i> Voir profil</a>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card" >
-      <div class="card-body">
+      <div class="card-body text-center">
       <img class="card-img-top" img src="image/chien3.jpg" alt="Card image cap" width="300" height="300">
-        <h5 class="card-title">Place Title Here</h5>
+        <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
         <p class="card-text">Place the content here and it will size as per the content only.</p>
-        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary">Bootstrap tutorials</a>
+        <a href="http://www.tutorialmines.net/bootstrap-3-tutorial/" class="btn btn-primary"><i class="fas fa-chevron-right"></i> Voir profil</a>
       </div>
     </div>
   </div>
