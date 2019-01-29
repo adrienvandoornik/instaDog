@@ -25,8 +25,7 @@ include 'header.php';
 ?>
 
   <div class="jumbotron text-center pt-5 pb-5">
-      <h2  aria-hidden="true">SE CONNECTER</h2>
-
+      <h2 class="title" style="font-size:3vw;"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</h2>
   </div>
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -34,14 +33,14 @@ include 'header.php';
   <form class="needs-validation bg-white formPadding" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">
-        <label for="validationCustom01">Email</label>
+        <label for="validationCustom01"><i class="far fa-envelope"></i> Email</label>
         <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
         <div class="valid-feedback">
 
         </div>
       </div>
       <div class="col-md-6 mb-3">
-        <label for="validationCustom02">Password</label>
+        <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
         <input type="password" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
         <div class="valid-feedback">
 
@@ -55,7 +54,7 @@ include 'header.php';
 <div class="container">
   <div class="row">
     <div class="col text-center bg-white">
-      <button class="btn btn-primary bottonConnecter">SE CONNECTER</button>
+      <button class="btn btn-primary bottonConnecter"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</button>
     </div>
   </div>
 </div>
@@ -65,7 +64,7 @@ include 'header.php';
 <div class="container bg-white">
   <div class="row">
     <div class="col text-center mb-4">
-     <a href="inscription.php"> <button class="btn btn-primary bottonInscrition">S'INCRIRE</button></a>
+     <a href="inscription.php"> <button class="btn btn-primary bottonInscrition"><i class="fas fa-user-plus"></i> S'INSCRIRE</button></a>
     </div>
   </div>
 </div>

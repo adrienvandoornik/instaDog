@@ -1,17 +1,12 @@
 
-  body {
-    
-    background-color: rgb(236, 235, 232);
-    
-  }
+body {
+    background-color: rgb(236, 235, 232); 
+}
 
-  h2{
+h2{
     text-align: center;
-    }
+}
     
-
-
-
 p{
     text-align: center;
     font-size: 50px;
@@ -46,6 +41,13 @@ p{
     color: #ffffff;
 }
 
+.title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+    text-shadow: 2px 3px 3px #000;
+    color: aliceblue;
+}
+
 
 .navbar-brand {
     font-family: 'Work Sans', sans-serif;
@@ -60,6 +62,11 @@ p{
 .btn {
     font-family: 'Work Sans', sans-serif;
     font-weight:900;
+}
+
+.nopadding {
+    padding-right: 0px;
+    padding-left: 0px;
 }
  
 .square {
@@ -107,5 +114,4 @@ p{
     font-family: 'Work Sans', sans-serif;
     font-weight:900;
 }
-
 
