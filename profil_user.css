@@ -6,6 +6,15 @@ body {
 .jumbotron { 
     background-color: #525050; /* Gris */
     color: #ffffff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+}
+
+.title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+    text-shadow: 2px 3px 3px #000;
+    color: aliceblue;
 }
 
 .square {
