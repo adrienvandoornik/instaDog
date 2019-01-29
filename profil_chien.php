@@ -42,7 +42,7 @@
             <div class="carousel-item active">
                 <img src="image/chien1.jpg" alt="Los Angeles" width="1100" height="400">
                 <div class="card-img-overlay">
-      <h4 class="card-title mt-5 ml-5">John Doe</h4>
+      <h4 class="card-title mt-5 ml-5"><i class="fas fa-paw"></i> John Doe</h4>
                 </div>
             </div>
         </div>
@@ -60,11 +60,11 @@
 
     <!-- ///deuxieme parti////////////////////////////////////////////////////////////////////////////////////////////////// -->
    
-    <h2 class="text-center mt-4 text-decoration">Articles</h2>
+    <h2 class="text-center mt-4 text-decoration"><i class="far fa-newspaper"></i> Articles</h2>
   <div class="container mt-4">
   <div class="d-flex justify-content-center">
     <button class="btn btn-danger mb-3 mt-3" type="button" data-toggle="collapse" data-target="#footwear" aria-expanded="false" aria-controls="footwear">
-Ajouter un Article
+    <i class="far fa-plus-square"></i> Ajouter un Article
 </button>
   </div>
   <div class="d-flex justify-content-center">
@@ -76,14 +76,14 @@ Ajouter un Article
                             <form class="needs-validation formPadding" novalidate>
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3 sm-6 text-center">
-                                        <label for="validationCustom01">Texte</label>
+                                        <label for="validationCustom01"><i class="fas fa-comment-medical"></i> Commentaire</label>
                                         <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
                                             value="Mark" required>
                                         <div class="valid-feedback">
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3 sm-6 text-center">
-                                        <label for="validationCustom02">Photo</label>
+                                        <label for="validationCustom02"><i class="fas fa-image"></i> Photo</label>
                                         <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
                                             value="Otto" required>
                                         <div class="valid-feedback">
@@ -94,7 +94,7 @@ Ajouter un Article
                                     <div class="container">
                                     <div class="row">
                                         <div class="col text-center">
-                                        <button class="btn btn-primary bottonConnecter">VALIDER</button>
+                                        <button class="btn btn-primary bottonConnecter"><i class="far fa-plus-square"></i> VALIDER</button>
                                         </div>
                                     </div>
                                     </div>
@@ -113,7 +113,7 @@ Ajouter un Article
  <img class="card-img-top" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fkimsulli.files.wordpress.com%2F2011%2F06%2Fdog3.jpg&f=1" alt="Lights" style="width:100%" alt="Card image">
  </a>
   <div class="card-body">
-    <h4 class="card-title">Feioso</h4>
+    <h4 class="card-title"><i class="fas fa-paw"></i> Feioso</h4>
     <p class="card-text">Some example text some example text. John Doe is an architect and engineer sdsd dffd  wewefefref  gergergerg  ergergerg ergerg gf a we t ree rger  eg</p>
   </div>
 </div>
