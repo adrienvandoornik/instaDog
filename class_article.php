@@ -10,8 +10,8 @@ class Article
     private $raceChien;
     private $listeArticleChien;
 
-    public function getArticle(){return $this->article;}
-    public function insertArticle(){return $this->article;}
+    public function insertCommentaire(){return $this->commentaire;}
+    public function getCommentaire(){return $this->commentaire;}
 }
 
 ?>
