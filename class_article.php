@@ -1,12 +1,12 @@
 <?php
 
-class Chien
+class Article
 {
-    private $idChien;
-    private $surnomChien;
-    private $nomElevageChien;
-    private $ageChien;
-    private $sexeChien;
+    private $idArticle;
+    private $imageArticle;
+    private $texteArticle;
+    private $listeCommentaireArticle;
+    private $datePublicationArticle;
     private $raceChien;
     private $listeArticleChien;
 
