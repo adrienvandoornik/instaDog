@@ -72,6 +72,12 @@ class Article extends Commentaire
 $article = new Article;
 
 // Invocation des functions
+$article->getIdArticle();
+$article->getImageArticle();
+$article->getTexteArticle();
+$article->getListeCommentaireArticle();
+$article->getDatePublicationArticle();
+
 $article->getCommentaire();
 $article->insertCommentaire();
 

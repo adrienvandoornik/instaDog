@@ -17,6 +17,42 @@ class Chien extends Article
     private $raceChien;
     private $listeArticleChien;
 
+    // Liste des getters
+    public function getIdChien()
+    {
+         return $this->idChien;
+    }
+
+    public function getSurnomChien()
+    {
+         return $this->surnomChien;
+    }
+
+    public function getNomElevageChien()
+    {
+        return $this->nomElevageChienn;
+    }
+
+    public function getAgeChien()
+    {
+        return $this->ageChien;
+    }
+
+    public function getSexeChien()
+    {
+        return $this->sexeChien;
+    }
+
+    public function getRaceChien()
+    {
+        return $this->raceChien;
+    }
+
+    public function getListeArticleChien()
+    {
+        return $this->listeArticleChien;
+    }
+
     // Renvoyer le contenu de l'attribut 
     public function getArticle(){
         return $this->article;
@@ -34,6 +70,14 @@ class Chien extends Article
 $chien = new Chien;
 
 // Invocation des functions
+$chien->getIdChien();
+$chien->getSurnomChien();
+$chien->getNomElevageChien();
+$chien->getAgeChien();
+$chien->getSexeChien();
+$chien->getRaceChien();
+$chien->getListeArticleChien();
+
 $chien->getArticle();
 $chien->insertArticle();
 
