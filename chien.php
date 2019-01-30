@@ -10,12 +10,7 @@ class Chien
     private $raceChien;
     private $listeArticleChien;
 
-
-    public function__set ($name, $value) { }
-
     public function getArticle(){return $this->article;}
-
-
 }
 
 ?>
