@@ -19,7 +19,7 @@
           <a class="nav-link text-light" href="profil_user.php"><i class="fas fa-user-circle"></i> Profil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="connexion.php">
+          <a class="nav-link text-light" href="se_connecter.php">
             <span style="font-size: 1rem;">
             <span style="color: white;">
             <i class="fas fa-sign-in-alt"></i>

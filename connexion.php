@@ -1,82 +1,319 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>InstaDog</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="connexion.css">
-  <link rel="stylesheet" href="instadog.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-  <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-  <?php
-
-include 'header.php';
-?>
-
-  <div class="jumbotron text-center pt-5 pb-5">
-      <h2 class="title" style="font-size:3vw;"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</h2>
-  </div>
-
-  <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <div class="container bg-white mb-3">
-  <form class="needs-validation bg-white formPadding" novalidate>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom01"><i class="far fa-envelope"></i> Email</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
-        <div class="valid-feedback">
-
-        </div>
-      </div>
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
-        <input type="password" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
-        <div class="valid-feedback">
-
-        </div>
-      </div>
-
-    </div>
-    <div class="clearfix"></div>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col text-center bg-white">
-      <button class="btn btn-primary bottonConnecter"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</button>
-    </div>
-  </div>
-</div>
-  </form>
-
- <p>Pas encore membre?</p>
-<div class="container bg-white">
-  <div class="row">
-    <div class="col text-center mb-4">
-     <a href="inscription.php"> <button class="btn btn-primary bottonInscrition"><i class="fas fa-user-plus"></i> S'INSCRIRE</button></a>
-    </div>
-  </div>
-</div>
-
-
-  </div>
-
-  <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <?php
-include 'footer.php';
+
+class Connexion {
+    private $connexion;
+
+   
+    public function __construct() {
+        $PARAM_hote= 'localhost';
+        $PARAM_port='3306';
+        $PARAM_nom_bd='InstaDog';
+        $PARAM_utilisateur='adminInstaDog';
+        $PARAM_mot_passe='Inst@Dog';
+
+        try{
+            $this->connexion = new PDO(
+                'mysql:host='.$PARAM_hote.';dbname='.$PARAM_nom_bd,
+                $PARAM_utilisateur,
+                $PARAM_mot_passe);
+            
+        }catch (Exception $e){
+            echo 'Erreur : '.$e->getMessage().'<br>';
+            echo 'N° :'.$e->getCode();
+        }
+    
+    }
+
+    public function getConnexion(){
+        return $this->connexion;
+    }
+
+   
+
+
+    // function insert user////////////////////////////////////////////////////////////////////////////////////////////////
+/* 
+    function insert_utilisateurr($nom, $prenom, $email, $motDePasse, $dernierConnexion, $login){
+        $user = true;
+        
+        try{
+            $requete_prepare=$this->connexion->prepare(
+                "INSERT INTO utilisateur (nom, prenom, email, motDePasse, dateConnexion) values (:nom, :prenom, :email, :motDePasse, :dateConnexion)");
+
+            $requete_prepare->execute(
+                array('nom' => $utilisateur));
+                        
+        }catch (Exception $e){
+            echo "erreur";
+            return false;
+
+        }
+        
+        return true;
+    } 
+ */
+   
+ //function insert musique//////////////////////////////////////////////////////////////////////////////////////////////////
+/* 
+    function insert_chien(){
+            
+            
+        try {
+            $requete_prepare=$this->connexion->prepare(
+                "INSERT INTO Musique (type) values (:musique)");
+
+            $requete_prepare->execute(
+                array('musique' => $musique));
+        } catch (Exception $e) {
+                echo "erreur";
+                return false;
+        }
+            return $musique;
+    } */
+
+//function insert personne/////////////////////////////////////////////////////////////////////////////////////////////////
+/* 
+function insert_personne($Nom, $Prenom, $URL_Photo, $Date_Naissance, $Statut_couple){
+    
+    $requete_prepare = $this->connexion->prepare(
+        "INSERT INTO Personne (Nom, Prenom, URL_Photo, Date_Naissance, Statut_couple) 
+        values (:Nom, :Prenom, :URL_Photo, :Date_Naissance, :Statut_couple)"
+    );
+
+    $requete_prepare->execute(
+        array(
+            'Nom' => $Nom,
+            'Prenom' => $Prenom, 
+            'URL_Photo' => $URL_Photo, 
+            'Date_Naissance' => $Date_Naissance, 
+            'Statut_couple' => $Statut_couple
+        )
+    );
+    $id= $this->connexion->lastInsertId(); 
+    return $id;    
+}
+
+
+// get Hobby///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getHobby() {
+
+   
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Hobby");
+
+    $requete_prepare->execute();
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+    
+    return $resultat;
+
+}
+
+//getPersonne////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function selectAllMusiques() {
+
+    
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Musique");
+    
+    $requete_prepare->execute();
+
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $resultat;
+}
+
+//selectPersonneById//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function selectPersonneById($id) {
+
+    
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Personne  WHERE id = :id");
+    
+    $requete_prepare->execute(array("id" => $id));
+
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $resultat;
+}
+
+//selectPersonne///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function selectPersonne() {
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Personne");
+    
+    $requete_prepare->execute();
+
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $resultat;
+}
+
+
+//selectNomPreno_Like///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function selectPersonneByNomPrenomLike($pattern) {
+
+   
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Personne WHERE Nom LIKE :nom
+         OR Prenom LIKE :prenom");
+    
+    $requete_prepare->execute(array("nom"=>"%$pattern%",
+    "prenom"=>"%$pattern%"));
+
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+    return $resultat;
+    
+}
+
+//Relation_Hobby///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function getPersonneHobby($personneId) {
+
+    
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT Type FROM Hobby h
+        INNER JOIN RelationHobby 
+        ON Hobby_Id = h.Id
+        WHERE Personne_Id = :Id");
+    
+    $requete_prepare->execute(
+        array("Id"=> $personneId));
+    
+    $hobbies=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $hobbies;
+    
+}
+
+//Relation_Musique/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getPersonneMusique($personneId) {
+
+    
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT Type FROM Musique m
+        INNER JOIN RelationMusique
+        ON Musique_Id = m.Id
+        WHERE Personne_Id = :Id");
+
+    $requete_prepare->execute(
+        array("Id"=> $personneId));
+    
+    $musiques=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $musiques;
+    
+}
+
+//Relation_Personne////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function getRelationPersonne($personneId){
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM RelationPersonne r 
+        INNER JOIN Personne p
+        ON Personne_Id = p.Id
+        WHERE Personne_Id = :id");
+
+    $requete_prepare->execute(
+      array("id"=>$personneId));
+
+    $select_relation=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+
+    return $select_relation;
+}
+
+
+
+
+//function botton recherche////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ function selectRecherche($recherche) {
+
+    $requete_prepare=$this->connexion->prepare(
+        "SELECT * FROM Personne WHERE Nom LIKE :nom
+         OR Prenom LIKE :prenom");
+    
+    $requete_prepare->execute(array("nom"=>"%$recherche%",
+    "prenom"=>"%$recherche%"));
+
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+    return $resultat;
+     
+} 
+
+///function insert relation musique//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function insert_relation_musique ($personne_Id, $musique_Id) {
+        try {
+            $requete_prepare = $this->connexion->prepare(
+                "INSERT INTO RelationMusique (Personne_Id, Musique_Id) 
+                values (:Personne_Id, :Musique_Id)"
+            );
+
+            $requete_prepare->execute(
+                array(
+                    'Personne_Id' => $personne_Id,
+                    'Musique_Id' => $musique_Id 
+                    
+                )
+            );
+        } catch (Exception $e) {
+            echo "erreur";
+            return false;
+        }
+        return true;      
+    }
+
+///function insert relation hobby//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function insert_relation_hobby ($personne_Id, $hobby_Id) {
+    
+        $requete_prepare = $this->connexion->prepare(
+            "INSERT INTO RelationHobby (Personne_Id, Hobby_Id) 
+            values (:Personne_Id, :Hobby_Id)"
+        );
+
+        $requete_prepare->execute(
+            array(
+                'Personne_Id' => $personne_Id,
+                'Hobby_Id' => $hobby_Id 
+                
+            )
+        );
+    }
+
+///function insert relation personne//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function insert_relation_personne ($personne_Id, $relation_Id, $Type) {
+    
+    $requete_prepare = $this->connexion->prepare(
+        "INSERT INTO RelationPersonne (Personne_Id, Relation_Id, Type) 
+        values (:Personne_Id, :Relation_Id, :Type)"
+    );
+
+    $requete_prepare->execute(
+        array(
+            'Personne_Id' => $personne_Id,
+            'Relation_Id' => $relation_Id,
+            'Type' => $Type
+            
+        )
+    );
+} */
+
+}// Fin de la class Connexion
+
 
 ?>
-</body>
-
-</html>

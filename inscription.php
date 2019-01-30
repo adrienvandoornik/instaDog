@@ -101,7 +101,7 @@ include 'header.php';
 <div class="container">
   <div class="row">
     <div class="col text-center mb-4">
-      <a href="connexion.php"><button class="btn btn-primary bottonInscrition"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</button></a>
+      <a href="se_connecter.php"><button class="btn btn-primary bottonInscrition"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</button></a>
     </div>
   </div>
 </div>
