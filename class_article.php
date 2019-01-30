@@ -15,6 +15,32 @@ class Article extends Commentaire
     private $listeCommentaireArticle;
     private $datePublicationArticle;
 
+     // Liste des getters
+     public function getIdArticle()
+     {
+         return $this->idArticle;
+     }
+
+     public function getImageArticle()
+     {
+         return $this->imageArticle;
+     }
+
+     public function getTexteArticle()
+     {
+         return $this->texteArticle;
+     }
+
+     public function getListeCommentaireArticle()
+     {
+         return $this->listeCommentaireArticle;
+     }
+
+     public function getDatePublicationArticle()
+     {
+         return $this->datePublicationArticle;
+     }
+
      // insérer un commentaire
     function insertCommentaire($imageArticle, $texteArticle, $datePublicationArticle, $idChien)
     {
@@ -35,11 +61,18 @@ class Article extends Commentaire
          }
      }
 
-    // récupérer commentaire
+    // // Renvoyer le contenu de l'attribut 
     public function getCommentaire(){
         return $this->commentaire;
         echo "getCommentaire";
     }
 }
+
+// création d'un objet Article
+$article = new Article;
+
+// Invocation des functions
+$article->getCommentaire();
+$article->insertCommentaire();
 
 ?>

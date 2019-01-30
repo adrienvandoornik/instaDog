@@ -17,7 +17,7 @@ class Chien extends Article
     private $raceChien;
     private $listeArticleChien;
 
-    // Récupérer Article
+    // Renvoyer le contenu de l'attribut 
     public function getArticle(){
         return $this->article;
         echo "getArticle";
@@ -29,5 +29,12 @@ class Chien extends Article
         echo "insertArticle";
     }
 }
+
+// création d'un objet Chien
+$chien = new Chien;
+
+// Invocation des functions
+$chien->getArticle();
+$chien->insertArticle();
 
 ?>

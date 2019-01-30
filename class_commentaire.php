@@ -14,11 +14,43 @@ class Commentaire extends Article
     private $dateCommentaire;
     private $loginCommentaire;
 
-    // Récupérer IdUtilisateur
+    // Liste des getters
+    public function getIdCommentaire()
+    {
+        return $this->idCommentaire;
+    }
+
+    public function getTexteCommentaire()
+    {
+        return $this->texteCommentaire;
+    }
+
+    public function getDateCommentaire()
+    {
+        return $this->dateCommentaire;
+    }
+
+    public function getLoginCommentaire()
+    {
+        return $this->loginCommentaire;
+    }
+
+    // Renvoyer le contenu de l'attribut 
     public function getIdUtilisateur(){
         return $this->idUtilisateur;
         echo "getIdUtilisateur";
     }
 }
+
+// création d'un objet Commentaire
+$commentaire = new Commentaire;
+
+// Invocation des functions
+$commentaire->getIdCommentaire();
+$commentaire->getTexteCommentaire();
+$commentaire->getDateCommentaire();
+$commentaire->getLoginCommentaire();
+
+$commentaire->getIdUtilisateur();
 
 ?>
