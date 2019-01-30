@@ -1,13 +1,17 @@
 <?php
+require_once "class_article.php";
 
-class Commentaire
+class Commentaire extends Article
 {
     private $idCommentaire;
     private $texteCommentaire;
     private $dateCommentaire;
     private $loginCommentaire;
 
-    public function getIdUtilisateur(){return $this->idUtilisateur;}
+    public function getIdUtilisateur(){
+        return $this->idUtilisateur;
+        echo "getIdUtilisateur";
+    }
 }
 
 ?>
