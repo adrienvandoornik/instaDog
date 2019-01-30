@@ -1,6 +1,7 @@
 <?php
 require_once "class_article.php";
 
+// Class Objet Commentaire
 class Commentaire extends Article
 {
     private $idCommentaire;
@@ -8,6 +9,7 @@ class Commentaire extends Article
     private $dateCommentaire;
     private $loginCommentaire;
 
+    // Récupérer IdUtilisateur
     public function getIdUtilisateur(){
         return $this->idUtilisateur;
         echo "getIdUtilisateur";

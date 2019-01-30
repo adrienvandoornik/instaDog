@@ -1,7 +1,8 @@
 <?php
-require_once "utilisateur.php";
+require_once "class_article.php";
 
-class Chien extends Utilisateur
+// class Objet Chien
+class Chien extends Article
 {
     private $idChien;
     private $surnomChien;
@@ -11,10 +12,13 @@ class Chien extends Utilisateur
     private $raceChien;
     private $listeArticleChien;
 
+    // Récupérer Article
     public function getArticle(){
         return $this->article;
         echo "getArticle";
     }
+
+    // Insérer Article
     public function insertArticle($idArticle){
         return $this->article;
         echo "insertArticle";
