@@ -30,7 +30,7 @@ include 'header.php';
 <!--
 ////Galerie de Photo////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<div class="container-fluid-nopadding">
+<div >
   <div class="row no-gutters">
         <div class="col-md-4 col-lg-4">
         <a href="profil_chien.php">

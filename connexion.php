@@ -31,6 +31,15 @@ class Connexion {
    
 
 
+
+
+
+
+
+
+
+    
+
     // function insert user////////////////////////////////////////////////////////////////////////////////////////////////
 /* 
     function insert_utilisateurr($nom, $prenom, $email, $motDePasse, $dernierConnexion, $login){
