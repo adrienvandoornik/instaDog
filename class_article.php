@@ -1,9 +1,14 @@
 <?php
+
+// inclure la page
 require_once "class_commentaire.php";
 
 // class Objet Article
 class Article extends Commentaire
 {
+    // Déclaration des attributs et méthodes ici
+
+    // attributs privés
     private $idArticle;
     private $imageArticle;
     private $texteArticle;

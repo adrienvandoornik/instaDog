@@ -1,9 +1,14 @@
 <?php
+
+// inclure la page
 require_once "class_article.php";
 
 // class Objet Chien
 class Chien extends Article
 {
+    // Déclaration des attributs et méthodes ici.
+
+    // attributs privés
     private $idChien;
     private $surnomChien;
     private $nomElevageChien;
