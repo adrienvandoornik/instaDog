@@ -34,7 +34,7 @@ include 'header.php';
     
   <div class="jumbotron text-center pt-5 pb-5">
       <h2 class="title" style="font-size:3vw;"><i class="fas fa-user-plus"></i> S'INSCRIRE</h2>
-      <h6><span class="" aria-hidden="true"></span>Inscrivez-vous pour continuer</h6>
+      <h6><span aria-hidden="true"></span>Inscrivez-vous pour continuer</h6>
   </div>
 
 
