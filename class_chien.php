@@ -61,6 +61,7 @@ class Chien extends Article
 
     // Insérer Article
     public function insertArticle($idArticle){
+        // à compléter
         return $this->article;
         echo "insertArticle";
     }
