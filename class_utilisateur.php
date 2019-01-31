@@ -38,7 +38,7 @@ class Utilisateur {
 
     public function setEmail($email){
         $this->email = $email;
-        
+
     }
 
     public function getDerniereConnexion(){
@@ -51,9 +51,32 @@ class Utilisateur {
 
     public function setLogin($login){
         $this->login = $login;
-      
+
     }
-    
+
+///Insert Chien/////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+    function insertUtilisateur($utilisateur){
+
+      $requete_prepare=$this->connexion->prepare(
+      "INSERT INTO Utilisateur (motDePasse, email, derniereConnexion, login)
+
+    ) values (:motDePasse, :email, :derniereConnexio, :login)");
+
+
+      $requete_prepare->execute(
+        array(
+              'moDePasse' => $motDePasse,
+              'email' => $email,
+              'derniereConnexion' => $derniereConnexion,
+              'login' => $login
+
+            )
+        );
+
+                return $chien
+    }
+
 
 
 

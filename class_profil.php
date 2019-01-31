@@ -3,18 +3,15 @@
 require 'connexion.php';
 $appliBD = new Connexion();
 
+require_once "class_utilisateur.php";
+class Profil extends Utilisateur;
+
+
 class Profil {
     private $nom;
     private $prenom;
     private $listeChien;
 
-
-
-    public function __set($name, $value){
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->listeChien =$listeChien;
-    }
 
     public function getNom(){
         return $this->nom;
@@ -22,7 +19,7 @@ class Profil {
 
     public function setNom($nom){
         $this->nom = $nom;
-        
+
     }
 
     public function getPrenom($prenom){
@@ -32,26 +29,39 @@ class Profil {
 
     public function setPrenom($prenom){
         $this->prenom = $prenom;
-       
+
     }
 
     public function getListeChien(){
         return $this->listeChien;
     }
 
+////Insert Chien///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     function insertChien($chien){
-              
-            $requete_prepare=$this->connexion->prepare(
-                "INSERT INTO Chien (surnom, nomElevage, age, sexe, race, listeArticle) 
-                    
-                ) values (:musique)");
 
-            $requete_prepare->execute(
-                array('musique' => $musique));
-         
-            return $musique;
+            $requete_prepare=$this->connexion->prepare(
+                "INSERT INTO Chien (surnom, nomElevage, age, sexe, race, listeArticle)
+
+              ) values (:surnom, :nomElevage, :age, :sexe, :race, :listeChien)");
+
+
+        $requete_prepare->execute(
+            array(
+                'surnom' => $surnom,
+                'nomElevage' => $nomElevage,
+                'age' => $age,
+                'sexe' => $sexe,
+                'listeChien' => $listeChien
+            )
+        );
+
+            return $chien
     }
+
+
+
+
 
 }
 
