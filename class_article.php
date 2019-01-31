@@ -9,40 +9,40 @@ class Article extends Commentaire
     // Déclaration des attributs et méthodes ici
 
     // attributs privés
-    private $idArticle;
-    private $imageArticle;
-    private $texteArticle;
-    private $listeCommentaireArticle;
-    private $datePublicationArticle;
+    private $id;
+    private $image;
+    private $texte;
+    private $listeCommentaire;
+    private $datePublication;
 
      // Liste des getters
-     public function getIdArticle()
+     public function getId()
      {
-         return $this->idArticle;
+         return $this->id;
      }
 
-     public function getImageArticle()
+     public function getImage()
      {
-         return $this->imageArticle;
+         return $this->image;
      }
 
-     public function getTexteArticle()
+     public function getTexte()
      {
-         return $this->texteArticle;
+         return $this->texte;
      }
 
-     public function getListeCommentaireArticle()
+     public function getListeCommentaire()
      {
-         return $this->listeCommentaireArticle;
+         return $this->listeCommentaire;
      }
 
-     public function getDatePublicationArticle()
+     public function getDatePublication()
      {
-         return $this->datePublicationArticle;
+         return $this->datePublication;
      }
 
      // insérer un commentaire
-    function insertCommentaire($imageArticle, $texteArticle, $datePublicationArticle, $idChien)
+    function insertCommentaire($image, $texte, $datePublication, $idChien)
     {
          try {
              // préparation de la requête SQL
@@ -52,7 +52,7 @@ class Article extends Commentaire
              );
              // Exécution de la requête SQL
              $requete_prepare->execute(
-                 array('image' => $imageArticle, 'texte' => $texteArticle, 'datePublication' => $datePublicationArticle, 'chienId' => $idChien)
+                 array('image' => $image, 'texte' => $texte, 'datePublication' => $datePublication, 'chienId' => $idChien)
              );
              // Retourne le résultat
              return $this->connexion->lastInsertId(); // je retourne le dernière Id insérer
@@ -72,11 +72,11 @@ class Article extends Commentaire
 $article = new Article;
 
 // Invocation des functions
-$article->getIdArticle();
-$article->getImageArticle();
-$article->getTexteArticle();
-$article->getListeCommentaireArticle();
-$article->getDatePublicationArticle();
+$article->getId();
+$article->getImage();
+$article->getTexte();
+$article->getListeCommentaire();
+$article->getDatePublication();
 
 $article->getCommentaire();
 $article->insertCommentaire();

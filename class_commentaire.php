@@ -9,30 +9,30 @@ class Commentaire extends Article
     // Déclaration des attributs et méthodes ici.
 
     // attributs privés
-    private $idCommentaire;
-    private $texteCommentaire;
-    private $dateCommentaire;
-    private $loginCommentaire;
+    private $id;
+    private $texte;
+    private $date;
+    private $login;
 
     // Liste des getters
-    public function getIdCommentaire()
+    public function getId()
     {
-        return $this->idCommentaire;
+        return $this->id;
     }
 
-    public function getTexteCommentaire()
+    public function getTexte()
     {
-        return $this->texteCommentaire;
+        return $this->texte;
     }
 
-    public function getDateCommentaire()
+    public function getDate()
     {
-        return $this->dateCommentaire;
+        return $this->date;
     }
 
-    public function getLoginCommentaire()
+    public function getLogin()
     {
-        return $this->loginCommentaire;
+        return $this->login;
     }
 
     // Renvoyer le contenu de l'attribut 
@@ -46,10 +46,10 @@ class Commentaire extends Article
 $commentaire = new Commentaire;
 
 // Invocation des functions
-$commentaire->getIdCommentaire();
-$commentaire->getTexteCommentaire();
-$commentaire->getDateCommentaire();
-$commentaire->getLoginCommentaire();
+$commentaire->getId();
+$commentaire->getTexte();
+$commentaire->getDate();
+$commentaire->getLogin();
 
 $commentaire->getIdUtilisateur();
 
