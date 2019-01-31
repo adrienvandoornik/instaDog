@@ -9,14 +9,40 @@ class Article extends Commentaire
     // Déclaration des attributs et méthodes ici
 
     // attributs privés
-    private $idArticle;
-    private $imageArticle;
-    private $texteArticle;
-    private $listeCommentaireArticle;
-    private $datePublicationArticle;
+    private $id;
+    private $image;
+    private $texte;
+    private $listeCommentaire;
+    private $datePublication;
+
+     // Liste des getters
+     public function getId()
+     {
+         return $this->id;
+     }
+
+     public function getImage()
+     {
+         return $this->image;
+     }
+
+     public function getTexte()
+     {
+         return $this->texte;
+     }
+
+     public function getListeCommentaire()
+     {
+         return $this->listeCommentaire;
+     }
+
+     public function getDatePublication()
+     {
+         return $this->datePublication;
+     }
 
      // insérer un commentaire
-    function insertCommentaire($imageArticle, $texteArticle, $datePublicationArticle, $idChien)
+    function insertCommentaire($image, $texte, $datePublication, $idChien)
     {
          try {
              // préparation de la requête SQL
@@ -26,7 +52,7 @@ class Article extends Commentaire
              );
              // Exécution de la requête SQL
              $requete_prepare->execute(
-                 array('image' => $imageArticle, 'texte' => $texteArticle, 'datePublication' => $datePublicationArticle, 'chienId' => $idChien)
+                 array('image' => $image, 'texte' => $texte, 'datePublication' => $datePublication, 'chienId' => $idChien)
              );
              // Retourne le résultat
              return $this->connexion->lastInsertId(); // je retourne le dernière Id insérer
@@ -35,11 +61,24 @@ class Article extends Commentaire
          }
      }
 
-    // récupérer commentaire
+    // // Renvoyer le contenu de l'attribut 
     public function getCommentaire(){
         return $this->commentaire;
         echo "getCommentaire";
     }
 }
+
+// création d'un objet Article
+$article = new Article;
+
+// Invocation des functions
+$article->getId();
+$article->getImage();
+$article->getTexte();
+$article->getListeCommentaire();
+$article->getDatePublication();
+
+$article->getCommentaire();
+$article->insertCommentaire();
 
 ?>

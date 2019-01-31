@@ -9,16 +9,48 @@ class Commentaire extends Article
     // Déclaration des attributs et méthodes ici.
 
     // attributs privés
-    private $idCommentaire;
-    private $texteCommentaire;
-    private $dateCommentaire;
-    private $loginCommentaire;
+    private $id;
+    private $texte;
+    private $date;
+    private $login;
 
-    // Récupérer IdUtilisateur
+    // Liste des getters
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getTexte()
+    {
+        return $this->texte;
+    }
+
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    // Renvoyer le contenu de l'attribut 
     public function getIdUtilisateur(){
         return $this->idUtilisateur;
         echo "getIdUtilisateur";
     }
 }
+
+// création d'un objet Commentaire
+$commentaire = new Commentaire;
+
+// Invocation des functions
+$commentaire->getId();
+$commentaire->getTexte();
+$commentaire->getDate();
+$commentaire->getLogin();
+
+$commentaire->getIdUtilisateur();
 
 ?>
