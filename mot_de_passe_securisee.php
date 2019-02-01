@@ -1,5 +1,58 @@
 <?php
 
+/////////// FORMULAIRE LOGIN ///////////////////////////////////////////////////////////////////////////////////////////////
+
+if(isset($_POST['login'])){
+    session_start();
+    $errmsg_arr = array();
+    $errflag = false;
+    // configuration
+    $dbhost     = "localhost";
+    $dbname     = "InstaDog";
+    $dbuser     = "adminInstaDog";
+    $dbpass     = "Inst@Dog";
+
+    // database connection
+    $conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->exec("SET CHARACTER SET utf8mb4");
+    // new data
+
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+
+    if($email == '') {
+        $errmsg_arr[] = 'You must enter your Email';
+        $errflag = true;
+    }
+    if($pass == '') {
+        $errmsg_arr[] = 'You must enter your Password';
+        $errflag = true;
+    }
+
+    // query
+    $result = $conn->prepare("SELECT password FROM login WHERE email= :e");
+    $result->bindParam(':u', $email);
+    $result->execute();
+    $objPassword = $result->fetch(PDO::FETCH_OBJ);
+
+    $dbPassword = $objPassword->password;
+
+    $pass_hash = password_hash($pass,PASSWORD_BCRYPT);
+
+
+
+    if(!password_verify($dbPassword, $pass_hash)) {
+        $_SESSION['email'] = $email;
+        header("location: galeriePhoto.php");
+    }
+    else{
+        $errmsg_arr[] = 'Email and Password are not found';
+        $errflag = true;
+    }
+
+}
+
 /////////MOT DE PASSE SECURISEE AVEC PHP 5.5////////////////////////////////////////////////////////////////////////////////
 
 // Crée une clé de hachage pour un mot de passe
@@ -11,7 +64,6 @@ function password_bcrypt() {
     // On augmente le coût (cost) de l'algorithme le rendant par la même occasion 
     // plus lent et donc plus dur à « brute-forcer ».
     $hash = password_hash($pass,PASSWORD_BCRYPT,['cost' => 13])&#160;;
-}
 
 ////////COMPARER UN MOT DE PASSE ET UN HACHE////////////////////////////////////////////////////////////////////////////////
 
@@ -27,7 +79,7 @@ function getOptimalCost($timeTarget)
     } while (($end - $start) < $timeTarget);
     
     return $cost;
-}
+};
 
 // On choisit en général un temps d'exécution entre 0,1 s et 0,5 s ; 
 // C'est le bon compromis entre sécurité et attente de l'utilisateur.

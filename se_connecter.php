@@ -28,6 +28,11 @@ include 'header.php';
   </div>
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<?php
+
+
+
+?>
   <div class="container bg-white mb-3">
   <form name="formulaire" action="mot_de_passe_securisee.php" method="post" class="needs-validation bg-white formPadding" novalidate>
     <div class="form-row">
@@ -49,11 +54,10 @@ include 'header.php';
     </div>
     <div class="clearfix"></div>
 
-
     <div class="container">
     <div class="row">
       <div class="col text-center bg-white">
-          <button class="btn btn-primary bottonConnecter"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</button>
+          <button class="btn btn-primary bottonConnecter" type="submit" name="login"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</button>
       </div>
     </div>
     </div>
@@ -67,7 +71,6 @@ include 'header.php';
     </div>
   </div>
 </div>
-
 
   </div>
 
