@@ -39,9 +39,13 @@ echo getOptimalCost(0.3);
 if(password_verify('ADMIN', '$2a$10$GlvaE1qXuYE6O/ICVtPTeOf3QwE6QNB2quHgqpbK2JKzDYCNnyAL6')) {
     // valide
     echo 'OK';
+    // redirection sur la page d'acceuil
+    // header("Location: galeriePhoto.php");
 } else {
     // invalide
     echo 'ERREUR';
+    // redirection sur la page se connecter
+    // header("Location: se_connecter.php");
 }
 
 // Vérifie qu'un mot de passe correspond à un hachage
