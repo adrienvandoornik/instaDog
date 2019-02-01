@@ -1,8 +1,9 @@
 <?php
+require_once "class_utilisateur.php";
 
 
 
-class Profil {
+class Profil extends Utilisateur{
     private $nom;
     private $prenom;
     private $listeChien;
