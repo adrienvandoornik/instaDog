@@ -1,5 +1,14 @@
 <?php
 
+include 'class_utilisateur.php';
+include 'class_profil';
+include 'class_chien';
+include 'class_article';
+include 'class_commentaire';
+
+
+
+
 class Connexion {
     private $connexion;
 
@@ -27,13 +36,82 @@ class Connexion {
     public function getConnexion(){
         return $this->connexion;
     }
+//////Function/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+    function insertUtilisateur($utilisateur){
+
+      $requete_prepare=$this->connexion->prepare(
+      "INSERT INTO Utilisateur (motDePasse, email, derniereConnexion, login)
+
+    ) values (:motDePasse, :email, :derniereConnexio, :login)");
+
+
+      $requete_prepare->execute(
+        array(
+              'moDePasse' => $motDePasse,
+              'email' => $email,
+              'derniereConnexion' => $derniereConnexion,
+              'login' => $login
+
+            )
+        );
+
+
+
+    }
+
+///////////Get Utilisateur/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function getUtilisateur($id){
+  $requete_prepare = $connexion->prepare(
+    "SELECT u.id, u.motDePasse, u.email, u.derniereConnexion, u.login
+    FROM Utilisateur u
+    WHERE id = :id"
+  );
+  $requete_prepare->execute(array("id"=>$id));
+
+  $utilisateur = $requete_prepare->fetchObject("Utilisateur");
+
+  return $utilisateur;
+}
+
+
+
+///Get Chien////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public function getChienDuUtilisateur($utilisateurId){
+  $requete_prepare =$connexion->prepare(
+    "SELECT * FROM Chien WHERE utilisateurId = :id");
+
+    $requete_prepare->execute(array("id"=>$utilisateurId));
+
+    $listeChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
+
+    return $listeChien;
+}
+
+
+///Get Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+public function getArticliDuChien($chienId){
+  $requete_prepare =$connexion->prepare(
+    "SELECT * FROM Article WHERE chienId = :id");
+
+    $requete_prepare->execute(array("id"=>$chienId));
+
+    $listeChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Article');
+
+    return $listeChien;
+}
+
 
 
 
 
 ///Insert Chien/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-      
+
 
 
 

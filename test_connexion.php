@@ -14,6 +14,8 @@ if($appliBD->getConnexion() != null){
 
 } else {
     echo 'Connexion BD échouée';
-} 
+}
+
+
 
 ?>

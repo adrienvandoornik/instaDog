@@ -1,10 +1,5 @@
 <?php
 
-require 'connexion.php';
-$appliBD = new Connexion();
-
-require_once "class_utilisateur.php";
-class Profil extends Utilisateur;
 
 
 class Profil {
