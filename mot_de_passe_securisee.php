@@ -8,7 +8,8 @@
 
 function password_bcrypt() {
     $pass = 'Mot de passe'&#160;;
-    // On augmente le coût (cost) de l'algorithme le rendant par la même occasion plus lent et donc plus dur à « brute-forcer ».
+    // On augmente le coût (cost) de l'algorithme le rendant par la même occasion 
+    // plus lent et donc plus dur à « brute-forcer ».
     $hash = password_hash($pass,PASSWORD_BCRYPT,['cost' => 13])&#160;;
 }
 

@@ -407,5 +407,4 @@ function insert_relation_personne ($personne_Id, $relation_Id, $Type) {
 
 }// Fin de la class Connexion
 
-
 ?>
