@@ -46,7 +46,7 @@ class Article extends Commentaire
     {
          try {
              // préparation de la requête SQL
-             $requete_prepare = $this->connexion->prepare(
+             $requete_prepare = $this->article->prepare(
                  "INSERT INTO Commentaire (image, texte, datePublication, chienId) 
                             values (:image, :texte, :datePublication, :chienId)"
              );
@@ -55,13 +55,13 @@ class Article extends Commentaire
                  array('image' => $image, 'texte' => $texte, 'datePublication' => $datePublication, 'chienId' => $idChien)
              );
              // Retourne le résultat
-             return $this->connexion->lastInsertId(); // je retourne le dernière Id insérer
+             return $this->article->lastInsertId(); // je retourne le dernière Id insérer
          } catch (Exception $e) {
              return 0;
          }
      }
 
-    // // Renvoyer le contenu de l'attribut 
+    // Renvoyer le contenu de l'attribut 
     public function getCommentaire(){
         return $this->commentaire;
         echo "getCommentaire";
