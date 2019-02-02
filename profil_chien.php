@@ -22,7 +22,7 @@
 
   <!-- ////HEADER//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-  
+
   <?php
 
     include 'header.php';
@@ -59,7 +59,7 @@
 
 
     <!-- ///deuxieme parti////////////////////////////////////////////////////////////////////////////////////////////////// -->
-   
+
     <h2 class="text-center mt-4 text-decoration"><i class="far fa-newspaper"></i> Articles</h2>
   <div class="container mt-4">
   <div class="d-flex justify-content-center">
@@ -68,29 +68,26 @@
 </button>
   </div>
   <div class="d-flex justify-content-center">
-    
 
-<div class="collapse" id="footwear" style="width: 36rem;">
+
+<div class="collapse" id="footwear" style="width: 50rem;">
                     <div class="card card-body">
-                        <div class="row ">
+                        <div class="row d-flex justify-content-around">
                             <form class="needs-validation formPadding" novalidate>
                                 <div class="form-row">
-                                    <div class="col-md-6 mb-3 sm-6 text-center">
-                                        <label for="validationCustom01"><i class="fas fa-comment-medical"></i> Commentaire</label>
-                                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
-                                            value="Mark" required>
-                                        <div class="valid-feedback">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3 sm-6 text-center">
+                                  <div class="form-group col-md-8">
+                                      <label for="comment"><i class="fas fa-comment-medical"></i> Comment:</label>
+                                      <textarea class="form-control" rows="4" id="comment" name="text"></textarea>
+                                  </div>
+                                    <div class="col-md-4 mb-3 sm-6">
                                         <label for="validationCustom02"><i class="fas fa-image"></i> Photo</label>
                                         <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
                                             value="Otto" required>
                                         <div class="valid-feedback">
                                         </div>
                                     </div>
-                                   
-                                                                        
+
+
                                     <div class="container">
                                     <div class="row">
                                         <div class="col text-center">
@@ -109,7 +106,7 @@
   <div class="container mb-3">
   <div class="d-flex justify-content-center">
  <div class="card mt-1 mb-4" style="width:500px">
- <a href="article.php"> 
+ <a href="article.php">
  <img class="card-img-top" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fkimsulli.files.wordpress.com%2F2011%2F06%2Fdog3.jpg&f=1" alt="Lights" style="width:100%" alt="Card image">
  </a>
   <div class="card-body">

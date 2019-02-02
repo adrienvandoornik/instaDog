@@ -20,6 +20,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
     </script>
+    <?php require 'connexion.php';
+    $appliBD = new Connexion();
+    $utilisateur_id = $appliBD->getUtilisateur(4);
+    ?>
 </head>
 
 <body>
@@ -48,12 +52,12 @@
                     <tbody>
                         <tr>
                             <th scope="row"><i class="fas fa-user-circle"></i> NOM</th>
-                            <td>Van Doornik <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                            <td><?php echo $utilisateur_id->getNom(); ?> <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
                                     modifier</button></td>
                         </tr>
                         <tr>
                             <th scope="row"><i class="far fa-user-circle"></i> PRENOM</th>
-                            <td>Adrien <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                            <td><?php echo $utilisateur_id->getPrenom(); ?>  <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
                                     modifier</button></td>
                         </tr>
                     </tbody>
@@ -64,7 +68,7 @@
                     <tbody>
                         <tr>
                             <th scope="row"><i class="far fa-envelope"></i> EMAIL</th>
-                            <td>adrien.vandoornik@gmail.com <button type="button" class="btn btn-link"><i
+                            <td><?php echo $utilisateur_id->getEmail();?><button type="button" class="btn btn-link"><i
                                         class="far fa-edit"></i> modifier</button></td>
                         </tr>
                         <tr>
@@ -80,12 +84,12 @@
                     <tbody>
                         <tr>
                             <th scope="row"><i class="fas fa-theater-masks"></i> PSEUDO</th>
-                            <td>Adrien421 <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                            <td><?php echo $utilisateur_id->getLogin();?><button type="button" class="btn btn-link"><i class="far fa-edit"></i>
                                     modifier</button></td>
                         </tr>
                         <tr>
                             <th scope="row"><i class="far fa-clock"></i> DERNIERE CONNEXION</th>
-                            <td>22/01/2019 10h37 <button type="button" class="btn btn-link"><i class="far fa-edit"></i>
+                            <td>22/01/2019<button type="button" class="btn btn-link"><i class="far fa-edit"></i>
                                     modifier</button></td>
                         </tr>
                     </tbody>
@@ -144,9 +148,8 @@
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
-                                    value="Otto" required>
+                                <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
+                              <input type="file" name="nom" class="" />
                                 <div class="valid-feedback">
                                 </div>
                             </div>

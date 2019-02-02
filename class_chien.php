@@ -4,7 +4,7 @@
 require_once "class_article.php";
 
 // class Objet Chien
-class Chien extends Article
+class Chien extends Profil
 {
     // Déclaration des attributs et méthodes ici.
 
@@ -48,23 +48,17 @@ class Chien extends Article
         return $this->race;
     }
 
-    public function getListeArticle()
+    public function getlisteArticle()
     {
         return $this->listeArticle;
     }
 
-    // Renvoyer le contenu de l'attribut 
+    // Renvoyer le contenu de l'attribut
     public function getArticle(){
         return $this->article;
         echo "getArticle";
     }
 
-    // Insérer Article
-    public function insertArticle($idArticle){
-        // à compléter
-        return $this->article;
-        echo "insertArticle";
-    }
 }
 
 // Création d'un objet Chien
@@ -77,9 +71,7 @@ $chien->getNomElevage();
 $chien->getAge();
 $chien->getSexe();
 $chien->getRace();
-$chien->getListeArticle();
-
+$chien->getUtilisateurId();
 $chien->getArticle();
-$chien->insertArticle();
 
 ?>

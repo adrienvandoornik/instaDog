@@ -9,11 +9,11 @@ class Article extends Commentaire
     // Déclaration des attributs et méthodes ici
 
     // attributs privés
-    private $id;
-    private $image;
-    private $texte;
-    private $listeCommentaire;
-    private $datePublication;
+    protected $id;
+    protected $image;
+    protected $texte;
+    protected $listeCommentaire;
+    protected $datePublication;
 
      // Liste des getters
      public function getId()
@@ -31,9 +31,9 @@ class Article extends Commentaire
          return $this->texte;
      }
 
-     public function getListeCommentaire()
+     public function getlisteCommentaire()
      {
-         return $this->listeCommentaire;
+         return $this->$listeCommentaire;
      }
 
      public function getDatePublication()
@@ -42,12 +42,12 @@ class Article extends Commentaire
      }
 
      // insérer un commentaire
-    function insertCommentaire($image, $texte, $datePublication, $idChien)
+    function insertArticle($image, $texte, $datePublication, $chienId)
     {
          try {
              // préparation de la requête SQL
              $requete_prepare = $this->article->prepare(
-                 "INSERT INTO Commentaire (image, texte, datePublication, chienId) 
+                 "INSERT INTO Commentaire (image, texte, datePublication, chienId)
                             values (:image, :texte, :datePublication, :chienId)"
              );
              // Exécution de la requête SQL
@@ -61,7 +61,7 @@ class Article extends Commentaire
          }
      }
 
-    // Renvoyer le contenu de l'attribut 
+    // Renvoyer le contenu de l'attribut
     public function getCommentaire(){
         return $this->commentaire;
         echo "getCommentaire";

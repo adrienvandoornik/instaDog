@@ -1,10 +1,10 @@
 <?php
 
 include 'class_utilisateur.php';
-/*include 'class_profil';
-include 'class_chien';
-include 'class_article';
-include 'class_commentaire';
+include 'class_profil.php';
+/*include 'class_chien.php';
+include 'class_article.php';
+include 'class_commentaire.php';
 */
 
 
@@ -67,7 +67,7 @@ public function getUtilisateur($id){
   );
   $requete_prepare->execute(array("id"=>$id));
 
-  $utilisateur = $requete_prepare->fetchObject("Utilisateur");
+  $utilisateur = $requete_prepare->fetchObject("Profil");
 
   return $utilisateur;
 }
@@ -77,7 +77,7 @@ public function getUtilisateur($id){
 
 ///Get Chien////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-public function getChienDuUtilisateur($utilisateurId){
+public function getListeChien($utilisateurId){
   $requete_prepare =$connexion->prepare(
     "SELECT * FROM Chien WHERE utilisateurId = :id");
 
@@ -92,7 +92,7 @@ public function getChienDuUtilisateur($utilisateurId){
 ///Get Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-public function getArticliDuChien($chienId){
+public function getListeArticleChien($chienId){
   $requete_prepare =$connexion->prepare(
     "SELECT * FROM Article WHERE chienId = :id");
 
@@ -104,8 +104,70 @@ public function getArticliDuChien($chienId){
 }
 
 
+////Insert Chien///////////////////////////////////////////////////////////////////////////////////////////////////////////////////77
+
+  /*  public function insertChien($surnom, $nomElevage, $age, $sexe, $race, $utilisateurId){
+
+      $requete_prepare = $this->connexion->prepare("
+      INSERT INTO Chien (surnom, nomElevage, age,  sexe, race, utilisateurId) values (:surnom, :nomElevage,:age,:sexe,:race, :utilisateurId)");
+      $requete_prepare->execute(
+        array(
+              'surnom'=> $surnom,
+              'nomElevage'=> $nomElevage,
+              'age' => $age,
+              'sexe' => $sexe,
+              'race' => $race,
+              'utilisateurId' => $utilisateurId
+
+            )
+        );
+
+    }*/
 
 
+///Insert Article///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  /*  public function insertArticle($image, $texte, $datePublication, $chienId){
+
+      $requete_prepare = $this->connexion->prepare("
+      INSERT INTO Article (image, texte, datePublication, chienId) values (:image, :texte, :datePublication, :chienId)");
+      $requete_prepare->execute(
+        array(
+              'image'=> $image,
+              'texte'=> $texte,
+              'datePublication' => $datePublication,
+              'sexe' => $sexe,
+              'chienId' => $chienId
+
+
+            )
+        );
+         $idArticle = $this->article->lastInsertId();
+         return $idArticle;
+
+    }
+
+///Insert Commentaire/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public function insertCommentaire($texte, $dateCommentaire, $utilisateurId, $articleId){
+
+          $requete_prepare = $this->connexion->prepare("
+          INSERT INTO Article (texte, dateCommentaire, utilisateurId, articleId) values (:texte, :dateCommentaire, :utilisateurId, :articleId)");
+          $requete_prepare->execute(
+            array(
+                  'texte'=> $texte,
+                  'dateCommentaire'=> $dateCommentaire,
+                  'utilisateurId' => $utilisateurId,
+                  'articleId' => $articleId
+
+
+
+                )
+            );
+             $idCommentaire = $this->article->lastInsertId();
+             return $idCommentaire;
+
+        }*/
 
 
 

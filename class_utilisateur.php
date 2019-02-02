@@ -4,11 +4,11 @@
 
 
 class Utilisateur {
-    private $id;
-    private $motDePasse;
-    private $email;
-    private $derniereConnexion;
-    private $login;
+    protected $id;
+    protected $motDePasse;
+    protected $email;
+    protected $derniereConnexion;
+    protected $login;
 
     public function __set($name, $value){
 

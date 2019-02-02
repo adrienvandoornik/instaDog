@@ -1,4 +1,11 @@
-.jumbotron { 
+
+
+body {
+    background-color: rgb(236, 235, 232);
+}
+
+
+.jumbotron {
     background-color: #525050; /* Gris */
     color: #ffffff;
     font-family: 'Work Sans', sans-serif;
@@ -44,7 +51,7 @@
     font-family: 'Work Sans', sans-serif;
     font-weight:900;
 }
- 
+
 .square {
     width: 100%;
     padding-bottom: 100%;
