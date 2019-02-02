@@ -75,16 +75,16 @@
                         <div class="row d-flex justify-content-around">
                             <form class="needs-validation formPadding" novalidate>
                                 <div class="form-row">
-                                  <div class="form-group col-md-8">
+                                  <div class="form-group col-md-7">
                                       <label for="comment"><i class="fas fa-comment-medical"></i> Comment:</label>
-                                      <textarea class="form-control" rows="4" id="comment" name="text"></textarea>
+                                      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
                                   </div>
-                                    <div class="col-md-4 mb-3 sm-6">
-                                        <label for="validationCustom02"><i class="fas fa-image"></i> Photo</label>
-                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
-                                            value="Otto" required>
-                                        <div class="valid-feedback">
-                                        </div>
+                                    <div class="col-md-5 mb-3 sm-6">
+                                      <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
+                                       <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                                       <input type="file" name="file" class="form-control-file border" />
+                                      <div class="valid-feedback">
+                                      </div>
                                     </div>
 
 

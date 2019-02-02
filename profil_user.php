@@ -110,7 +110,7 @@
         <div class="collapse" id="collapseExample">
             <div class="card card-body">
                 <div class="row">
-                    <form class="needs-validation formPadding" novalidate>
+                    <form method="post" action="page.php" enctype="multipart/form-data" class="needs-validation formPadding" novalidate >
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01"><i class="far fa-user-circle"></i> Surnom</label>
@@ -149,22 +149,22 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
-                              <input type="file" name="file" class="form-control-file border" />
+                                 <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                                 <input type="file" name="file" class="form-control-file border" />
                                 <div class="valid-feedback">
                                 </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
                             </div>
                         </div>
 
                 </div>
 
-                <div class=" row justify-content-center">
+                <div class=" row justify-content-center mt-3">
                 <div class="col-md-6 mb-3">
                     <button type="button" class="btn btn-primary btn-block"><i class="far fa-plus-square"></i> Ajouter
                         un chien</button>
                 </div>
                 </div>
+                </form>
             </div>
         </div>
     </div>

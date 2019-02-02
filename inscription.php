@@ -20,18 +20,18 @@
 </head>
 
 <body>
-  
- 
-   
+
+
+
  <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-  
+
  <?php
 
 include 'header.php';
 ?>
-     
-    
+
+
   <div class="jumbotron text-center pt-5 pb-5">
       <h2 class="title" style="font-size:3vw;"><i class="fas fa-user-plus"></i> S'INSCRIRE</h2>
       <h6><span aria-hidden="true"></span>Inscrivez-vous pour continuer</h6>
@@ -41,11 +41,11 @@ include 'header.php';
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <div class="container containerForm bg-white mb-3">
-    <form class="needs-validation formPadding" novalidate>
+    <form action="formulaireCible.php" method="post" class="needs-validation formPadding" novalidate>
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationCustom01"><i class="fas fa-user-circle"></i> Prénom</label>
-          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
+          <input type="text" name="prenom" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
             required>
           <div class="valid-feedback">
 
@@ -53,7 +53,7 @@ include 'header.php';
         </div>
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="far fa-user-circle"></i> Nom</label>
-          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="text" name="nom" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
           <div class="valid-feedback">
 
           </div>
@@ -61,7 +61,7 @@ include 'header.php';
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom01"><i class="fas fa-envelope"></i> Email</label>
-          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
+          <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
             required>
           <div class="valid-feedback">
 
@@ -69,7 +69,7 @@ include 'header.php';
         </div>
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
-          <input type="password" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="password" name="password" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
           <div class="valid-feedback">
 
           </div>
@@ -77,15 +77,15 @@ include 'header.php';
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="fas fa-theater-masks"></i> Pseudo</label>
-          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="text" name="pseudo" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
           <div class="valid-feedback">
 
           </div>
         </div>
       </div>
       <div class="clearfix"></div>
-      
-          
+
+
 <div class="container">
   <div class="row">
     <div class="col text-center">
@@ -93,10 +93,10 @@ include 'header.php';
     </div>
   </div>
 </div>
- 
+
     </form>
      <p>Déjà membre?</p>
-  
+
 
 <div class="container">
   <div class="row">
@@ -109,7 +109,7 @@ include 'header.php';
 <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <?php
   include 'footer.php';
-  
+
   ?>
 </body>
 
