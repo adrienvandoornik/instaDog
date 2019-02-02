@@ -149,7 +149,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
-                              <input type="file" name="nom" class="" />
+                              <input type="file" name="file" class="form-control-file border" />
                                 <div class="valid-feedback">
                                 </div>
                             </div>
