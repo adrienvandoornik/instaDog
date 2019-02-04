@@ -1,21 +1,21 @@
 <?php
 
-// inclure la page
-require_once "class_article.php";
-
 // class Objet Chien
-class Chien extends Profil
+class Chien
 {
     // Déclaration des attributs et méthodes ici.
 
     // Attributs privés
-    private $id;
+    protected $id;
     private $surnom;
     private $nomElevage;
     private $age;
     private $sexe;
     private $race;
     private $listeArticle;
+    private $image;
+
+    public function __set($name, $value){}
 
     // Liste des getters
     public function getId()
@@ -53,25 +53,12 @@ class Chien extends Profil
         return $this->listeArticle;
     }
 
-    // Renvoyer le contenu de l'attribut
-    public function getArticle(){
-        return $this->article;
-        echo "getArticle";
+    public function getImage(){
+      return $this->image;
     }
+
 
 }
 
-// Création d'un objet Chien
-$chien = new Chien;
-
-// Invocation des functions
-$chien->getId();
-$chien->getSurnom();
-$chien->getNomElevage();
-$chien->getAge();
-$chien->getSexe();
-$chien->getRace();
-$chien->getUtilisateurId();
-$chien->getArticle();
 
 ?>

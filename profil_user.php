@@ -23,6 +23,7 @@
     <?php require 'connexion.php';
     $appliBD = new Connexion();
     $utilisateur_id = $appliBD->getUtilisateur(4);
+    $listeChien = $appliBD->getListeChien(4);
     ?>
 </head>
 
@@ -168,18 +169,21 @@
             </div>
         </div>
     </div>
-    </div>
+
 
 
     <!-- ////Liste de Chien//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
     <div class="container">
+      <?php
+      foreach($listeChien as $chien){
+       ?>
         <div class="row mb-3">
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <img class="card-img-top" img src="image/chien1.jpg" alt="Card image cap" width="300"
+                        <img class="card-img-top" img src=<?php echo $chien->getImage();?> alt="Card image cap" width="300"
                             height="300">
                         <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
                         <p class="card-text">Place the content here and it will size as per the content only.</p>
@@ -191,19 +195,7 @@
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
-                        <img class="card-img-top" img src="image/chien2.png" alt="Card image cap" width="300"
-                            height="300">
-                        <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
-                        <p class="card-text">Place the content here and it will size as per the content only.</p>
-                        <a href="profil_chien.php" class="btn btn-primary"><i
-                                class="fas fa-chevron-right"></i> Voir profil</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <img class="card-img-top" img src="image/chien3.jpg" alt="Card image cap" width="300"
+                        <img class="card-img-top" img src=""  alt="Card image cap" width="300"
                             height="300">
                         <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
                         <p class="card-text">Place the content here and it will size as per the content only.</p>
@@ -213,6 +205,7 @@
                 </div>
             </div>
         </div>
+        <?php }?>
     </div>
     <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 

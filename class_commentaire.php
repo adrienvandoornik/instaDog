@@ -1,10 +1,7 @@
 <?php
 
-// inclure la page
-require_once "class_article.php";
-
 // Class Objet Commentaire
-class Commentaire extends Article
+class Commentaire
 {
     // Déclaration des attributs et méthodes ici.
 
@@ -13,6 +10,8 @@ class Commentaire extends Article
     private $texte;
     private $date;
     private $login;
+
+    public function __set($name, $value){}
 
     // Liste des getters
     public function getId()
@@ -35,22 +34,7 @@ class Commentaire extends Article
         return $this->login;
     }
 
-    // Renvoyer le contenu de l'attribut 
-    public function getIdUtilisateur(){
-        return $this->idUtilisateur;
-        echo "getIdUtilisateur";
-    }
 }
 
-// création d'un objet Commentaire
-$commentaire = new Commentaire;
-
-// Invocation des functions
-$commentaire->getId();
-$commentaire->getTexte();
-$commentaire->getDate();
-$commentaire->getLogin();
-
-$commentaire->getIdUtilisateur();
 
 ?>
