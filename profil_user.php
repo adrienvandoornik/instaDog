@@ -192,18 +192,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <img class="card-img-top" img src=""  alt="Card image cap" width="300"
-                            height="300">
-                        <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
-                        <p class="card-text">Place the content here and it will size as per the content only.</p>
-                        <a href="profil_chien.php" class="btn btn-primary"><i
-                                class="fas fa-chevron-right"></i> Voir profil</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
         <?php }?>
     </div>

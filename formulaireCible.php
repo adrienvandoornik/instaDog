@@ -1,5 +1,5 @@
 <?php
-
+/*
 require 'connexion.php';
 $appliBD = new Connexion();
 $utilisateur_Id = 2; // _SESSION["id"];
@@ -11,5 +11,5 @@ $appliBD->insertUtilisateur($_POST["prenom"], $_POST["nom"], $_POST["email"], $_
 
 $appliBD->insertChien($_POST["surnom"], $_POST["nomElevage"], $_POST["age"], $_POST["sexe"], $_POST["race"], $file["image"], $utilisateur_Id);
 
-
+*/
 ?>

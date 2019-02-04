@@ -83,6 +83,7 @@ public function getListeChien($utilisateurId){
     $requete_prepare->execute(array("id"=>$utilisateurId));
 
     $listeChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
+          return $chien;
 
     return $listeChien;
 }
@@ -112,7 +113,7 @@ public function getListeArticle($chienId){
         array(
               'nom'=> $nom,
               'prenom'=> $prenom,
-              'dateConnexion' => $dateConnexion,
+              'dateConnexion' => $dateConnexion,          
               'email' => $email,
               'motDePasse' => $motDePasse,
               'login' => $login
@@ -191,6 +192,22 @@ public function getListeArticle($chienId){
              return $idCommentaire;
 
         }
+
+///Get chienById///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public function getChienById($id){
+          $requete_prepare = $this->connexion->prepare(
+            "SELECT *
+            FROM Chien
+            WHERE id = :id"
+          );
+          $requete_prepare->execute(array("id"=>$id));
+
+          $chien = $requete_prepare->fetchObject("Chien");
+
+          return $chien;
+        }
+
 
 
 

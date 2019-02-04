@@ -16,6 +16,11 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+        <?php require 'connexion.php';
+        $appliBD = new Connexion();
+        $chienById = $appliBD->getChienById(2);
+        ?>
+
 </head>
 
 <body>
@@ -40,9 +45,9 @@
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="image/chien1.jpg" alt="Los Angeles" width="1100" height="400">
+                <img src="<?php echo $chienById->getImage();?>" alt="Los Angeles" width="1100" height="400">
                 <div class="card-img-overlay">
-      <h4 class="card-title mt-5 ml-5"><i class="fas fa-paw"></i> John Doe</h4>
+      <h4 class="card-title mt-5 ml-5"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom(); ?></h4>
                 </div>
             </div>
         </div>
