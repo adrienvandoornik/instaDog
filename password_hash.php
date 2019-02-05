@@ -6,56 +6,41 @@
 // PASSWORD_BCRYPT est utilisée pour créer une nouvelle table de hachage de mot de passe 
 // en utilisant l'algorithme CRYPT_BLOWFISH.
 
-function password_bcrypt() {
-    $pass = 'Mot de passe'&#160;;
-    // On augmente le coût (cost) de l'algorithme le rendant par la même occasion 
-    // plus lent et donc plus dur à « brute-forcer ».
-    $hash = password_hash($pass,PASSWORD_BCRYPT,['cost' => 13])&#160;;
+// méthode 1
+echo password_hash("digital2018", PASSWORD_DEFAULT);
+echo '<br>';
+echo '<br>';
 
-echo password_hash("rasmuslerdorf", PASSWORD_DEFAULT);
+// méthode 2 avec le coût
+$options = ['cost' => 12,];
+echo password_hash("digital2018", PASSWORD_BCRYPT, $options);
+echo '<br>';
+echo '<br>';
 
-////////COMPARER UN MOT DE PASSE ET UN HACHE////////////////////////////////////////////////////////////////////////////////
+// méthode 3 pour obtenir le bon coût avec notre serveur
 
-// Pour déterminer le coût de l'algorithme idéal
-/*
-function getOptimalCost($timeTarget)
-{ 
-    $cost = 9;
-    do {
-        $cost++;
-        $start = microtime(true);
-        password_hash("test", PASSWORD_BCRYPT, ["cost" => $cost]);
-        $end = microtime(true);
-    } while (($end - $start) < $timeTarget);
-    
-    return $cost;
-}; 
+/* 
+$timeTarget = 0.05; // 50 millisecondes
 
-// On choisit en général un temps d'exécution entre 0,1 s et 0,5 s ; 
-// C'est le bon compromis entre sécurité et attente de l'utilisateur.
-echo getOptimalCost(0.3); 
+$cost = 8;
+do {
+    $cost++;
+    $start = microtime(true);
+    password_hash("digital2018", PASSWORD_BCRYPT, ["cost" => $cost]);
+    $end = microtime(true);
+} while (($end - $start) < $timeTarget);
+
+echo "Valeur de 'cost' la plus appropriée : " . $cost;
+*/
 
 //////////VERIFIER UN HACHE////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Vérifie qu'un mot de passe correspond à un hachage
-if(password_verify('ADMIN', '$2a$10$GlvaE1qXuYE6O/ICVtPTeOf3QwE6QNB2quHgqpbK2JKzDYCNnyAL6')) {
-    // valide
-    echo 'OK';
-    // redirection sur la page d'acceuil
-    // header("Location: galeriePhoto.php");
-} else {
-    // invalide
-    echo 'ERREUR';
-    // redirection sur la page se connecter
-    // header("Location: se_connecter.php");
-}
+$hash = '$2y$12$lN4bD4I2fQZj1Gyv7YlWnus6fWH.fN871YiH4Wt6aQye0DuhXSfZa';
 
-// Vérifie qu'un mot de passe correspond à un hachage
-if (password_verify($pass, $hash)) {
-    // Vérifie que le hachage fourni est conforme à l'algorithme et aux options spécifiées
-    if (password_needs_rehash($hash, $algorithm, $options)) {
-        $hash = password_hash($pass, $algorithm, $options);
-    }
+if (password_verify('digital2018', $hash)) {
+    echo 'Le mot de passe est valide !';
+} else {
+    echo 'Le mot de passe est invalide.';
 }
-*/
 ?>
