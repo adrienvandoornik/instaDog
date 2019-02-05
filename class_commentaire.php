@@ -8,7 +8,7 @@ class Commentaire
     // attributs privés
     private $id;
     private $texte;
-    private $date;
+    private $dateCommentaire;
     private $login;
 
     public function __set($name, $value){}
@@ -24,9 +24,9 @@ class Commentaire
         return $this->texte;
     }
 
-    public function getDate()
+    public function getDateCommentaire()
     {
-        return $this->date;
+        return $this->dateCommentaire;
     }
 
     public function getLogin()

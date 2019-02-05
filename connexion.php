@@ -83,7 +83,7 @@ public function getListeChien($utilisateurId){
     $requete_prepare->execute(array("id"=>$utilisateurId));
 
     $listeChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
-        
+
 
     return $listeChien;
 }
@@ -93,7 +93,7 @@ public function getListeChien($utilisateurId){
 
 
 public function getListeArticle($chienId){
-  $requete_prepare =$connexion->prepare(
+  $requete_prepare =$this->connexion->prepare(
     "SELECT * FROM Article WHERE chienId = :id");
 
     $requete_prepare->execute(array("id"=>$chienId));
@@ -176,7 +176,7 @@ public function getListeArticle($chienId){
         public function insertCommentaire($texte, $dateCommentaire, $utilisateurId, $articleId){
 
           $requete_prepare = $this->connexion->prepare("
-          INSERT INTO Article (texte, dateCommentaire, utilisateurId, articleId) values (:texte, :dateCommentaire, :utilisateurId, :articleId)");
+          INSERT INTO Commentaire (texte, dateCommentaire, utilisateurId, articleId) values (:texte, :dateCommentaire, :utilisateurId, :articleId)");
           $requete_prepare->execute(
             array(
                   'texte'=> $texte,
@@ -207,6 +207,40 @@ public function getListeArticle($chienId){
 
           return $chien;
         }
+
+
+///Get Article by id/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+                public function getArticleById($id){
+                  $requete_prepare = $this->connexion->prepare(
+                    "SELECT *
+                    FROM Article
+                    WHERE id = :id"
+                  );
+                  $requete_prepare->execute(array("id"=>$id));
+
+                  $article = $requete_prepare->fetchObject("Article");
+
+                  return $article;
+                }
+
+
+
+///Get Commentaire///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                public function getCommentaire($id){
+                  $requete_prepare = $this->connexion->prepare(
+                    "SELECT *
+                    FROM Commentaire
+                    WHERE id = :id"
+                  );
+                  $requete_prepare->execute(array("id"=>$id));
+
+                  $commentaire = $requete_prepare->fetchObject("Commentaire");
+
+                  return $commentaire;
+                }
+
 
 
 

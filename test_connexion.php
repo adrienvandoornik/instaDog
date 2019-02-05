@@ -39,9 +39,9 @@ echo "<br>";
 /*$chienById = $appliBD->getChienById(2);
 echo $chienById->getSurnom();*/
 
-//$appliBD->insertArticle("image/cachorro.jpeg", "Tuca est un chien tres intelligent et vaillant", "2019-02-06", 2);
+//$appliBD->insertArticle("image/chienArticle.jpeg", "Tuca quand il etais un chiot", "2019-02-06", 2);
 
-
+//$appliBD->insertCommentaire("Il est tout beau", "2019-02-06", 4, 1);
 
 
 ?>

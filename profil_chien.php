@@ -19,6 +19,7 @@
         <?php require 'connexion.php';
         $appliBD = new Connexion();
         $chienById = $appliBD->getChienById(2);
+        $articleById = $appliBD->getListeArticle(2);
         ?>
 
 </head>
@@ -109,17 +110,21 @@
   </div>
 
   <div class="container mb-3">
+    <?php
+    foreach($articleById as $article){
+     ?>
   <div class="d-flex justify-content-center">
  <div class="card mt-1 mb-4" style="width:500px">
  <a href="article.php">
- <img class="card-img-top" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fkimsulli.files.wordpress.com%2F2011%2F06%2Fdog3.jpg&f=1" alt="Lights" style="width:100%" alt="Card image">
+ <img class="card-img-top" src=<?php echo $article->getImage();?> alt="Lights" style="width:100%" alt="Card image">
  </a>
   <div class="card-body">
     <h4 class="card-title"><i class="fas fa-paw"></i> Feioso</h4>
-    <p class="card-text">Some example text some example text. John Doe is an architect and engineer sdsd dffd  wewefefref  gergergerg  ergergerg ergerg gf a we t ree rger  eg</p>
+    <p class="card-text"><?php echo $article->getTexte();?></p>
   </div>
 </div>
 </div>
+<?php }?>
 </div>
 
      <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
