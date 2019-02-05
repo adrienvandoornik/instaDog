@@ -83,7 +83,7 @@ public function getListeChien($utilisateurId){
     $requete_prepare->execute(array("id"=>$utilisateurId));
 
     $listeChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
-          return $chien;
+        
 
     return $listeChien;
 }
@@ -113,7 +113,7 @@ public function getListeArticle($chienId){
         array(
               'nom'=> $nom,
               'prenom'=> $prenom,
-              'dateConnexion' => $dateConnexion,          
+              'dateConnexion' => $dateConnexion,
               'email' => $email,
               'motDePasse' => $motDePasse,
               'login' => $login
