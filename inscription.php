@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <title>InstaDog</title>
@@ -17,6 +17,10 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <!--permet d'utiliser les fonctions de connexion.php-->
+  <?php require('connexion.php');
+  $appliBD = new Connexion();
+  ?>
 </head>
 
 <body>

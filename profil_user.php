@@ -22,8 +22,8 @@
     </script>
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $utilisateur_id = $appliBD->getUtilisateur(4);
-    $listeChien = $appliBD->getListeChien(4);
+    $utilisateur_id = $appliBD->getUtilisateur(1);
+    $listeChien = $appliBD->getListeChien(1);
     ?>
 </head>
 

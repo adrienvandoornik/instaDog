@@ -22,7 +22,7 @@ class Utilisateur {
         return $this->motDePasse;
     }
 
-    public function setMoDePasse($motDePasse){
+    public function setMotDePasse($motDePasse){
        $this->motDePasse = $motDePasse;
     }
 
