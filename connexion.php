@@ -242,6 +242,24 @@ public function getListeArticle($chienId){
                 }
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+                    public function getUtilisateurPassword(){
+                      $requete_prepare = $this->connexion->prepare(
+                      "SELECT motDePasse
+                       FROM Utilisateur"
+
+                            );
+                    $requete_prepare->execute();
+
+                    $resultat = $requete_prepare->fetchObject("Utilisateur");
+
+                     return $resultat;
+
+                      }
+
+
+
 
 
 
