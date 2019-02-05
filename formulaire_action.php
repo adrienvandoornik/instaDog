@@ -10,7 +10,7 @@ $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $dateConnexion = date("Y-m-d H:i:s"); 
 $email = $_POST["email"];
-$motDePasse = $_POST["password"];
+$motDePasse = $_POST["motDePasse"];
 $hash = password_hash($motDePasse, PASSWORD_BCRYPT);
 $login = $_POST["login"];
 
