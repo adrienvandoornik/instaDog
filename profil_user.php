@@ -176,10 +176,11 @@
 
 
     <div class="container">
-      <?php
-      foreach($listeChien as $chien){
-       ?>
+
         <div class="row mb-3">
+          <?php
+          foreach($listeChien as $chien){
+           ?>
             <div class="col-sm-4">
                 <div class="card">
                     <div class="card-body text-center">
@@ -187,8 +188,9 @@
                             height="300">
                         <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
                         <p class="card-text">Place the content here and it will size as per the content only.</p>
-                        <a href="profil_chien.php" class="btn btn-primary"><i
+                       <a href= profil_chien.php?id=<?php echo $chien->getId();?> class="btn btn-primary" ><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>
+
                     </div>
                 </div>
             </div>
