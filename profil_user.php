@@ -173,31 +173,36 @@
 
 
     <!-- ////Liste de Chien//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<?php
+
+echo   ' <div class="container">';
 
 
-    <div class="container">
 
-        <div class="row mb-3">
-          <?php
-          foreach($listeChien as $chien){
-           ?>
-            <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <img class="card-img-top" img src=<?php echo $chien->getImage();?> alt="Card image cap" width="300"
-                            height="300">
-                        <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>
-                        <p class="card-text">Place the content here and it will size as per the content only.</p>
-                       <a href= profil_chien.php?id=<?php echo $chien->getId();?> class="btn btn-primary" ><i
-                                class="fas fa-chevron-right"></i> Voir profil</a>
+echo       ' <div class="row mb-3">';
+  foreach($listeChien as $chien){
+echo            '<div class="col-sm-4">';
 
-                    </div>
-                </div>
-            </div>
+        echo       ' <div class="card">';
+              echo      '<div class="card-body text-center">';
+                  echo      '<img class="card-img-top" src=" '. $chien->getImage() .' " alt="Card image cap" width="300"
+                            height="300">';
+                  echo    '  <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>';
+                  echo    '  <p class="card-text">Place the content here and it will size as per the content only.</p>';
+                        echo '<a href= profil_chien.php?id='. $chien->getId().' class="btn btn-primary" ><i
+                                class="fas fa-chevron-right"></i> Voir profil</a>';
 
-        </div>
-        <?php }?>
-    </div>
+                echo    ' </div>
+                       </div>
+
+                   </div>';
+}
+      echo   ' </div>
+
+        </div>';
+
+    ?>
+
     <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <?php
