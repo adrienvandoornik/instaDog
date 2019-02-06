@@ -62,9 +62,6 @@ public function getUtilisateur($id){
 
 ///Get Chien////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
 public function getListeChien($utilisateurId){
   $requete_prepare =$this->connexion->prepare(
     "SELECT * FROM Chien WHERE utilisateurId = :id");
@@ -79,7 +76,6 @@ public function getListeChien($utilisateurId){
 
 
 ///Get Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 public function getListeArticle($chienId){
   $requete_prepare =$this->connexion->prepare(
@@ -172,9 +168,6 @@ public function getListeArticle($chienId){
                   'dateCommentaire'=> $dateCommentaire,
                   'utilisateurId' => $utilisateurId,
                   'articleId' => $articleId
-
-
-
                 )
             );
              $idCommentaire = $this->connexion->lastInsertId();
@@ -184,71 +177,67 @@ public function getListeArticle($chienId){
 
 ///Get chienById///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public function getChienById($id){
-          $requete_prepare = $this->connexion->prepare(
-            "SELECT *
-            FROM Chien
-            WHERE id = :id"
-          );
-          $requete_prepare->execute(array("id"=>$id));
+public function getChienById($id){
+  $requete_prepare = $this->connexion->prepare(
+    "SELECT *
+    FROM Chien
+    WHERE id = :id"
+  );
+  $requete_prepare->execute(array("id"=>$id));
 
-          $chien = $requete_prepare->fetchObject("Chien");
+  $chien = $requete_prepare->fetchObject("Chien");
 
-          return $chien;
-        }
+  return $chien;
+}
 
 
 ///Get Article by id/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
-                public function getArticleById($id){
-                  $requete_prepare = $this->connexion->prepare(
-                    "SELECT *
-                    FROM Article
-                    WHERE id = :id"
-                  );
-                  $requete_prepare->execute(array("id"=>$id));
+public function getArticleById($id){
+ $requete_prepare = $this->connexion->prepare(
+  "SELECT *
+   FROM Article
+   WHERE id = :id"
+  );
+  $requete_prepare->execute(array("id"=>$id));
 
-                  $article = $requete_prepare->fetchObject("Article");
+  $article = $requete_prepare->fetchObject("Article");
 
-                  return $article;
-                }
-
+  return $article;
+}
 
 
 ///Get Commentaire///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-                public function getCommentaire($id){
-                  $requete_prepare = $this->connexion->prepare(
-                    "SELECT *
-                    FROM Commentaire
-                    WHERE id = :id"
-                  );
-                  $requete_prepare->execute(array("id"=>$id));
+public function getCommentaire($id){
+  $requete_prepare = $this->connexion->prepare(
+    "SELECT *
+    FROM Commentaire
+    WHERE id = :id"
+  );
+  $requete_prepare->execute(array("id"=>$id));
 
-                  $commentaire = $requete_prepare->fetchObject("Commentaire");
+  $commentaire = $requete_prepare->fetchObject("Commentaire");
 
-                  return $commentaire;
-                }
+  return $commentaire;
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
 
+public function rechercheByRace($pattern) {
+  $requete_prepare=$this->connexion->prepare(
+    "SELECT * FROM Chien WHERE race LIKE :race");
 
+    $requete_prepare->execute(array("race"=>"%$pattern%"));
 
-      function rechercheByRace($pattern) {
-          $requete_prepare=$this->connexion->prepare(
-            "SELECT * FROM Chien WHERE race LIKE :race");
-              $requete_prepare->execute(array("race"=>"%$pattern%"));
-
-                  $resultat=$requete_prepare->fetchObject("Chien");
-                    return $resultat;
-
-                                    }
+    $resultat=$requete_prepare->fetchObject("Chien");
+    return $resultat;
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 public function getAllChien(){
@@ -258,22 +247,19 @@ public function getAllChien(){
     $requete_prepare->execute();
 
     $allChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
-
-
     return $allChien;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
 public function getUtilisateurEmail($email){
-                     $requete_prepare = $this->connexion->prepare(
-                     "SELECT *
-                      FROM Utilisateur where email = :email"
+   $requete_prepare = $this->connexion->prepare(
+   "SELECT *
+    FROM Utilisateur where email = :email");
+     $requete_prepare->execute(array("email"=>$email));
 
-                           );
-                   $requete_prepare->execute(array("email"=>$email));
-
-                   $resultat = $requete_prepare->fetchObject("Utilisateur");
-                   return $resultat;
+     $resultat = $requete_prepare->fetchObject("Utilisateur");
+     return $resultat;
 
 }
 

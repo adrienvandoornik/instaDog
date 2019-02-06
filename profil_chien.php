@@ -109,6 +109,9 @@
   </div>
   </div>
 
+
+<!--///Liste Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
   <div class="container mb-3">
     <?php
     foreach($articleById as $article){
@@ -116,10 +119,10 @@
   <div class="d-flex justify-content-center">
  <div class="card mt-1 mb-4" style="width:500px">
  <a href="article.php">
- <img class="card-img-top" src=<?php echo $article->getImage();?> alt="Lights" style="width:100%" alt="Card image">
+ <img class="card-img-top" src=<?php echo $article->getImage();?> alt="Lights" style="width:100%" height="400" alt="Card image">
  </a>
   <div class="card-body">
-    <h4 class="card-title"><i class="fas fa-paw"></i> Feioso</h4>
+    <h4 class="card-title"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom();?></h4>
     <p class="card-text"><?php echo $article->getTexte();?></p>
   </div>
 </div>
@@ -127,7 +130,7 @@
 <?php }?>
 </div>
 
-     <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////Footer/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
      <?php
     include 'footer.php';
 

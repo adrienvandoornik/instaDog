@@ -25,7 +25,7 @@
     $articleById = $appliBD->getArticleById(1);
     $commentaireById = $appliBD->getCommentaire(1);
     $article_Id = $appliBD->getListeArticle(2);
-      $chienById = $appliBD->getChienById(2);
+    $chienById = $appliBD->getChienById(2);
     ?>
 </head>
 
@@ -44,7 +44,7 @@
             <div class="card mt-5"  style="width:750px">
                 <img class="card-img-top"
                     src= <?php echo $articleById->getImage();  ?>
-                    alt="Lights" style="width:100%" height="600" alt="Card image">
+                    alt="Lights" style="width:100%" alt="Card image">
 
                 <div class="card-body">
                     <h4 class="card-title"><i class="fas fa-paw"></i><?php echo $chienById->getSurnom(); ?></h4>

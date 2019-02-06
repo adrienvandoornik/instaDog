@@ -3,7 +3,7 @@
 require 'connexion.php';
 $appliBD = new Connexion();
 
-//Insert Utilisateur////////////////////////////////////////////////////////////////////////////////////////////////////////////7777
+//Insert Utilisateur////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Les variables qui récupèrent les valeurs du formulaire Poster
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
@@ -19,9 +19,18 @@ $id_utilisateur = $appliBD->insertUtilisateur($nom, $prenom, $dateConnexion, $em
 // je redirige sur la page du nouveau profil
 header("Location: profil_user.php?id=$id_utilisateur");
 
+//Insert Chien//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$surnom = $_POST['surnom'];
+$nomElevage = $_POST['nomElevage'];
+$age = $_POST['age'];
+$sexe = $_POST['sexe'];
+$race = $_POST['race'];
+$file = $_File['image'];//IL FAUT ENCORE TOUTES LES FONCTIONS, PAS SUR!!!!!!////////
+$utilisateurId = $_GET['id']//PAS ENCORE SUR!!!!!!!!!!!!!!!!!////////////////////////////
 
 
-
+$appliBD->insertChien($surnom,$nomElevage, $age, $sexe, $race, $file, $utilisateurId);
 
 
 
