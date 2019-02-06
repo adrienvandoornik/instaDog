@@ -45,7 +45,7 @@ include 'header.php';
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
   <div class="container containerForm bg-white mb-3">
-    <form action="formulaireCible.php" method="post" class="needs-validation formPadding" novalidate>
+    <form action="formulaire_action.php" method="post" class="needs-validation formPadding" novalidate>
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationCustom01"><i class="fas fa-user-circle"></i> Prénom</label>
@@ -73,7 +73,7 @@ include 'header.php';
         </div>
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
-          <input type="password" name="password" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="password" name="motDePasse" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
           <div class="valid-feedback">
 
           </div>
@@ -81,7 +81,7 @@ include 'header.php';
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="fas fa-theater-masks"></i> Pseudo</label>
-          <input type="text" name="pseudo" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="text" name="login" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
           <div class="valid-feedback">
 
           </div>

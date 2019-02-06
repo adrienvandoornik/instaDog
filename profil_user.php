@@ -187,7 +187,7 @@ echo            '<div class="col-sm-4">';
               echo      '<div class="card-body text-center">';
                   echo      '<img class="card-img-top" src=" '. $chien->getImage() .' " alt="Card image cap" width="300"
                             height="300">';
-                  echo    '  <h5 class="card-title"><i class="fas fa-paw"></i> Place Title Here</h5>';
+                  echo    '  <h5 class="card-title"><i class="fas fa-paw"></i> '. $chien->getSurnom().'</h5>';
                   echo    '  <p class="card-text">Place the content here and it will size as per the content only.</p>';
                         echo '<a href= profil_chien.php?id='. $chien->getId().' class="btn btn-primary" ><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>';

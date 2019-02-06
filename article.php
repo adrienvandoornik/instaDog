@@ -25,6 +25,7 @@
     $articleById = $appliBD->getArticleById(1);
     $commentaireById = $appliBD->getCommentaire(1);
     $article_Id = $appliBD->getListeArticle(2);
+      $chienById = $appliBD->getChienById(2);
     ?>
 </head>
 
@@ -40,13 +41,13 @@
 
     <div class="container">
         <div class="d-flex justify-content-center">
-            <div class="card mt-5" style="width:750px">
+            <div class="card mt-5"  style="width:750px">
                 <img class="card-img-top"
                     src= <?php echo $articleById->getImage();  ?>
-                    alt="Lights" style="width:100%" alt="Card image">
+                    alt="Lights" style="width:100%" height="600" alt="Card image">
 
                 <div class="card-body">
-                    <h4 class="card-title"><i class="fas fa-paw"></i> Feioso</h4>
+                    <h4 class="card-title"><i class="fas fa-paw"></i><?php echo $chienById->getSurnom(); ?></h4>
                     <p class="card-text"><?php echo $articleById->getTexte(); ?></p>
                 </div>
             </div>
@@ -83,26 +84,25 @@
     </div>
 
     <!-- ///Autres Articles///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<?php
+    echo '<div class="container mb-3">
+        <h3 class="text-center mt-3 text-decoration">Autres Articles</h3>';
 
-    <div class="container mb-3">
-        <h3 class="text-center mt-3 text-decoration">Autres Articles</h3>
-        <div class="d-flex justify-content-center align-items-center">
-
-            <div class="card mt-5 mr-4" style="width:100px">
-              <?php
-              foreach($article_Id as $article){
-               ?>
+        echo'<div class="d-flex justify-content-center align-items-center">';
+            foreach($article_Id as $article){
+          echo'<div class="card mt-5 mr-4" style="width:100px">
                 <img class="card-img-top"
-                     src=<?php echo $article->getImage();?>
-                     alt="Lights" style="width:100%" alt="Card image">
-                <?php }?>
-            </div>
+                     src="'.$article->getImage().'";
+                     alt="Lights" style="width:100%" height="90" alt="Card image">
 
-        </div>
-    </div>
+            </div>';
+          }
+          echo' </div>
+
+  </div>';
 
 
-
+?>
     <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <?php
     include 'footer.php';

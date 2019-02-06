@@ -1,15 +1,35 @@
 <?php
-/*
+
 require 'connexion.php';
 $appliBD = new Connexion();
-$utilisateur_Id = 2; // _SESSION["id"];
-$file["image"] = cachorro;
-//insertUtilisateur///////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
-$appliBD->insertUtilisateur($_POST["prenom"], $_POST["nom"], $_POST["email"], $_POST["password"], $_POST["pseudo"]);
+//Insert Utilisateur////////////////////////////////////////////////////////////////////////////////////////////////////////////7777
+// Les variables qui récupèrent les valeurs du formulaire Poster
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+$dateConnexion = date("Y-m-d");
+$email = $_POST["email"];
+$motDePasse = $_POST["motDePasse"];
+$hash = password_hash($motDePasse, PASSWORD_BCRYPT);
+$login = $_POST["login"];
+
+// j'appelle la base de donnée et les functions pour insérer les données du nouvelle utilisateur
+$id_utilisateur = $appliBD->insertUtilisateur($nom, $prenom, $dateConnexion, $email, $hash, $login);
+
+// je redirige sur la page du nouveau profil
+header("Location: profil_user.php?id=$id_utilisateur");
 
 
-$appliBD->insertChien($_POST["surnom"], $_POST["nomElevage"], $_POST["age"], $_POST["sexe"], $_POST["race"], $file["image"], $utilisateur_Id);
 
-*/
+
+
+
+
+
+
+
+
+
+
+
 ?>

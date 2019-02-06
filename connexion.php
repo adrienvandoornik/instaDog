@@ -62,17 +62,6 @@ public function getUtilisateur($id){
 
 ///Get Chien////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-public function getAllChien(){
-  $requete_prepare = $this->connexion->prepare(
-    "SELECT c.nom, c.image FROM Chien c"
-  );
-  $requete_prepare->execute();
-
-  $resultat=$requete_prepare->fetchObject("Chien");
-
-    return $resultat;
-
-}
 
 
 
@@ -244,24 +233,49 @@ public function getListeArticle($chienId){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
-                    public function getUtilisateurPassword(){
-                      $requete_prepare = $this->connexion->prepare(
-                      "SELECT motDePasse
-                       FROM Utilisateur"
-
-                            );
-                    $requete_prepare->execute();
-
-                    $resultat = $requete_prepare->fetchObject("Utilisateur");
-
-                     return $resultat;
-
-                      }
 
 
 
+      function rechercheByRace($pattern) {
+          $requete_prepare=$this->connexion->prepare(
+            "SELECT * FROM Chien WHERE race LIKE :race");
+              $requete_prepare->execute(array("race"=>"%$pattern%"));
+
+                  $resultat=$requete_prepare->fetchObject("Chien");
+                    return $resultat;
+
+                                    }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+public function getAllChien(){
+  $requete_prepare =$this->connexion->prepare(
+    "SELECT * FROM Chien");
+
+    $requete_prepare->execute();
+
+    $allChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
+
+
+    return $allChien;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+public function getUtilisateurEmail($email){
+                     $requete_prepare = $this->connexion->prepare(
+                     "SELECT *
+                      FROM Utilisateur where email = :email"
+
+                           );
+                   $requete_prepare->execute(array("email"=>$email));
+
+                   $resultat = $requete_prepare->fetchObject("Utilisateur");
+                   return $resultat;
+
+}
 
 
 

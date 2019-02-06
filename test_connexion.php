@@ -4,8 +4,40 @@
 
 require 'connexion.php';
 $appliBD = new Connexion();
-//$utilisateur_Id = 4; // _SESSION["id"];
 
+
+/*
+$toutLesChiens = $appliBD->getAllChien();
+foreach ($toutLesChiens as  $chiens) {
+  echo $chiens->getSurnom();
+}*/
+
+/*
+$hash = $appliBD->getUtilisateurEmail($_POST['email'])->getMotDePasse();
+//echo $hash;
+
+$idProfilHash = $appliBD->getUtilisateurEmail($_POST['email'])->getId();
+//echo $idProfilHash;
+
+if(password_verify($_POST['motDePasse'], $hash)) {
+    header('Location: profil_user.php?id='.$idProfilHash);;
+} else {
+    echo 'ERREUR';
+}*/
+
+
+/*
+$hash = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getMotDePasse();
+//echo $hash;
+
+$idProfilHash = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getId();
+//echo $idProfilHash;
+
+if(password_verify('raul1', $hash)) {
+    header('Location: profil_user.php?id='.$idProfilHash);;
+} else {
+    echo 'ERREUR';
+}*/
 
 
 
