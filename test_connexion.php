@@ -5,6 +5,23 @@
 require 'connexion.php';
 $appliBD = new Connexion();
 
+$utilisateur_id = $appliBD->getUtilisateur($_GET['id']);
+$email = $utilisateur_id->getEmail();
+$motDePasse = $appliBD->getUtilisateurEmail($email)->getMotDePasse();
+
+if(isset($_POST['email']) && isset($_POST['motDePasse'])){
+    if ($email == $_POST['email'] && $motDePasse == $_POST['motDePasse']){
+
+        session_start();
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['motDePasse'] = $_POST['motDePasse'];
+
+        header ('location: profil_user.php');
+    } else {
+        header ('location: se_connecter.php');
+    }
+}
+
 
 /*
 session_start();
@@ -40,15 +57,6 @@ if(password_verify($_POST['motDePasse'], $hash)) {
 
 
 
-$hash = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getMotDePasse();
-echo $hash;
-
-
-$email = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getEmail();
-echo $email;
-
-$idProfilHash = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getId();
-echo $idProfilHash;
 /*
 if(password_verify('raul1', $hash)) {
     header('Location: profil_user.php?id='.$idProfilHash);
