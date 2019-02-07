@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+/*$email = "fresco@mail.com";
+$mdp = "fresco1";
+
+if($email == $_POST['email'] && $mdp == $_POST['motDePasse']){
+  session_start();
+  $_SESSION['email'] = $_POST['email'];
+  $_SESSION['motDePasse'] = $_POST['motDePasse'];
+  header("Location: test_connexion.php");
+}*/
+ ?>
+
 <html lang="en">
 
 <head>
