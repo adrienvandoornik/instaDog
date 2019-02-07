@@ -11,20 +11,20 @@ $nomElevage = $_POST['nomElevage'];
 $age = $_POST['age'];
 $sexe = $_POST['sexe'];
 $race = $_POST['race'];
-$image = $_File['image'];//IL FAUT ENCORE TOUTES LES FONCTIONS, PAS SUR!!!!!!////////
-$utilisateurId = $_GET['id']//PAS ENCORE SUR!!!!!!!!!!!!!!!!!////////////////////////////
+//$image = $_FILES['image'];//IL FAUT ENCORE TOUTES LES FONCTIONS, PAS SUR!!!!!!////////
+$utilisateurId = $_POST['id'];
 
 // On sauvegarde la photo sur le serveur dans le dossier img
 // Chaque photo aura pour nom photo-DDMMYYYYHHmmss.jpeg par exemple ; 
 //  on ajoute un timestamp au nom pour le rendre unique
 $suffixe = date("YmdHis");
-$uploadedFileName = $_FILES["photo-promenade"]["name"];
-$uploadedFile = new SplFileInfo($uploadedFileName);
-$fileExtension = $uploadedFile->getExtension(); // il faut encore fonction getExtension
+$image = $_FILES["image"]["name"];
+$uploadedFile = new SplFileInfo($image);
+$fileExtension = $uploadedFile->getExtension(); 
 $destinationFolder = $_SERVER['DOCUMENT_ROOT']."/projets/instaDog/";
-$destinationName = "image/photo-".$suffixe.".".$fileExtension;
+$destinationName = "image/photo-chien".$suffixe.".".$fileExtension;
 
-if(move_uploaded_file($_FILES["photo-promenade"]["tmp_name"], $destinationFolder.$destinationName)){
+if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$destinationName)){
     echo "<br/> fichier enregistré avec succes";
 }
 
