@@ -3,7 +3,7 @@
 
  require_once("connexion.php");
 // connexion à la base de donnée
-$appliDB = new Connexion();
+$appliBD = new Connexion();
 
 // Les variables qui récupèrent les valeurs du formulaire Poster
 $nom = $_POST['nom'];
