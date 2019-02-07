@@ -46,18 +46,18 @@ include 'header.php';
 
 ?>
   <div class="container bg-white mb-3">
-  <form name="formulaire" action="mot_de_passe_securisee.php" method="post" class="needs-validation bg-white formPadding" novalidate>
+  <form action="formulaire_action_connexion.php" method="post" class="needs-validation bg-white formPadding" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom01"><i class="far fa-envelope"></i> Email</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="Entrer votre email ici" value="" required>
+        <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="Entrer votre email ici" value="" required>
         <div class="valid-feedback">
 
         </div>
       </div>
       <div class="col-md-6 mb-3">
         <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
-        <input type="password" class="form-control" id="validationCustom02" placeholder="Entrer votre mot de passe ici" value="" required>
+        <input type="password" name="motDePasse" class="form-control" id="validationCustom02" placeholder="Entrer votre mot de passe ici" value="" required>
         <div class="valid-feedback">
 
         </div>

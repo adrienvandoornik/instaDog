@@ -7,6 +7,19 @@ $appliBD = new Connexion();
 
 
 /*
+session_start();
+
+$_SESSION['email'] = "raul_seixas@gmail.com";
+$_SESSION['motDePasse'] = "raul1";
+
+echo $_SESSION['email'];
+echo <a href="formulaire_action_user.php">link</a>
+
+require 'connexion.php';
+$appliBD = new Connexion();*/
+
+
+/*
 $toutLesChiens = $appliBD->getAllChien();
 foreach ($toutLesChiens as  $chiens) {
   echo $chiens->getSurnom();
@@ -26,18 +39,23 @@ if(password_verify($_POST['motDePasse'], $hash)) {
 }*/
 
 
-/*
+
 $hash = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getMotDePasse();
-//echo $hash;
+echo $hash;
+
+
+$email = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getEmail();
+echo $email;
 
 $idProfilHash = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getId();
-//echo $idProfilHash;
-
+echo $idProfilHash;
+/*
 if(password_verify('raul1', $hash)) {
     header('Location: profil_user.php?id='.$idProfilHash);
 } else {
     echo 'ERREUR';
 }*/
+
 
 
 
@@ -78,7 +96,8 @@ echo $chienById->getSurnom();*/
 
 
 // On démarre la session (ceci est indispensable dans toutes les pages de notre section membre)
-session_start ();
+/*session_start ();
+
 
 // On récupère nos variables de session
 if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
@@ -90,7 +109,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
   echo '</head>';
 
   echo '<body>';
-  echo 'Votre login est '.$_SESSION['email'].' et votre mot de passe est '.$_SESSION['motDePasse'].'.';
+  echo 'Votre email est '.$_SESSION['email'].' et votre mot de passe est '.$_SESSION['motDePasse'].'.';
   echo '<br />';
 
   // On affiche un lien pour fermer notre session
@@ -98,7 +117,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
 }
 else {
   echo 'Les variables ne sont pas déclarées.';
-}
+}*/
 
 
 
