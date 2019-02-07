@@ -38,7 +38,7 @@
 
      <!--  ///Text Profil////////////////////////////////////////////////////////////////////////////////////////////////7 -->
      <div class="jumbotron text-center pt-5 pb-5">
-        <h2 class="title" style="font-size:3vw;">NOM DU CHIEN</h2>
+        <h2 class="title" style="font-size:3vw;"><?php echo $chienById->getSurnom(); ?></h2>
         <h6><i class="fas fa-paw"></i> Profil de mon chien</h6>
     </div>
 

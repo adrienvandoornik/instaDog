@@ -40,7 +40,7 @@
     <!-- ///Donnees du User////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <div class="jumbotron text-center pt-5 pb-5">
-        <h2 class="title" style="font-size:3vw;">PRENOM + NOM</h2>
+        <h2 class="title" style="font-size:3vw;"><?php echo $utilisateur_id->getPrenom(); ?> <?php echo $utilisateur_id->getNom(); ?></h2>
         <h6><span aria-hidden="true"></span><i class="fas fa-user-circle"></i> Mon Profil Utilisateur</h6>
     </div>
 
@@ -111,39 +111,39 @@
         <div class="collapse" id="collapseExample">
             <div class="card card-body">
                 <div class="row">
-                    <form method="post" action="page.php" enctype="multipart/form-data" class="needs-validation formPadding" novalidate >
+                    <form method="post" action="formulaire_action_dog.php" enctype="multipart/form-data" class="needs-validation formPadding" novalidate >
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01"><i class="far fa-user-circle"></i> Surnom</label>
-                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+                                <input type="text" name="surnom" class="form-control" id="validationCustom01" placeholder="First name"
                                     value="Mark" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-dog"></i> Nom de l'élevage</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+                                <input type="text" name="nomElevage" class="form-control" id="validationCustom02" placeholder="Last name"
                                     value="Otto" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01"><i class="far fa-clock"></i> Âge</label>
-                                <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+                                <input type="text" name="age" class="form-control" id="validationCustom01" placeholder="First name"
                                     value="Mark" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-venus"></i> Sexe</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+                                <input type="text" name="sexe" class="form-control" id="validationCustom02" placeholder="Last name"
                                     value="Otto" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-dog"></i> Race</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+                                <input type="text" name="race" class="form-control" id="validationCustom02" placeholder="Last name"
                                     value="Otto" required>
                                 <div class="valid-feedback">
                                 </div>
@@ -151,7 +151,7 @@
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
                                  <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                                 <input type="file" name="file" class="form-control-file border" />
+                                 <input type="file" name="image" class="form-control-file border" />
                                 <div class="valid-feedback">
                                 </div>
                             </div>
@@ -188,7 +188,7 @@ echo            '<div class="col-sm-4">';
                   echo      '<img class="card-img-top" src=" '. $chien->getImage() .' " alt="Card image cap" width="300"
                             height="300">';
                   echo    '  <h5 class="card-title"><i class="fas fa-paw"></i> '. $chien->getSurnom().'</h5>';
-                  echo    '  <p class="card-text">Place the content here and it will size as per the content only.</p>';
+                  echo    '  <p class="card-text">'. $chien->getRace().'</p>';
                         echo '<a href= profil_chien.php?id='. $chien->getId().' class="btn btn-primary" ><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>';
 
