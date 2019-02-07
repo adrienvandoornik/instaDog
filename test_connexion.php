@@ -34,7 +34,7 @@ $idProfilHash = $appliBD->getUtilisateurEmail("raul_seixas@gmail.com")->getId();
 //echo $idProfilHash;
 
 if(password_verify('raul1', $hash)) {
-    header('Location: profil_user.php?id='.$idProfilHash);;
+    header('Location: profil_user.php?id='.$idProfilHash);
 } else {
     echo 'ERREUR';
 }*/
