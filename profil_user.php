@@ -114,6 +114,7 @@
         <div class="collapse" id="collapseExample">
             <div class="card card-body">
                 <div class="row">
+                    
                     <form method="post" action="formulaire_action_dog.php" enctype="multipart/form-data" class="needs-validation formPadding" novalidate >
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
@@ -164,8 +165,7 @@
 
                 <div class=" row justify-content-center mt-3">
                 <div class="col-md-6 mb-3">
-                    <button type="button" class="btn btn-primary btn-block"><i class="far fa-plus-square"></i> Ajouter
-                        un chien</button>
+                    <button class="btn btn-primary btn-block"><i class="far fa-plus-square"></i> Ajouter un chien</button>
                 </div>
                 </div>
                 </form>

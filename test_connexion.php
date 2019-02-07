@@ -83,7 +83,7 @@ echo "<br>";
 
 //$appliBD->insertChien($_POST["surnom"], $_POST["nomElevage"], $_POST["age"], $_POST["sexe"], $_POST["race"], $file["image"], $utilisateur_Id);
 
- //$appliBD->insertChien("Rocky", "rocky2", "1991-07-07", "Male", "Labrador", "image/photochienTESTE.jpeg", 4);
+$appliBD->insertChien("Rocky", "rocky2", "1991-07-07", "Male", "Labrador", "image/photochienTESTE.jpeg", 4);
 
 
 /*$chienById = $appliBD->getChienById(2);

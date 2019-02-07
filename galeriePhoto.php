@@ -18,173 +18,36 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <?php require 'connexion.php';
-        $appliBD = new Connexion();
-        $AllChien = $appliBD->getAllChien();
-        ?>
+    $appliBD = new Connexion();
+    $AllChien = $appliBD->getAllChien();
+    ?>
 </head>
 
 <body>
   <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <?php
-
 include 'header.php';
-?>
 
-<!--
-////Galerie de Photo////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<?php
-  echo '<div class="row no-gutters">';
-  foreach($AllChien as $chien){ // A completer indentation
-        echo'<div class="col-md-4 col-lg-4">';
-        echo'<a href= profil_chien.php?id='. $chien->getId().'>';
-            echo'<div class="square" style="background-image: url('. $chien->getImage().')">';
-               echo'<div class="card-img-overlay">';
-                    echo'<h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i>'. $chien->getSurnom().'</p>';
-               echo'</div>';
-            echo'</div>';
-        echo'</a>';
-     echo'</div>';
-  echo'</div>'; 
-?>
+//Galerie de Photo/////////////////////////////////////////////////////////////////
 
-///// reste en commentaire en attendant de finir la boucle foreach
+echo '<div class="row no-gutters">';
+foreach ($AllChien as $chien) { // A completer indentation
+    echo '<div class="col-md-4 col-lg-4">';
+    echo '<a href= profil_chien.php?id=' . $chien->getId() . '>';
+    echo '<div class="square" style="background-image: url(' . $chien->getImage() . ')">';
+    echo '<div class="card-img-overlay">';
+    echo '<h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i>' . $chien->getSurnom() . '</p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</a>';
+    echo '</div>';
+};
+echo '</div>';
 
-     <!-- <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien2.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Rocky</p>
-                </div>
-            </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien3.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Nougat</p>
-                </div>
-            </div>
-        </a>
-      </div>
-  </div>
-
-  <div class="row no-gutters">
-        <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien4.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Charly</p>
-                </div>
-            </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien5.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
-                </div>
-            </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien1.png')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Tango</p>
-                </div>
-            </div>
-        </a>
-      </div>
-  </div>
-
-  <div class="row no-gutters">
-        <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien2.png')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
-                </div>
-            </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien6.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
-                </div>
-            </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien4.png')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
-                </div>
-            </div>
-        </a>
-      </div>
-  </div>
-
-  <div class="row no-gutters">
-        <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien7.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
-                </div>
-            </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien2.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
-                </div>
-            </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien4.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> John Doe</p>
-                </div>
-            </div>
-        </a>
-      </div>
-  </div> -->
-
- 
-
-
-  
-  <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <?php
+/////Footer//////////////////////////////////////////////////////////////////////////////////////////////////////////
     include 'footer.php';
-
     ?>
-
-
-
-  <!-- ///Scrip JavaScript//////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-
-  <!-- Bootstrap Js CDN -->
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </body>
 </html>
