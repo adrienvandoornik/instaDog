@@ -116,17 +116,17 @@
     <?php
     foreach($articleById as $article){
      ?>
-  <div class="d-flex justify-content-center">
- <div class="card mt-1 mb-4" style="width:500px">
- <a href="article.php">
- <img class="card-img-top" src=<?php echo $article->getImage();?> alt="Lights" style="width:100%" height="400" alt="Card image">
- </a>
-  <div class="card-body">
-    <h4 class="card-title"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom();?></h4>
-    <p class="card-text"><?php echo $article->getTexte();?></p>
-  </div>
-</div>
-</div>
+     <div class="d-flex justify-content-center">
+      <div class="card mt-1 mb-4" style="width:500px">
+         <a href="article.php">
+           <img class="card-img-top" src=<?php echo $article->getImage();?> alt="Lights" style="width:100%" height="350" alt="Card image">
+         </a>
+       <div class="card-body">
+         <h4 class="card-title"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom();?></h4>
+         <p class="card-text"><?php echo $article->getTexte();?></p>
+     </div>
+     </div>
+    </div>
 <?php }?>
 </div>
 
