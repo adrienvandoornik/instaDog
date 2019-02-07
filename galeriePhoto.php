@@ -16,6 +16,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <?php require 'connexion.php';
+        $appliBD = new Connexion();
+        $AllChien = $appliBD->getAllChien();
+        ?>
 </head>
 
 <body>
@@ -28,20 +33,24 @@ include 'header.php';
 
 <!--
 ////Galerie de Photo////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<?php
+  echo '<div class="row no-gutters">';
+  foreach($AllChien as $chien){ // A completer indentation
+        echo'<div class="col-md-4 col-lg-4">';
+        echo'<a href= profil_chien.php?id='. $chien->getId().'>';
+            echo'<div class="square" style="background-image: url('. $chien->getImage().')">';
+               echo'<div class="card-img-overlay">';
+                    echo'<h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i>'. $chien->getSurnom().'</p>';
+               echo'</div>';
+            echo'</div>';
+        echo'</a>';
+     echo'</div>';
+  echo'</div>'; 
+?>
 
-<div >
-  <div class="row no-gutters">
-        <div class="col-md-4 col-lg-4">
-        <a href="profil_chien.php">
-            <div class="square" style="background-image: url('image/chien1.jpg')">
-                <div class="card-img-overlay">
-                    <h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> Pepito</p>
-                </div>
-            </div>
-        </a>
-      </div>
+///// reste en commentaire en attendant de finir la boucle foreach
 
-      <div class="col-md-4 col-lg-4">
+     <!-- <div class="col-md-4 col-lg-4">
         <a href="profil_chien.php">
             <div class="square" style="background-image: url('image/chien2.jpg')">
                 <div class="card-img-overlay">
@@ -156,9 +165,9 @@ include 'header.php';
             </div>
         </a>
       </div>
-  </div>
+  </div> -->
 
-</div>  
+ 
 
 
   
