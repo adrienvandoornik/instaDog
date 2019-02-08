@@ -11,8 +11,8 @@ $nomElevage = $_POST['nomElevage'];
 $age = $_POST['age'];
 $sexe = $_POST['sexe'];
 $race = $_POST['race'];
-//$image = $_FILES['image'];//IL FAUT ENCORE TOUTES LES FONCTIONS, PAS SUR!!!!!!////////
-$utilisateurId = $_POST['id'];
+
+$utilisateurId = $_POST['id']; // Il manque pour récupérer l'Id de l'utilisateur
 
 // On sauvegarde la photo sur le serveur dans le dossier img
 // Chaque photo aura pour nom photo-DDMMYYYYHHmmss.jpeg par exemple ; 
@@ -22,14 +22,14 @@ $image = $_FILES["image"]["name"];
 $uploadedFile = new SplFileInfo($image);
 $fileExtension = $uploadedFile->getExtension(); 
 $destinationFolder = $_SERVER['DOCUMENT_ROOT']."/projets/instaDog/";
-$destinationName = "image/photo-chien".$suffixe.".".$fileExtension;
+$imageDestinationName = "image/photo-chien".$suffixe.".".$fileExtension;
 
-if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$destinationName)){
+if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$imageDestinationName)){
     echo "<br/> fichier enregistré avec succes";
 }
 
 // j'appelle la base de donnée et les functions pour insérer les données du nouveau chien
-$appliBD->insertChien($surnom, $nomElevage, $age, $sexe, $race, $image, $utilisateurId);
+$appliBD->insertChien($surnom, $nomElevage, $age, $sexe, $race, $imageDestinationName, $utilisateurId);
 
 // je redirige sur la page du nouveau profil
 header("Location: profil_user.php?id='.$utilisateurId");
