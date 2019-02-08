@@ -83,7 +83,7 @@
                                 <div class="form-row">
                                   <div class="form-group col-md-7">
                                       <label for="commentaire"><i class="fas fa-comment-medical"></i> Commentaire</label>
-                                      <textarea class="form-control" rows="5" id="commentaire" name="commentaire" placeholder="Entrer un texte"
+                                      <textarea class="form-control" rows="5" id="commentaire" type="text" name="texte" placeholder="Entrer un texte"
                                     value="" required></textarea>
                                   </div>
                                     <div class="col-md-5 mb-3 sm-6">
