@@ -1,6 +1,6 @@
 <?php
 /////// FORMULAIRE INSCRIPTION INSTADOG/////////////////////////////////////////////////////////////////////////////////////
-/*
+
  require_once("connexion.php");
 // connexion à la base de donnée
 $appliBD = new Connexion();
@@ -19,5 +19,5 @@ $id_utilisateur = $appliBD->insertUtilisateur($nom, $prenom, $dateConnexion, $em
 
 // je redirige sur la page du nouveau profil
 header("Location: profil_user.php?id='.$id_utilisateur");
-*/
+
 ?>

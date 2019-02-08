@@ -79,8 +79,8 @@
     <div class="container mt-3">
         <form action="/action_page.php">
             <div class="form-group">
-                <label for="comment"><i class="fas fa-comment-medical"></i> Comment:</label>
-                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                <label for="commentaire"><i class="fas fa-comment-medical"></i> Comment:</label>
+                <textarea class="form-control" rows="5" id="commentaire" name="texte" placeholder="Entrer un commentaire" value="" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary"><i class="fas fa-comment-medical"></i> Submit</button>
         </form>

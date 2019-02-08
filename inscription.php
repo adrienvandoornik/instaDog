@@ -48,7 +48,7 @@ include 'header.php';
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationCustom01"><i class="fas fa-user-circle"></i> Prénom</label>
-          <input type="text" name="prenom" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
+          <input type="text" name="prenom" class="form-control" id="validationCustom01" placeholder="Entrer un prénom" value=""
             required>
           <div class="valid-feedback">
 
@@ -56,7 +56,7 @@ include 'header.php';
         </div>
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="far fa-user-circle"></i> Nom</label>
-          <input type="text" name="nom" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="text" name="nom" class="form-control" id="validationCustom02" placeholder="Entrer un nom" value="" required>
           <div class="valid-feedback">
 
           </div>
@@ -64,7 +64,7 @@ include 'header.php';
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom01"><i class="fas fa-envelope"></i> Email</label>
-          <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="First name" value="Mark"
+          <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="Entrer un email" value=""
             required>
           <div class="valid-feedback">
 
@@ -72,7 +72,7 @@ include 'header.php';
         </div>
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
-          <input type="password" name="motDePasse" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="password" name="motDePasse" class="form-control" id="validationCustom02" placeholder="Entrer un mot de passe" value="" required>
           <div class="valid-feedback">
 
           </div>
@@ -80,7 +80,7 @@ include 'header.php';
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="fas fa-theater-masks"></i> Pseudo</label>
-          <input type="text" name="login" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+          <input type="text" name="login" class="form-control" id="validationCustom02" placeholder="Entrer un pseudonyme" value="" required>
           <div class="valid-feedback">
 
           </div>
