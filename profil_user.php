@@ -33,8 +33,8 @@ if (isset($_SESSION['id'])){
     </script>
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $utilisateur_id = $appliBD->getUtilisateur(9);//($_GET['id']);
-    $listeChien = $appliBD->getListeChien(9);//($_GET['id']);
+    $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);
+    $listeChien = $appliBD->getListeChien($_GET['id']);
     ?>
 </head>
 

@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if (isset($_SESSION['id'])){
+
+}else {
+    header ('location: se_connecter.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
