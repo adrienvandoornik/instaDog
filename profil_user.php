@@ -1,7 +1,15 @@
+<?php
+
+session_start();
+if (isset($_SESSION['id'])){
+
+}else {
+    header ('location: se_connecter.php');
+}
+
+ ?>
+
 <!DOCTYPE html>
-
-
-
 <html lang="fr">
 
 <head>
@@ -25,8 +33,8 @@
     </script>
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $utilisateur_id = $appliBD->getUtilisateur(4);//($_GET['id']);
-    $listeChien = $appliBD->getListeChien(4);
+    $utilisateur_id = $appliBD->getUtilisateur(9);//($_GET['id']);
+    $listeChien = $appliBD->getListeChien(9);//($_GET['id']);
     ?>
 </head>
 
@@ -114,7 +122,7 @@
         <div class="collapse" id="collapseExample">
             <div class="card card-body">
                 <div class="row">
-                    
+
                     <form method="post" action="formulaire_action_dog.php" enctype="multipart/form-data" class="needs-validation formPadding" novalidate >
                         <div class="form-row">
                             <div class="col-md-6 mb-3">

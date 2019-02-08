@@ -88,6 +88,20 @@ public function getListeArticle($chienId){
     return   $listeArticle;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+public function getListeCommentaire($articleId){
+  $requete_prepare =$this->connexion->prepare(
+    "SELECT * FROM Commentaire WHERE articleId = :id");
+
+    $requete_prepare->execute(array("id"=>$articleId));
+
+    $listeCommentaire = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Commentaire');
+
+    return   $listeCommentaire;
+}
+
 ///Function Insert Utilisateur/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public function insertUtilisateur($nom,$prenom,$dateConnexion, $email, $motDePasse, $login){

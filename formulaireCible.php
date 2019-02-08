@@ -20,7 +20,7 @@ $id_utilisateur = $appliBD->insertUtilisateur($nom, $prenom, $dateConnexion, $em
 header("Location: profil_user.php?id=$id_utilisateur");
 
 //Insert Chien//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/*
 $surnom = $_POST['surnom'];
 $nomElevage = $_POST['nomElevage'];
 $age = $_POST['age'];
@@ -34,7 +34,23 @@ $appliBD->insertChien($surnom,$nomElevage, $age, $sexe, $race, $file, $utilisate
 
 
 
+$email = $_POST['email'];
 
+$motDePasse = $_POST['motDePasse'];
+
+$hash = $appliBD->getUtilisateurEmail($email)->getMotDePasse();
+
+$email = $appliBD->getUtilisateurEmail($email)->getEmail();
+
+$idProfilHash = $appliBD->getUtilisateurEmail($email)->getId();
+
+if(password_verify($motDePasse, $hash)) {
+    header('Location: profil_user.php?id='.$idProfilHash);
+} else {
+      header('Location: se_connecter.php');
+}
+
+*/
 
 
 
