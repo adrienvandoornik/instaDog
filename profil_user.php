@@ -119,36 +119,36 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01"><i class="far fa-user-circle"></i> Surnom</label>
-                                <input type="text" name="surnom" class="form-control" id="validationCustom01" placeholder="First name"
-                                    value="Mark" required>
+                                <input type="text" name="surnom" class="form-control" id="validationCustom01" placeholder="Entrer un surnom"
+                                    value="" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-dog"></i> Nom de l'élevage</label>
-                                <input type="text" name="nomElevage" class="form-control" id="validationCustom02" placeholder="Last name"
-                                    value="Otto" required>
+                                <input type="text" name="nomElevage" class="form-control" id="validationCustom02" placeholder="Entrer un nom d'élevage"
+                                    value="" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01"><i class="far fa-clock"></i> Âge</label>
-                                <input type="text" name="age" class="form-control" id="validationCustom01" placeholder="First name"
-                                    value="Mark" required>
+                                <input type="text" name="age" class="form-control" id="validationCustom01" placeholder="Entrer un âge"
+                                    value="" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-venus"></i> Sexe</label>
-                                <input type="text" name="sexe" class="form-control" id="validationCustom02" placeholder="Last name"
-                                    value="Otto" required>
+                                <input type="text" name="sexe" class="form-control" id="validationCustom02" placeholder="Mâle ou Femelle?"
+                                    value="" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-dog"></i> Race</label>
-                                <input type="text" name="race" class="form-control" id="validationCustom02" placeholder="Last name"
-                                    value="Otto" required>
+                                <input type="text" name="race" class="form-control" id="validationCustom02" placeholder="Entrer une race"
+                                    value="" required>
                                 <div class="valid-feedback">
                                 </div>
                             </div>

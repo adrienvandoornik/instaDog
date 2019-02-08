@@ -79,16 +79,17 @@
 <div class="collapse" id="footwear" style="width: 50rem;">
                     <div class="card card-body">
                         <div class="row d-flex justify-content-around">
-                            <form class="needs-validation formPadding" novalidate>
+                        <form method="post" action="formulaire_action_article.php" enctype="multipart/form-data" class="needs-validation formPadding" novalidate >
                                 <div class="form-row">
                                   <div class="form-group col-md-7">
-                                      <label for="comment"><i class="fas fa-comment-medical"></i> Comment:</label>
-                                      <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                                      <label for="commentaire"><i class="fas fa-comment-medical"></i> Commentaire</label>
+                                      <textarea class="form-control" rows="5" id="commentaire" name="commentaire" placeholder="Entrer un texte"
+                                    value="" required></textarea>
                                   </div>
                                     <div class="col-md-5 mb-3 sm-6">
                                       <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
                                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-                                       <input type="file" name="file" class="form-control-file border" />
+                                        <input type="file" name="image" class="form-control-file border" />
                                       <div class="valid-feedback">
                                       </div>
                                     </div>

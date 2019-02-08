@@ -50,14 +50,14 @@ include 'header.php';
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom01"><i class="far fa-envelope"></i> Email</label>
-        <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="Entrer votre email ici" value="" required>
+        <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="Entrer un email" value="" required>
         <div class="valid-feedback">
 
         </div>
       </div>
       <div class="col-md-6 mb-3">
         <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
-        <input type="password" name="motDePasse" class="form-control" id="validationCustom02" placeholder="Entrer votre mot de passe ici" value="" required>
+        <input type="password" name="motDePasse" class="form-control" id="validationCustom02" placeholder="Entrer un mot de passe" value="" required>
         <div class="valid-feedback">
 
         </div>
