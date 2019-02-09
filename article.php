@@ -88,7 +88,7 @@ if (isset($_SESSION['id'])){
 <!--///Inserer Commentaires///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <div class="container mt-3">
-        <form action="/action_page.php">
+        <form  action="formulaire_action_commentaire.php" method="post" class="needs-validation formPadding" novalidate>
             <div class="form-group">
                 <label for="commentaire"><i class="fas fa-comment-medical"></i> Comment:</label>
                 <textarea class="form-control" rows="5" id="commentaire" name="texte" placeholder="Entrer un commentaire" value="" required></textarea>
