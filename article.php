@@ -34,7 +34,7 @@ if (isset($_SESSION['id'])){
     $appliBD = new Connexion();
     $article = $appliBD->getArticleById(1);
     $commentaire = $appliBD->getListeCommentaire(1);
-
+    
     $article_Id = $appliBD->getListeArticle(2);
 
     ?>

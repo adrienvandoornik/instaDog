@@ -19,40 +19,6 @@ $id_utilisateur = $appliBD->insertUtilisateur($nom, $prenom, $dateConnexion, $em
 // je redirige sur la page du nouveau profil
 header("Location: profil_user.php?id=$id_utilisateur");
 
-//Insert Chien//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*
-$surnom = $_POST['surnom'];
-$nomElevage = $_POST['nomElevage'];
-$age = $_POST['age'];
-$sexe = $_POST['sexe'];
-$race = $_POST['race'];
-$file = $_File['image'];//IL FAUT ENCORE TOUTES LES FONCTIONS, PAS SUR!!!!!!////////
-$utilisateurId = $_GET['id']//PAS ENCORE SUR!!!!!!!!!!!!!!!!!////////////////////////////
-
-
-$appliBD->insertChien($surnom,$nomElevage, $age, $sexe, $race, $file, $utilisateurId);
-
-
-
-$email = $_POST['email'];
-
-$motDePasse = $_POST['motDePasse'];
-
-$hash = $appliBD->getUtilisateurEmail($email)->getMotDePasse();
-
-$email = $appliBD->getUtilisateurEmail($email)->getEmail();
-
-$idProfilHash = $appliBD->getUtilisateurEmail($email)->getId();
-
-if(password_verify($motDePasse, $hash)) {
-    header('Location: profil_user.php?id='.$idProfilHash);
-} else {
-      header('Location: se_connecter.php');
-}
-
-*/
-
-
 
 
 
