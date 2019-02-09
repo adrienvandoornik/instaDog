@@ -246,7 +246,7 @@ public function rechercheByRace($pattern) {
 
     $requete_prepare->execute(array("race"=>"%$pattern%"));
 
-    $resultat=$requete_prepare->fetchObject("Chien");
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
     return $resultat;
 }
 
