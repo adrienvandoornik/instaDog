@@ -34,8 +34,8 @@
           <i class="fas fa-plus-circle"></i> Ajouter Chien</button>
         </a>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Race" aria-label="Search">
+      <form action="galeriePhoto.php" method="post" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="recherche" type="search" placeholder="Race" aria-label="Search">
         <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
       </form>
     </div>
