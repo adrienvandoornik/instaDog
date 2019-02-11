@@ -34,8 +34,9 @@
           <i class="fas fa-plus-circle"></i> Ajouter Chien</button>
         </a>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Race" aria-label="Search">
+      <form action="galeriePhoto.php" method="GET" class="form-inline my-2 my-lg-0">
+        <!-- Dans value il charge si il y a quelque chose de set dans le GET q et l'affiche dans la barre de recherche  -->
+        <input class="form-control mr-sm-2" type="text" name="q"  value="<?php if (isset($_GET['q'])) echo $_GET['q']; ?>" placeholder="Chercher une chien...">
         <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
       </form>
     </div>

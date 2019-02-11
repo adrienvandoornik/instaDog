@@ -6,12 +6,8 @@ include 'class_chien.php';
 include 'class_article.php';
 include 'class_commentaire.php';
 
-
-
-
 class Connexion {
     private $connexion;
-
 
     public function __construct() {
         $PARAM_hote= 'localhost';
@@ -37,11 +33,6 @@ class Connexion {
         return $this->connexion;
     }
 
-
-
-
-
-
 ///////////Get Utilisateur/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 public function getUtilisateur($id){
@@ -56,9 +47,6 @@ public function getUtilisateur($id){
 
   return $utilisateur;
 }
-
-
-
 
 ///Get Chien////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -250,6 +238,21 @@ public function getAllChien(){
     return $allChien;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    function getChienBySurnomRaceLike($pattern)
+    {
+        $requete_prepare = $this->connexion->prepare(
+            // requete sql
+            "SELECT * FROM Chien 
+            WHERE surnom LIKE :surnom
+            OR race LIKE :race"
+        );
+        $requete_prepare->execute(array("surnom" => "%$pattern%", "race" => "%$pattern%"));
+        $allChien = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
+        return $allChien;
+    }
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
 public function getUtilisateurEmail($email){
@@ -262,12 +265,6 @@ public function getUtilisateurEmail($email){
      return $resultat;
 
 }
-
-
-
-
-
-
 
 }// Fin de la class Connexion
 

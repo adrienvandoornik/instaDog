@@ -19,7 +19,14 @@
 
     <?php require 'connexion.php';
     $appliBD = new Connexion();
+     // Si je récupère des valeurs dans le GET q alors
+  if (isset($_GET["q"])) { 
+    // la je fais la recherche
+    $AllChien = $appliBD->getChienBySurnomRaceLike($_GET["q"]);
+  } else {
+    // sinon je réaffiche toutes les personnes
     $AllChien = $appliBD->getAllChien();
+  }
     ?>
 </head>
 
@@ -37,7 +44,7 @@ foreach ($AllChien as $chien) { // A completer indentation
     echo '<a href= profil_chien.php?id=' . $chien->getId() . '>';
     echo '<div class="square" style="background-image: url(' . $chien->getImage() . ')">';
     echo '<div class="card-img-overlay">';
-    echo '<h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i>' . $chien->getSurnom() . '</p>';
+    echo '<h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i> ' . $chien->getSurnom() . '</p>';
     echo '</div>';
     echo '</div>';
     echo '</a>';
