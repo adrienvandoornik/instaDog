@@ -24,7 +24,7 @@
     // la je fais la recherche
     $AllChien = $appliBD->getChienBySurnomRaceLike($_GET["q"]);
   } else {
-    // sinon je réaffiche toutes les personnes
+    // sinon je réaffiche toutes les chiens
     $AllChien = $appliBD->getAllChien();
   }
     ?>
