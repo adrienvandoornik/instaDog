@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <title>INSTADOG - Communauté de chiens</title>
     <meta charset="utf-8">
@@ -21,87 +20,57 @@
         $chienById = $appliBD->getChienById(2);
         $articleById = $appliBD->getListeArticle(2);
         ?>
-
 </head>
-
 <body>
-
   <!-- ////HEADER//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
   <?php
-
     include 'header.php';
-    ?>
-
-
-
+  ?>
      <!--  ///Text Profil////////////////////////////////////////////////////////////////////////////////////////////////7 -->
      <div class="jumbotron text-center pt-5 pb-5">
         <h2 class="title" style="font-size:3vw;"><?php echo $chienById->getSurnom(); ?></h2>
         <h6><i class="fas fa-paw"></i> Profil de mon chien</h6>
     </div>
-
     <div id="demo" class="carousel slide" data-ride="carousel">
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="<?php echo $chienById->getImage();?>" alt="Photo profil chien" width="1100" height="400">
-                <div class="carousel-caption text-left">
+                <div class="carousel-caption text-center">
                     <div class="container-fluid">
-                        <div class="row">
-                          <p>Caractéristique</p>
-                            <div class="col-sm-4">
-                                <ul class="list-group">
-                                    <li class="list-group-item active"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom(); ?></li>
-                                    <li class="list-group-item list-group-item-dark">Elevage: <?php echo $chienById->getNomElevage();  ?></li>
-                                    <li class="list-group-item list-group-item-dark">Âge: <?php echo $chienById->getAge(); ?></li>
-                                    <li class="list-group-item list-group-item-dark">Sexe: <?php echo $chienById->getSexe(); ?></li>
-                                    <li class="list-group-item list-group-item-dark">Race: <?php echo $chienById->getRace(); ?></li>
-                                </ul>
+                        <div class="flex row justify-content-center">
+                            <div class="col-sm-12">
+                              <div class="table-responsive">
+                              <table class="table">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th>Surnom</th>
+                                    <th>Elevage</th>
+                                    <th>Age</th>
+                                    <th>Sexe</th>
+                                    <th>Race</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-dark text-dark">
+                                    <td><i class="fas fa-dog"></i> <?php echo $chienById->getSurnom(); ?></td>
+                                    <td><i class="fas fa-home"></i> <?php echo $chienById->getNomElevage();  ?></td>
+                                    <td><i class="fas fa-clock"></i> <?php echo $chienById->getAge(); ?></td>
+                                    <td><i class="fas fa-transgender-alt"></i> <?php echo $chienById->getSexe(); ?></td>
+                                    <td><i class="fas fa-dna"></i> <?php echo $chienById->getRace(); ?></td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
-                            <div class="col-sm-8"><div class="table-responsive">
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th>Surnom</th>
-        <th>Elevage</th>
-        <th>Age</th>
-        <th>Sexe</th>
-        <th>Race</th>
-      </tr>
-    </thead>
-    <tbody>
-         <tr class="table-dark text-dark">
-        <td><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom(); ?></td>
-        <td><?php echo $chienById->getNomElevage();  ?></td>
-        <td><?php echo $chienById->getAge(); ?></td>
-        <td><?php echo $chienById->getSexe(); ?></td>
-        <td><?php echo $chienById->getRace(); ?></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div></div>
+                            </div>
+                          </div>
                         </div>
                     </div>
                 </div> 
             </div>
         </div>
-
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-
     </div>
-
-
     <!-- ///deuxieme parti////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
     <h2 class="text-center mt-4 text-decoration"><i class="far fa-newspaper"></i> Articles</h2>
   <div class="container mt-4">
   <div class="d-flex justify-content-center">
@@ -110,8 +79,6 @@
 </button>
   </div>
   <div class="d-flex justify-content-center">
-
-
 <div class="collapse" id="footwear" style="width: 50rem;">
                     <div class="card card-body">
                         <div class="row d-flex justify-content-around">
@@ -129,8 +96,6 @@
                                       <div class="valid-feedback">
                                       </div>
                                     </div>
-
-
                                     <div class="container">
                                     <div class="row">
                                         <div class="col text-center">
@@ -145,10 +110,7 @@
                 </div>
   </div>
   </div>
-
-
 <!--///Liste Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
   <div class="container mb-3">
     <?php
     foreach($articleById as $article){
@@ -166,13 +128,9 @@
     </div>
 <?php }?>
 </div>
-
 <!-- /////Footer/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
      <?php
     include 'footer.php';
-
     ?>
-
 </body>
-
 </html>
