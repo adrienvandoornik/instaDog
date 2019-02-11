@@ -47,14 +47,45 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="<?php echo $chienById->getImage();?>" alt="Photo profil chien" width="1100" height="400">
-                <div class="card-img-overlay">
-      <h4 class="card-title mt-5 ml-5">Caractéristique</h4>
-      <p class="card-title mt-5 ml-5">Surnom: <?php echo $chienById->getSurnom(); ?> <br>
-                                    Nom de l'élevage: <?php echo $chienById->getNomElevage();  ?> <br>
-                                    Âge: <?php echo $chienById->getAge(); ?> <br>
-                                    Sexe: <?php echo $chienById->getSexe(); ?> <br>
-                                    Race: <?php echo $chienById->getRace(); ?></p>
-                </div>
+                <div class="carousel-caption text-left">
+                    <div class="container-fluid">
+                        <div class="row">
+                          <p>Caractéristique</p>
+                            <div class="col-sm-4">
+                                <ul class="list-group">
+                                    <li class="list-group-item active"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom(); ?></li>
+                                    <li class="list-group-item list-group-item-dark">Elevage: <?php echo $chienById->getNomElevage();  ?></li>
+                                    <li class="list-group-item list-group-item-dark">Âge: <?php echo $chienById->getAge(); ?></li>
+                                    <li class="list-group-item list-group-item-dark">Sexe: <?php echo $chienById->getSexe(); ?></li>
+                                    <li class="list-group-item list-group-item-dark">Race: <?php echo $chienById->getRace(); ?></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-8"><div class="table-responsive">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Surnom</th>
+        <th>Elevage</th>
+        <th>Age</th>
+        <th>Sexe</th>
+        <th>Race</th>
+      </tr>
+    </thead>
+    <tbody>
+         <tr class="table-dark text-dark">
+        <td><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom(); ?></td>
+        <td><?php echo $chienById->getNomElevage();  ?></td>
+        <td><?php echo $chienById->getAge(); ?></td>
+        <td><?php echo $chienById->getSexe(); ?></td>
+        <td><?php echo $chienById->getRace(); ?></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div></div>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
 

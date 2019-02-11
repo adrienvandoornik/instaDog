@@ -75,7 +75,7 @@ include 'header.php';
     </div>
   </form>
 
- <p>Pas encore membre?</p>
+ <p>Pas encore membre?</p> 
 <div class="container bg-white">
   <div class="row">
     <div class="col text-center mb-4">

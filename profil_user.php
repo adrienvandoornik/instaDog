@@ -191,7 +191,7 @@ echo            '<div class="col-sm-4">';
                   echo      '<img class="card-img-top" src=" '. $chien->getImage() .' " alt="Card image cap" width="300"
                             height="300">';
                   echo    '  <h5 class="card-title"><i class="fas fa-paw"></i> '. $chien->getSurnom().'</h5>';
-                  echo    '  <p class="card-text">'. $chien->getRace().'</p>';
+                  echo    '  <p class="card-text">'. $chien->getRace().' / '. $chien->getSexe().' / '. $chien->getAge().' / '. $chien->getNomElevage().'</p>';
                         echo '<a href= profil_chien.php?id='. $chien->getId().' class="btn btn-primary" ><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>';
 
