@@ -46,9 +46,14 @@
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo $chienById->getImage();?>" alt="Los Angeles" width="1100" height="400">
+                <img src="<?php echo $chienById->getImage();?>" alt="Photo profil chien" width="1100" height="400">
                 <div class="card-img-overlay">
-      <h4 class="card-title mt-5 ml-5"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom(); ?></h4>
+      <h4 class="card-title mt-5 ml-5">Caractéristique</h4>
+      <p class="card-title mt-5 ml-5">Surnom: <?php echo $chienById->getSurnom(); ?> <br>
+                                    Nom de l'élevage: <?php echo $chienById->getNomElevage();  ?> <br>
+                                    Âge: <?php echo $chienById->getAge(); ?> <br>
+                                    Sexe: <?php echo $chienById->getSexe(); ?> <br>
+                                    Race: <?php echo $chienById->getRace(); ?></p>
                 </div>
             </div>
         </div>
