@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <title>InstaDog</title>
     <meta charset="utf-8">
@@ -29,22 +28,17 @@
 </head>
 
 <body>
-
     <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
     <?php
     include 'header.php';
     ?>
-
     <!-- ////Photo Article////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
     <div class="container">
         <div class="d-flex justify-content-center">
             <div class="card mt-5"  style="width:750px">
                 <img class="card-img-top"
                     src= <?php echo $articleById->getImage();  ?>
                     alt="Lights" style="width:100%" alt="Card image">
-
                 <div class="card-body">
                     <h4 class="card-title"><i class="fas fa-paw"></i><?php echo $chienById->getSurnom(); ?></h4>
                     <p class="card-text"><?php echo $articleById->getTexte(); ?></p>
@@ -52,8 +46,6 @@
             </div>
         </div>
     </div>
-
-
 
     <div class="container">
         <div class="container mt-5">
@@ -93,20 +85,14 @@
                 <img class="card-img-top"
                      src="'.$article->getImage().'";
                      alt="Lights" style="width:100%" height="90" alt="Card image">
-
             </div>';
           }
           echo' </div>
-
   </div>';
-
-
 ?>
     <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <?php
     include 'footer.php';
-
     ?>
 </body>
-
 </html>

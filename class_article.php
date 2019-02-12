@@ -1,6 +1,4 @@
 <?php
-
-
 // class Objet Article
 class Article
 {
@@ -40,8 +38,5 @@ class Article
      {
          return $this->datePublication;
      }
-
 }
-
-
 ?>

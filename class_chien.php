@@ -1,5 +1,4 @@
 <?php
-
 // class Objet Chien
 class Chien
 {
@@ -56,9 +55,5 @@ class Chien
     public function getImage(){
       return $this->image;
     }
-
-
 }
-
-
 ?>

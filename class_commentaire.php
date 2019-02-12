@@ -1,5 +1,4 @@
 <?php
-
 // Class Objet Commentaire
 class Commentaire
 {
@@ -33,8 +32,5 @@ class Commentaire
     {
         return $this->login;
     }
-
 }
-
-
 ?>
