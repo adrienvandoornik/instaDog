@@ -31,14 +31,11 @@ if(password_verify($motDePasse, $hash)) {
 
         }
         else {
-            // Le visiteur n'a pas été reconnu comme étant membre de notre site.
-            echo '<body onLoad="alert(\'Membre non reconnu...\')">';
-            // puis on le redirige vers la page d'accueil
-            echo '<meta http-equiv="refresh" content="0;URL=se_connecter.php">';
+            header('Location: se_connecter.php');
         }
     }
     else {
-        echo 'Les variables du formulaire ne sont pas déclarées.';
+        header('Location: se_connecter.php');
     }
         
 } else {

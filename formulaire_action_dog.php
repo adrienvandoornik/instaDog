@@ -8,7 +8,7 @@ $appliBD = new Connexion();
 // Les variables qui récupèrent les valeurs du formulaire Poster
 $surnom = $_POST['surnom'];
 $nomElevage = $_POST['nomElevage'];
-$age = $_POST['age'];
+$dateAge = $_POST['age'];
 $sexe = $_POST['sexe'];
 $race = $_POST['race'];
 
@@ -29,7 +29,7 @@ if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$imageDes
 }
 
 // j'appelle la base de donnée et les functions pour insérer les données du nouveau chien
-$appliBD->insertChien($surnom, $nomElevage, $age, $sexe, $race, $imageDestinationName, $utilisateurId);
+$appliBD->insertChien($surnom, $nomElevage, $dateAge, $sexe, $race, $imageDestinationName, $utilisateurId);
 
 // je redirige sur la page du nouveau profil
 header("Location: profil_user.php?id='.$utilisateurId");

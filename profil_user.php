@@ -142,7 +142,7 @@ else {
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01"><i class="far fa-clock"></i> Âge</label>
-                                <input type="text" name="age" class="form-control" id="validationCustom01" placeholder="Entrer un âge"
+                                <input type="date" name="age" class="form-control" id="validationCustom01" placeholder="Entrer un âge"
                                     value="" required>
                                     <div class="valid-feedback">Validé!</div>
                                     <div class="invalid-feedback">Rentrer un age</div>
