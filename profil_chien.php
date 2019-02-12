@@ -34,8 +34,8 @@ else {
         crossorigin="anonymous"></script>
         <?php require 'connexion.php';
         $appliBD = new Connexion();
-        $chienById = $appliBD->getChienById(2);
-        $articleById = $appliBD->getListeArticle(2);
+        $chienById = $appliBD->getChienById($_GET['id']);
+        $articleById = $appliBD->getListeArticle($_GET['id']);
         ?>
 </head>
 <body>

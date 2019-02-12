@@ -38,8 +38,8 @@ else {
     </script>
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $utilisateur_id = $appliBD->getUtilisateur(4);//($_GET['id']);
-    $listeChien = $appliBD->getListeChien(4);
+    $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);//($_GET['id']);
+    $listeChien = $appliBD->getListeChien($_GET['id']);
     ?>
 </head>
 
