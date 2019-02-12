@@ -43,20 +43,23 @@ include 'header.php';
           <label for="validationCustom01"><i class="fas fa-user-circle"></i> Prénom</label>
           <input type="text" name="prenom" class="form-control" id="validationCustom01" placeholder="Entrer un prénom" value=""
             required>
-          <div class="valid-feedback"></div>
+          <div class="valid-feedback">validé!</div>
+          <div class="invalid-feedback">Rentrer un prénom</div>
         </div>
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="far fa-user-circle"></i> Nom</label>
           <input type="text" name="nom" class="form-control" id="validationCustom02" placeholder="Entrer un nom" value="" required>
-          <div class="valid-feedback"></div>
+          <div class="valid-feedback">validé!</div>
+          <div class="invalid-feedback">Rentrer un nom</div>
         </div>
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom01"><i class="fas fa-envelope"></i> Email</label>
           <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="Entrer un email" value=""
             required>
-          <div class="valid-feedback"></div>
+            <div class="valid-feedback">Validé!</div>
+            <div class="invalid-feedback">Rentrer un email</div>
         </div>
 
         <div class="col-md-6 mb-3">
@@ -65,13 +68,15 @@ include 'header.php';
           <small id="passwordHelpBlock" class="form-text text-muted">
           Le mot de passe doit contenir entre 8 et 20 caractères avec des lettres et des chiffres.
           </small>
-          <div class="valid-feedback"></div>
+          <div class="valid-feedback">validé!</div>
+          <div class="invalid-feedback">Rentrer un mot de passe</div>
         </div>
 
         <div class="col-md-6 mb-3">
           <label for="validationCustom02"><i class="fas fa-theater-masks"></i> Pseudo</label>
           <input type="text" name="login" class="form-control" id="validationCustom02" placeholder="Entrer un pseudonyme" value="" required>
-          <div class="valid-feedback"></div>
+          <div class="valid-feedback">validé!</div>
+          <div class="invalid-feedback">Rentrer un pseudo</div>
         </div>
       </div>
 
@@ -85,6 +90,26 @@ include 'header.php';
       </div>
     </div>
   </form>
+
+<script>
+// function application du style sur les champs de validation du formulaire
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
      <p>Déjà membre?</p>
 
   <div class="container">
@@ -95,9 +120,12 @@ include 'header.php';
     </div>
   </div>
 </div>
+
 <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  <?php
+ 
+ <?php
   include 'footer.php';
   ?>
+  
 </body>
 </html>

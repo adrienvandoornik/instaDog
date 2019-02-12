@@ -2,14 +2,9 @@
 require 'connexion.php';
 $appliBD = new Connexion();
 
-
-
-
-
 //Recuperer et tester Mot de Passe//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $email = $_POST['email'];
-
 $motDePasse = $_POST['motDePasse'];
 
 $hash = $appliBD->getUtilisateurEmail($email)->getMotDePasse();

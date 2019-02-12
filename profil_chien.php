@@ -88,13 +88,15 @@
                                       <label for="commentaire"><i class="fas fa-comment-medical"></i> Commentaire</label>
                                       <textarea class="form-control" rows="5" id="commentaire" type="text" name="texte" placeholder="Entrer un texte"
                                     value="" required></textarea>
+                                    <div class="valid-feedback">validé!</div>
+                                    <div class="invalid-feedback">Rentrer un texte</div>
                                   </div>
                                     <div class="col-md-5 mb-3 sm-6">
                                       <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
                                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
                                         <input type="file" name="image" class="form-control-file border" />
-                                      <div class="valid-feedback">
-                                      </div>
+                                        <div class="valid-feedback">validé!</div>
+                                        <div class="invalid-feedback">Ajouter une image</div>
                                     </div>
                                     <div class="container">
                                     <div class="row">
@@ -105,10 +107,30 @@
                                     </div>
                                 </div>
                             </form>
+
+                            <script>
+                            // function application du style sur les champs de validation du formulaire
+                            (function() {
+                              'use strict';
+                              window.addEventListener('load', function() {
+                                var forms = document.getElementsByClassName('needs-validation');
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                  form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                      event.preventDefault();
+                                      event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                  }, false);
+                                });
+                              }, false);
+                            })();
+                            </script>
+
                         </div>
                     </div>
                 </div>
-  </div>
+        </div>
   </div>
 <!--///Liste Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
   <div class="container mb-3">
