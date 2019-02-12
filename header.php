@@ -1,6 +1,4 @@
-
 <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark ">
     <a class="navbar-brand text-light" href="galeriePhoto.php"><i class="fas fa-dog"></i> INSTADOG</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo-navbar" aria-controls="demo-navbar"
@@ -25,12 +23,18 @@
             </span>Se connecter</a>
         </li>
 
-        <a href="inscription.php"><button type="button" class="btn btn-success ml-4 mr-4"><i class="fas fa-user-plus"></i> S'Inscrire</button>
+        <a href="inscription.php">
+          <button type="button" class="btn btn-success ml-4 mr-4">
+            <i class="fas fa-user-plus"></i> S'Inscrire
+          </button>
         </a>
 
-        <a href="profil_user.php"><button type="button" class="btn btn-danger ml-4 mr-4">
-          <i class="fas fa-plus-circle"></i> Ajouter Chien</button>
+        <a href="profil_user.php">
+          <button type="button" class="btn btn-danger ml-4 mr-4">
+            <i class="fas fa-plus-circle"></i> Ajouter Chien
+          </button>
         </a>
+        
       </ul>
       <form action="galeriePhoto.php" method="GET" class="form-inline my-2 my-lg-0">
         <!-- Dans value il charge si il y a quelque chose de set dans le GET q et l'affiche dans la barre de recherche  -->
