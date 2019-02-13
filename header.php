@@ -12,7 +12,7 @@
             <i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="se_connecter.php"><i class="fas fa-user-circle"></i> Profil</a>
+          <a class="nav-link text-light" href="profil_user.php"><i class="fas fa-user-circle"></i> Profil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="se_connecter.php">
