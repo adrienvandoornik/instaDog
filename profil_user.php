@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
 
 <?php
 
@@ -10,6 +8,10 @@ if (isset($_SESSION['id'])){
     header ('location: se_connecter.php');
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
 
 <head>
     <title>INSTADOG - Communauté de chiens</title>
@@ -32,7 +34,7 @@ if (isset($_SESSION['id'])){
     </script>
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);//($_GET['id']);
+    $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);
     $listeChien = $appliBD->getListeChien($_GET['id']);
     ?>
 </head>
