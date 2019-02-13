@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-
 <?php
 // On démarre la session dans toutes les pages de notre section membre
 session_start ();
@@ -16,7 +13,8 @@ if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
 else {
 }
 ?>
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <title>INSTADOG - Communauté de chiens</title>
     <meta charset="utf-8">
@@ -38,8 +36,8 @@ else {
     </script>
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);//($_GET['id']);
-    $listeChien = $appliBD->getListeChien($_GET['id']);
+    $utilisateur_id = $appliBD->getUtilisateur(4);//($_GET['id']);
+    $listeChien = $appliBD->getListeChien(4);
     ?>
 </head>
 
@@ -54,7 +52,7 @@ else {
 <!-- ///Donnees du User////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <div class="jumbotron text-center pt-5 pb-5">
-        <h2 class="title" style="font-size:3vw;"><?php echo $utilisateur_id->getPrenom(); ?> <?php echo $utilisateur_id->getNom(); ?></h2>
+        <h2 class="title" style="font-size:3vw;"><?php echo $utilisateur_id->getPrenom(); ?><?php echo $utilisateur_id->getNom(); ?></h2>
         <h6><span aria-hidden="true"></span><i class="fas fa-user-circle"></i> Mon Profil Utilisateur</h6>
     </div>
 
