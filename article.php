@@ -50,7 +50,7 @@ else {
     $appliBD = new Connexion();
     $article = $appliBD->getArticleById(1);
     $commentaire = $appliBD->getListeCommentaire(1);
-    
+
     $article_Id = $appliBD->getListeArticle(2);
 
     ?>
@@ -86,17 +86,24 @@ else {
             <div class="media border p-3 bg-white">
                 <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fbusiness-round-flat-vol-1-1%2F36%2Fuser_account_profile_avatar_person_student_male-512.png&f=1"
                     alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-                <div class="media-body">
+                  <div class="media-body">
                     <h4>'.$value->getLogin().';</h4>
                     <small><i><i class="far fa-clock"></i>'.$value->getDateCommentaire().';</i></small>
                     <p><'.$value->getTexte().';</p>
                 </div>
+<<<<<<< HEAD
             </div>';
           }
         echo'</div>
     </div>';
 ?>
 <!--///Inserer Commentaires///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+=======
+            </div>
+        </div>
+    </div>
+    <!-- ////// Inserer Commentaires/////////////////////////////////////////////////////////////////////////////////////// -->
+>>>>>>> master
 
     <div class="container mt-3">
         <form  action="formulaire_action_commentaire.php" method="post" class="needs-validation formPadding" novalidate>
