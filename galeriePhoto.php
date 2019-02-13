@@ -43,7 +43,8 @@ foreach ($afficherChien as $chien) { // A completer indentation
     echo '<a href= profil_chien.php?id=' . $chien->getId() . '>';
     echo '<div class="square" style="background-image: url(' . $chien->getImage() . ')">';
     echo '<div class="card-img-overlay">';
-    echo '<h4 class="card-title" style="font-size:3vw;"><i class="fas fa-paw"></i>' . $chien->getSurnom() . '</p>';
+    echo '<h4 class="card-title" style="font-size:3vw;">' . $chien->getSurnom() . '</h4>';
+    echo '<p class="card-title" style="font-size:1.2vw;"><i class="fas fa-paw"></i> ' . $chien->getRace() . '</p>';
     echo '</div>';
     echo '</div>';
     echo '</a>';

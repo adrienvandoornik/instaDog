@@ -12,6 +12,22 @@ if (isset($_SESSION['id'])){
 <!DOCTYPE html>
 <html lang="fr">
 
+<?php
+// On démarre la session dans toutes les pages de notre section membre
+session_start ();
+
+// On récupère nos variables de session
+if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
+
+    echo'<div class="alert alert-success" role="alert">';
+    echo'Bienvenue sur votre espace membre '.$_SESSION['email'].'!';
+    echo '<a href="./deconnexion_session.php"><button type="button" class="btn btn-danger float-right"><i class="fas fa-sign-out-alt"></i> Se déconnecter</button></a>';
+    echo'</div>';
+}
+else {
+}
+?>
+
 <head>
     <title>INSTADOG - Communauté de chiens</title>
     <meta charset="utf-8">
@@ -29,54 +45,60 @@ if (isset($_SESSION['id'])){
         crossorigin="anonymous"></script>
         <?php require 'connexion.php';
         $appliBD = new Connexion();
-        $chienById = $appliBD->getChienById(2);
-        $articleById = $appliBD->getListeArticle(2);
+        $chienById = $appliBD->getChienById($_GET['id']);
+        $articleById = $appliBD->getListeArticle($_GET['id']);
         ?>
-
 </head>
-
 <body>
-
   <!-- ////HEADER//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
   <?php
-
     include 'header.php';
-    ?>
-
-
-
+  ?>
      <!--  ///Text Profil////////////////////////////////////////////////////////////////////////////////////////////////7 -->
      <div class="jumbotron text-center pt-5 pb-5">
         <h2 class="title" style="font-size:3vw;"><?php echo $chienById->getSurnom(); ?></h2>
         <h6><i class="fas fa-paw"></i> Profil de mon chien</h6>
     </div>
-
     <div id="demo" class="carousel slide" data-ride="carousel">
         <!-- The slideshow -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo $chienById->getImage();?>" alt="Los Angeles" width="1100" height="400">
-                <div class="card-img-overlay">
-      <h4 class="card-title mt-5 ml-5"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom(); ?></h4>
-                </div>
+                <img src="<?php echo $chienById->getImage();?>" alt="Photo profil chien" width="1100" height="400">
+                <div class="carousel-caption text-center">
+                    <div class="container-fluid">
+                        <div class="flex row justify-content-center">
+                            <div class="col-sm-12">
+                              <div class="table-responsive">
+                              <table class="table">
+                                <thead class="thead-dark">
+                                  <tr>
+                                    <th>Surnom</th>
+                                    <th>Elevage</th>
+                                    <th>Age</th>
+                                    <th>Sexe</th>
+                                    <th>Race</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-dark text-dark">
+                                    <td><i class="fas fa-dog"></i> <?php echo $chienById->getSurnom(); ?></td>
+                                    <td><i class="fas fa-home"></i> <?php echo $chienById->getNomElevage();  ?></td>
+                                    <td><i class="fas fa-clock"></i> <?php echo $chienById->getAge(); ?></td>
+                                    <td><i class="fas fa-transgender-alt"></i> <?php echo $chienById->getSexe(); ?></td>
+                                    <td><i class="fas fa-dna"></i> <?php echo $chienById->getRace(); ?></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
-
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-
     </div>
-
-
     <!-- ///deuxieme parti////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
     <h2 class="text-center mt-4 text-decoration"><i class="far fa-newspaper"></i> Articles</h2>
   <div class="container mt-4">
   <div class="d-flex justify-content-center">
@@ -85,8 +107,6 @@ if (isset($_SESSION['id'])){
 </button>
   </div>
   <div class="d-flex justify-content-center">
-
-
 <div class="collapse" id="footwear" style="width: 50rem;">
                     <div class="card card-body">
                         <div class="row d-flex justify-content-around">
@@ -96,16 +116,16 @@ if (isset($_SESSION['id'])){
                                       <label for="commentaire"><i class="fas fa-comment-medical"></i> Commentaire</label>
                                       <textarea class="form-control" rows="5" id="commentaire" type="text" name="texte" placeholder="Entrer un texte"
                                     value="" required></textarea>
+                                    <div class="valid-feedback">validé!</div>
+                                    <div class="invalid-feedback">Rentrer un texte</div>
                                   </div>
                                     <div class="col-md-5 mb-3 sm-6">
                                       <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
                                        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
                                         <input type="file" name="image" class="form-control-file border" />
-                                      <div class="valid-feedback">
-                                      </div>
+                                        <div class="valid-feedback">validé!</div>
+                                        <div class="invalid-feedback">Ajouter une image</div>
                                     </div>
-
-
                                     <div class="container">
                                     <div class="row">
                                         <div class="col text-center">
@@ -115,15 +135,32 @@ if (isset($_SESSION['id'])){
                                     </div>
                                 </div>
                             </form>
+
+                            <script>
+                            // function application du style sur les champs de validation du formulaire
+                            (function() {
+                              'use strict';
+                              window.addEventListener('load', function() {
+                                var forms = document.getElementsByClassName('needs-validation');
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                  form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                      event.preventDefault();
+                                      event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                  }, false);
+                                });
+                              }, false);
+                            })();
+                            </script>
+
                         </div>
                     </div>
                 </div>
+        </div>
   </div>
-  </div>
-
-
 <!--///Liste Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
   <div class="container mb-3">
     <?php
     foreach($articleById as $article){
@@ -141,13 +178,9 @@ if (isset($_SESSION['id'])){
     </div>
 <?php }?>
 </div>
-
 <!-- /////Footer/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
      <?php
     include 'footer.php';
-
     ?>
-
 </body>
-
 </html>

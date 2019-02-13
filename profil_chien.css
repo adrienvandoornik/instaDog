@@ -71,6 +71,11 @@ body {
     font-weight:900;
 }
 
+.carousel-caption {
+    font-family: 'Work Sans', sans-serif;
+    font-weight:900;
+}
+
 .square:hover {
     transform: scale(1.02); /* (zoom effect) */
     opacity: 1;

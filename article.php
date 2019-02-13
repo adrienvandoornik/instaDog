@@ -10,7 +10,23 @@ if (isset($_SESSION['id'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
+<?php
+// On démarre la session dans toutes les pages de notre section membre
+session_start ();
+
+// On récupère nos variables de session
+if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
+
+    echo'<div class="alert alert-success" role="alert">';
+    echo'Bienvenue sur votre espace membre '.$_SESSION['email'].'!';
+    echo '<a href="./deconnexion_session.php"><button type="button" class="btn btn-danger float-right"><i class="fas fa-sign-out-alt"></i> Se déconnecter</button></a>';
+    echo'</div>';
+}
+else {
+}
+?>
 
 <head>
     <title>InstaDog</title>
@@ -41,22 +57,17 @@ if (isset($_SESSION['id'])){
 </head>
 
 <body>
-
     <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
     <?php
     include 'header.php';
     ?>
-
     <!-- ////Photo Article////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
     <div class="container">
         <div class="d-flex justify-content-center">
             <div class="card mt-5"  style="width:750px">
                 <img class="card-img-top"
                     src= <?php echo $article->getImage();  ?>
                     alt="Lights" style="width:100%" alt="Card image">
-
                 <div class="card-body">
                     <h4 class="card-title"><i class="fas fa-paw"></i>Chien</h4>
                     <p class="card-text"><?php echo $article->getTexte(); ?></p>
@@ -97,7 +108,7 @@ if (isset($_SESSION['id'])){
         </form>
     </div>
 
-    <!-- ///Autres Articles///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////Autres Articles////////////////////////////////////////////////////////////////////////////////////// -->
 <?php
     echo '<div class="container mb-3">
         <h3 class="text-center mt-3 text-decoration">Autres Articles</h3>';
@@ -108,20 +119,14 @@ if (isset($_SESSION['id'])){
                 <img class="card-img-top"
                      src="'.$articles->getImage().'";
                      alt="Lights" style="width:100%" height="90" alt="Card image">
-
             </div>';
           }
           echo' </div>
-
   </div>';
-
-
 ?>
-    <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <?php
     include 'footer.php';
-
     ?>
 </body>
-
 </html>

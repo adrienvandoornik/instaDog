@@ -6,12 +6,8 @@ include 'class_chien.php';
 include 'class_article.php';
 include 'class_commentaire.php';
 
-
-
-
 class Connexion {
     private $connexion;
-
 
     public function __construct() {
         $PARAM_hote= 'localhost';
@@ -30,17 +26,11 @@ class Connexion {
             echo 'Erreur : '.$e->getMessage().'<br>';
             echo 'N° :'.$e->getCode();
         }
-
     }
 
     public function getConnexion(){
         return $this->connexion;
     }
-
-
-
-
-
 
 ///////////Get Utilisateur/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -57,9 +47,6 @@ public function getUtilisateur($id){
   return $utilisateur;
 }
 
-
-
-
 ///Get Chien////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 public function getListeChien($utilisateurId){
@@ -70,10 +57,8 @@ public function getListeChien($utilisateurId){
 
     $listeChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
 
-
     return $listeChien;
 }
-
 
 ///Get Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -116,14 +101,11 @@ public function getListeCommentaire($articleId){
               'email' => $email,
               'motDePasse' => $motDePasse,
               'login' => $login
-
             )
         );
         $id= $this->connexion->lastInsertId();
         return $id;
-
     }
-
 
 ////Insert Chien///////////////////////////////////////////////////////////////////////////////////////////////////////////////////77
 
@@ -140,14 +122,11 @@ public function getListeCommentaire($articleId){
               'race' => $race,
               'image'=> $image,
               'utilisateurId' => $utilisateurId
-
             )
         );
         $idChien = $this->connexion->lastInsertId();
         return $idChien;
-
     }
-
 
 ///Insert Article///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -161,13 +140,10 @@ public function getListeCommentaire($articleId){
               'texte'=> $texte,
               'datePublication' => $datePublication,
               'chienId' => $chienId
-
-
             )
         );
         $idArticle = $this->connexion->lastInsertId();
         return $idArticle;
-
     }
 
 ///Insert Commentaire/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -186,7 +162,6 @@ public function getListeCommentaire($articleId){
             );
              $idCommentaire = $this->connexion->lastInsertId();
              return $idCommentaire;
-
         }
 
 ///Get chienById///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -204,7 +179,6 @@ public function getChienById($id){
   return $chien;
 }
 
-
 ///Get Article by id/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
 public function getArticleById($id){
@@ -219,7 +193,6 @@ public function getArticleById($id){
 
   return $article;
 }
-
 
 ///Get Commentaire///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -236,9 +209,7 @@ public function getCommentaire($id){
   return $commentaire;
 }
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
-
 
 public function rechercheByRace($pattern) {
   $requete_prepare=$this->connexion->prepare(
@@ -250,9 +221,7 @@ public function rechercheByRace($pattern) {
     return $resultat;
 }
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 public function getAllChien(){
   $requete_prepare =$this->connexion->prepare(
@@ -263,6 +232,10 @@ public function getAllChien(){
     $allChien = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
     return $allChien;
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 
@@ -276,12 +249,6 @@ public function getUtilisateurEmail($email){
      return $resultat;
 
 }
-
-
-
-
-
-
 
 }// Fin de la class Connexion
 

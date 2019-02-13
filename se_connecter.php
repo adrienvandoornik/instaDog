@@ -1,17 +1,5 @@
 <!DOCTYPE html>
-<?php
-/*$email = "fresco@mail.com";
-$mdp = "fresco1";
-
-if($email == $_POST['email'] && $mdp == $_POST['motDePasse']){
-  session_start();
-  $_SESSION['email'] = $_POST['email'];
-  $_SESSION['motDePasse'] = $_POST['motDePasse'];
-  header("Location: test_connexion.php");
-}*/
- ?>
-
-<html lang="en">
+<html lang="fr">
 
 <head>
   <title>InstaDog</title>
@@ -31,36 +19,30 @@ if($email == $_POST['email'] && $mdp == $_POST['motDePasse']){
   <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
   <?php
-
-include 'header.php';
-?>
+    include 'header.php';
+  ?>
 
   <div class="jumbotron text-center pt-5 pb-5">
       <h2 class="title" style="font-size:3vw;"><i class="fas fa-sign-in-alt"></i> SE CONNECTER</h2>
   </div>
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<?php
 
-
-
-?>
   <div class="container bg-white mb-3">
   <form action="formulaire_action_connexion.php" method="post" class="needs-validation bg-white formPadding" novalidate>
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom01"><i class="far fa-envelope"></i> Email</label>
         <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="Entrer un email" value="" required>
-        <div class="valid-feedback">
-
-        </div>
+        <div class="valid-feedback">validé!</div>
+        <div class="invalid-feedback">Rentrer un email valide</div>
       </div>
+
       <div class="col-md-6 mb-3">
         <label for="validationCustom02"><i class="fas fa-key"></i> Password</label>
         <input type="password" name="motDePasse" class="form-control" id="validationCustom02" placeholder="Entrer un mot de passe" value="" required>
-        <div class="valid-feedback">
-
-        </div>
+        <div class="valid-feedback">validé!</div>
+        <div class="invalid-feedback">Rentrer un mot de passe valide</div>
       </div>
 
     </div>
@@ -75,7 +57,26 @@ include 'header.php';
     </div>
   </form>
 
- <p>Pas encore membre?</p>
+  <script>
+// function application du style sur les champs de validation du formulaire
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    var forms = document.getElementsByClassName('needs-validation');
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+ <p>Pas encore membre?</p> 
 <div class="container bg-white">
   <div class="row">
     <div class="col text-center mb-4">
@@ -83,14 +84,13 @@ include 'header.php';
     </div>
   </div>
 </div>
+</div>
 
-  </div>
+<!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-  <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <?php
 include 'footer.php';
-
 ?>
-</body>
 
+</body>
 </html>

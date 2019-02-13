@@ -1,16 +1,21 @@
-<?php
-
-session_start();
-if (isset($_SESSION['id'])){
-
-}else {
-    header ('location: se_connecter.php');
-}
-
- ?>
-
 <!DOCTYPE html>
 <html lang="fr">
+
+<?php
+// On démarre la session dans toutes les pages de notre section membre
+session_start ();
+
+// On récupère nos variables de session
+if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
+
+    echo'<div class="alert alert-success" role="alert">';
+    echo'Bienvenue sur votre espace membre '.$_SESSION['email'].'!';
+    echo '<a href="./deconnexion_session.php"><button type="button" class="btn btn-danger float-right"><i class="fas fa-sign-out-alt"></i> Se déconnecter</button></a>';
+    echo'</div>';
+}
+else {
+}
+?>
 
 <head>
     <title>INSTADOG - Communauté de chiens</title>
@@ -33,22 +38,20 @@ if (isset($_SESSION['id'])){
     </script>
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);
+    $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);//($_GET['id']);
     $listeChien = $appliBD->getListeChien($_GET['id']);
     ?>
 </head>
 
 <body>
 
-    <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-    <?php
+<?php
+    include 'header.php';
+?>
 
-  include 'header.php';
-  ?>
-
-
-    <!-- ///Donnees du User////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///Donnees du User////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <div class="jumbotron text-center pt-5 pb-5">
         <h2 class="title" style="font-size:3vw;"><?php echo $utilisateur_id->getPrenom(); ?> <?php echo $utilisateur_id->getNom(); ?></h2>
@@ -109,8 +112,6 @@ if (isset($_SESSION['id'])){
             </div>
         </div>
 
-
-
         <!-- ///Formulaire Ajouter Chien/////////////////////////////////////////////////////////////////////////////////////////////// -->
 
         <h3><i class="fas fa-dog"></i> MES CHIENS</h3>
@@ -129,43 +130,43 @@ if (isset($_SESSION['id'])){
                                 <label for="validationCustom01"><i class="far fa-user-circle"></i> Surnom</label>
                                 <input type="text" name="surnom" class="form-control" id="validationCustom01" placeholder="Entrer un surnom"
                                     value="" required>
-                                <div class="valid-feedback">
-                                </div>
+                                    <div class="valid-feedback">Validé!</div>
+                                    <div class="invalid-feedback">Rentrer un surnom</div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-dog"></i> Nom de l'élevage</label>
                                 <input type="text" name="nomElevage" class="form-control" id="validationCustom02" placeholder="Entrer un nom d'élevage"
                                     value="" required>
-                                <div class="valid-feedback">
-                                </div>
+                                    <div class="valid-feedback">Validé!</div>
+                                    <div class="invalid-feedback">Rentrer un nom d'élevage</div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01"><i class="far fa-clock"></i> Âge</label>
-                                <input type="text" name="age" class="form-control" id="validationCustom01" placeholder="Entrer un âge"
+                                <input type="date" name="age" class="form-control" id="validationCustom01" placeholder="Entrer un âge"
                                     value="" required>
-                                <div class="valid-feedback">
-                                </div>
+                                    <div class="valid-feedback">Validé!</div>
+                                    <div class="invalid-feedback">Rentrer un age</div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-venus"></i> Sexe</label>
                                 <input type="text" name="sexe" class="form-control" id="validationCustom02" placeholder="Mâle ou Femelle?"
                                     value="" required>
-                                <div class="valid-feedback">
-                                </div>
+                                    <div class="valid-feedback">Validé!</div>
+                                    <div class="invalid-feedback">Rentrer si le chien est un mâle ou une femelle</div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-dog"></i> Race</label>
                                 <input type="text" name="race" class="form-control" id="validationCustom02" placeholder="Entrer une race"
                                     value="" required>
-                                <div class="valid-feedback">
-                                </div>
+                                    <div class="valid-feedback">Validé!</div>
+                                    <div class="invalid-feedback">Rentrer la race du chien</div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
                                  <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
                                  <input type="file" name="image" class="form-control-file border" />
-                                <div class="valid-feedback">
-                                </div>
+                                 <div class="valid-feedback">Validé!</div>
+                                <div class="invalid-feedback">Rentrer une image du chien</div>
                             </div>
                         </div>
 
@@ -177,50 +178,58 @@ if (isset($_SESSION['id'])){
                 </div>
                 </div>
                 </form>
+
+                <script>
+                    // function application du style sur les champs de validation du formulaire
+                    (function() {
+                    'use strict';
+                    window.addEventListener('load', function() {
+                        var forms = document.getElementsByClassName('needs-validation');
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                        });
+                    }, false);
+                    })();
+                </script>
+
             </div>
         </div>
     </div>
 
+<!-- ////Liste de Chien//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-
-    <!-- ////Liste de Chien//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <?php
-
 echo   ' <div class="container">';
-
-
-
 echo       ' <div class="row mb-3">';
   foreach($listeChien as $chien){
 echo            '<div class="col-sm-4">';
-
         echo       ' <div class="card">';
               echo      '<div class="card-body text-center">';
                   echo      '<img class="card-img-top" src=" '. $chien->getImage() .' " alt="Card image cap" width="300"
                             height="300">';
                   echo    '  <h5 class="card-title"><i class="fas fa-paw"></i> '. $chien->getSurnom().'</h5>';
-                  echo    '  <p class="card-text">'. $chien->getRace().'</p>';
+                  echo    '  <p class="card-text">'. $chien->getRace().' / '. $chien->getSexe().' / '. $chien->getAge().' / '. $chien->getNomElevage().'</p>';
                         echo '<a href= profil_chien.php?id='. $chien->getId().' class="btn btn-primary" ><i
                                 class="fas fa-chevron-right"></i> Voir profil</a>';
-
                 echo    ' </div>
                        </div>
-
                    </div>';
 }
       echo   ' </div>
-
         </div>';
+?>
 
-    ?>
-
-    <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <?php
 include 'footer.php';
-
 ?>
 
 </body>
-
 </html>

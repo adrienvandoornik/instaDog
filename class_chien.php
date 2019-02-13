@@ -1,5 +1,4 @@
 <?php
-
 // class Objet Chien
 class Chien
 {
@@ -9,7 +8,7 @@ class Chien
     protected $id;
     private $surnom;
     private $nomElevage;
-    private $age;
+    private $dateAge;
     private $sexe;
     private $race;
     private $listeArticle;
@@ -35,7 +34,7 @@ class Chien
 
     public function getAge()
     {
-        return $this->age;
+        return $this->dateAge;
     }
 
     public function getSexe()
@@ -56,9 +55,5 @@ class Chien
     public function getImage(){
       return $this->image;
     }
-
-
 }
-
-
 ?>

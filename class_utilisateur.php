@@ -1,7 +1,4 @@
-
 <?php
-
-
 
 class Utilisateur {
     protected $id;
@@ -32,7 +29,6 @@ class Utilisateur {
 
     public function setEmail($email){
         $this->email = $email;
-
     }
 
     public function getDerniereConnexion(){
@@ -45,16 +41,6 @@ class Utilisateur {
 
     public function setLogin($login){
         $this->login = $login;
-
     }
-
-///Insert Chien/////////////////////////////////////////////////////////////////////////////////////////////////////////7
-
-
-
-
-
 }
-
-
 ?>
