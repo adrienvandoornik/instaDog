@@ -19,7 +19,7 @@
 
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    //$AllChien = $appliBD->getAllChien();
+  
     ?>
 </head>
 
