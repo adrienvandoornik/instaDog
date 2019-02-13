@@ -48,8 +48,8 @@ else {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-    $article = $appliBD->getArticleById(1);
-    $commentaire = $appliBD->getListeCommentaire(1);
+    $article = $appliBD->getArticleById($_GET['id']);
+    $commentaire = $appliBD->getListeCommentaire($_GET['id']);
 
     $article_Id = $appliBD->getListeArticle(2);
 
@@ -91,19 +91,19 @@ else {
                     <small><i><i class="far fa-clock"></i>'.$value->getDateCommentaire().';</i></small>
                     <p><'.$value->getTexte().';</p>
                 </div>
-<<<<<<< HEAD
+
             </div>';
           }
         echo'</div>
     </div>';
 ?>
 <!--///Inserer Commentaires///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-=======
+
             </div>
         </div>
     </div>
     <!-- ////// Inserer Commentaires/////////////////////////////////////////////////////////////////////////////////////// -->
->>>>>>> master
+
 
     <div class="container mt-3">
         <form  action="formulaire_action_commentaire.php" method="post" class="needs-validation formPadding" novalidate>

@@ -12,22 +12,6 @@ if (isset($_SESSION['id'])){
 <!DOCTYPE html>
 <html lang="fr">
 
-<?php
-// On démarre la session dans toutes les pages de notre section membre
-session_start ();
-
-// On récupère nos variables de session
-if (isset($_SESSION['email']) && isset($_SESSION['motDePasse'])) {
-
-    echo'<div class="alert alert-success" role="alert">';
-    echo'Bienvenue sur votre espace membre '.$_SESSION['email'].'!';
-    echo '<a href="./deconnexion_session.php"><button type="button" class="btn btn-danger float-right"><i class="fas fa-sign-out-alt"></i> Se déconnecter</button></a>';
-    echo'</div>';
-}
-else {
-}
-?>
-
 <head>
     <title>INSTADOG - Communauté de chiens</title>
     <meta charset="utf-8">
@@ -94,7 +78,7 @@ else {
                           </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
