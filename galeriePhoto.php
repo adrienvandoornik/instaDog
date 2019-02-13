@@ -19,14 +19,7 @@
 
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-     // Si je récupère des valeurs dans le GET q alors
-  if (isset($_GET["q"])) { 
-    // la je fais la recherche
-    $AllChien = $appliBD->getChienBySurnomRaceLike($_GET["q"]);
-  } else {
-    // sinon je réaffiche toutes les chiens
-    $AllChien = $appliBD->getAllChien();
-  }
+    //$AllChien = $appliBD->getAllChien();
     ?>
 </head>
 
@@ -36,10 +29,16 @@
 <?php
 include 'header.php';
 
-//Galerie de Photo/////////////////////////////////////////////////////////////////
+//Galerie de Photo//////////////////////////////////////////////////////////////////////////////////////////////////////////////7
+
+$recherche = "";
+if ($_POST != null) {
+    $recherche = $_POST['recherche'];
+}
+$afficherChien = $appliBD->rechercheByRace($recherche);
 
 echo '<div class="row no-gutters">';
-foreach ($AllChien as $chien) { // A completer indentation
+foreach ($afficherChien as $chien) { // A completer indentation
     echo '<div class="col-md-4 col-lg-4">';
     echo '<a href= profil_chien.php?id=' . $chien->getId() . '>';
     echo '<div class="square" style="background-image: url(' . $chien->getImage() . ')">';

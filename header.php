@@ -12,7 +12,7 @@
             <i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="profil_user.php"><i class="fas fa-user-circle"></i> Profil</a>
+          <a class="nav-link text-light" href="se_connecter.php"><i class="fas fa-user-circle"></i> Profil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="se_connecter.php">
@@ -36,13 +36,9 @@
         </a>
         
       </ul>
-      <form action="galeriePhoto.php" method="GET" class="form-inline my-2 my-lg-0">
-        <!-- Dans value il charge si il y a quelque chose de set dans le GET q et l'affiche dans la barre de recherche  -->
-        <input class="form-control mr-sm-2" type="text" name="q"  value="<?php if (isset($_GET['q'])) echo $_GET['q']; ?>" placeholder="Chercher un chien...">
-        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Rechercher</button>
+      <form action="galeriePhoto.php" method="post" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="recherche" type="search" placeholder="Race" aria-label="Search">
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Search</button>
       </form>
     </div>
   </nav>
-
-
-

@@ -37,7 +37,7 @@ include 'header.php';
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
  
   <div class="container containerForm bg-white mb-3">
-    <form action="formulaire_action_user.php" method="post" class="needs-validation formPadding" novalidate>
+    <form action="formulaireCible.php" method="post" class="needs-validation formPadding" novalidate>
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationCustom01"><i class="fas fa-user-circle"></i> Prénom</label>

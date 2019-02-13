@@ -73,6 +73,20 @@ public function getListeArticle($chienId){
     return   $listeArticle;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+public function getListeCommentaire($articleId){
+  $requete_prepare =$this->connexion->prepare(
+    "SELECT * FROM Commentaire WHERE articleId = :id");
+
+    $requete_prepare->execute(array("id"=>$articleId));
+
+    $listeCommentaire = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Commentaire');
+
+    return   $listeCommentaire;
+}
+
 ///Function Insert Utilisateur/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public function insertUtilisateur($nom,$prenom,$dateConnexion, $email, $motDePasse, $login){
@@ -203,7 +217,7 @@ public function rechercheByRace($pattern) {
 
     $requete_prepare->execute(array("race"=>"%$pattern%"));
 
-    $resultat=$requete_prepare->fetchObject("Chien");
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Chien');
     return $resultat;
 }
 
@@ -221,18 +235,7 @@ public function getAllChien(){
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    function getChienBySurnomRaceLike($pattern)
-    {
-        $requete_prepare = $this->connexion->prepare(
-            // requete sql
-            "SELECT * FROM Chien 
-            WHERE surnom LIKE :surnom
-            OR race LIKE :race"
-        );
-        $requete_prepare->execute(array("surnom" => "%$pattern%", "race" => "%$pattern%"));
-        $allChien = $requete_prepare->fetchAll(PDO::FETCH_OBJ);
-        return $allChien;
-    }
+    
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
 

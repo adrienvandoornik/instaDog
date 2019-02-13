@@ -1,4 +1,5 @@
 <?php
+session_start();
 /////// FORMULAIRE AJOUTER UN CHIEN/////////////////////////////////////////////////////////////////////////////////////
 
  require_once("connexion.php");
@@ -11,16 +12,15 @@ $nomElevage = $_POST['nomElevage'];
 $dateAge = $_POST['age'];
 $sexe = $_POST['sexe'];
 $race = $_POST['race'];
-
-$utilisateurId = $_POST['id'];// Il manque pour récupérer l'Id de l'utilisateur
+$utilisateurId = $_SESSION['id'];// Il manque pour récupérer l'Id de l'utilisateur
 
 // On sauvegarde la photo sur le serveur dans le dossier img
-// Chaque photo aura pour nom photo-DDMMYYYYHHmmss.jpeg par exemple ; 
+// Chaque photo aura pour nom photo-DDMMYYYYHHmmss.jpeg par exemple ;
 //  on ajoute un timestamp au nom pour le rendre unique
 $suffixe = date("YmdHis");
 $image = $_FILES["image"]["name"];
 $uploadedFile = new SplFileInfo($image);
-$fileExtension = $uploadedFile->getExtension(); 
+$fileExtension = $uploadedFile->getExtension();
 $destinationFolder = $_SERVER['DOCUMENT_ROOT']."/projets/instaDog/";
 $imageDestinationName = "image/photo-chien".$suffixe.".".$fileExtension;
 
@@ -34,4 +34,4 @@ $appliBD->insertChien($surnom, $nomElevage, $dateAge, $sexe, $race, $imageDestin
 // je redirige sur la page du nouveau profil
 header("Location: profil_user.php?id='.$utilisateurId");
 
-?> 
+?>

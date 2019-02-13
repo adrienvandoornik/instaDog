@@ -16,7 +16,7 @@ if(isset($_POST['email']) && isset($_POST['motDePasse'])){
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['motDePasse'] = $_POST['motDePasse'];
 
-        header ('location: profil_user.php');
+        //header ('location: profil_user.php');
     } else {
         header ('location: se_connecter.php');
     }
@@ -91,8 +91,8 @@ echo "<br>";
 
 //$appliBD->insertChien($_POST["surnom"], $_POST["nomElevage"], $_POST["age"], $_POST["sexe"], $_POST["race"], $file["image"], $utilisateur_Id);
 
-$appliBD->insertChien("Rocky", "rocky2", "1991-07-07", "Male", "Labrador", "image/photochienTESTE.jpeg", 4);
-
+$appliBD->insertChien("Pepito", "pepito", "2007-07-07", "Male", "Batard", "image/5830c711109dcfc4ec70955162ba0daf.jpg", 9);
+$appliBD->insertChien("Denis", "denis", "2007-07-07", "Male", "Bouledogue", "image/23722302_1654340134622428_2842479475226363596_n.jpg", 9);
 
 /*$chienById = $appliBD->getChienById(2);
 echo $chienById->getSurnom();*/
@@ -127,7 +127,37 @@ else {
   echo 'Les variables ne sont pas déclarées.';
 }*/
 
+/*
+$email = $_POST['email'];
 
+$motDePasse = $_POST['motDePasse'];
+
+$utilisateurByEmai = $appliBD->getUtilisateurEmail($email)->getMotDePasse();
+
+$email = $appliBD->getUtilisateurEmail($email)->getEmail();
+
+$idProfilHash = $appliBD->getUtilisateurEmail($email)->getId();
+
+if(password_verify($motDePasse, $hash)) {
+
+  $utilisateur_id = $appliBD->getUtilisateur($idProfilHash);
+  $email = $utilisateur_id->getEmail();
+  $motDePasse = $appliBD->getUtilisateurEmail($email)->getMotDePasse();
+
+  if(isset($_POST['email']) && isset($_POST['motDePasse'])){
+      if ($email == $_POST['email'] && $motDePasse == $_POST['motDePasse']){
+
+          session_start();
+          $_SESSION['email'] = $_POST['email'];
+          $_SESSION['motDePasse'] = $_POST['motDePasse'];
+
+          header('Location: profil_user.php?id='.$idProfilHash);
+      } else {
+          header ('location: se_connecter.php');
+      }
+  }
+}
+*/
 
 
 ?>
