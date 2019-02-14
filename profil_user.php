@@ -2,10 +2,9 @@
 <?php
 
 session_start();
-if (isset($_SESSION['id'])){
-
-}else {
+if (!isset($_SESSION['id'])){
     header ('location: se_connecter.php');
+    exit;
 }
 ?>
 
@@ -207,7 +206,7 @@ echo       ' <div class="row mb-3">';
 echo            '<div class="col-sm-4">';
         echo       ' <div class="card">';
               echo      '<div class="card-body text-center">';
-                  echo      '<img class="card-img-top" src=" '. $chien->getImage() .' " alt="Card image cap" width="300"
+                  echo      '<img class="card-img-top" src="'. $chien->getImage() .'" alt="Card image cap" width="300"
                             height="300">';
                   echo    '  <h5 class="card-title"><i class="fas fa-paw"></i> '. $chien->getSurnom().'</h5>';
                   echo    '  <p class="card-text">'. $chien->getRace().' / '. $chien->getSexe().' / '. $chien->getAge().' / '. $chien->getNomElevage().'</p>';

@@ -105,7 +105,7 @@ if (isset($_SESSION['id'])){
                                   </div>
                                     <div class="col-md-5 mb-3 sm-6">
                                       <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
-                                       <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                                       <input type="hidden" name="MAX_FILE_SIZE" value="1073741824" />
                                         <input type="file" name="image" class="form-control-file border" />
                                         <div class="valid-feedback">validé!</div>
                                         <div class="invalid-feedback">Ajouter une image</div>

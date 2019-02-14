@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,7 +21,7 @@
 
     <?php require 'connexion.php';
     $appliBD = new Connexion();
-  
+
     ?>
 </head>
 

@@ -21,7 +21,7 @@ $suffixe = date("YmdHis");
 $image = $_FILES["image"]["name"];
 $uploadedFile = new SplFileInfo($image);
 $fileExtension = $uploadedFile->getExtension();
-$destinationFolder = $_SERVER['DOCUMENT_ROOT']."/projets/instaDog/";
+$destinationFolder = $_SERVER['DOCUMENT_ROOT']."/instaDog/";
 $imageDestinationName = "image/photo-chien".$suffixe.".".$fileExtension;
 
 if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$imageDestinationName)){
@@ -32,6 +32,6 @@ if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$imageDes
 $appliBD->insertChien($surnom, $nomElevage, $dateAge, $sexe, $race, $imageDestinationName, $utilisateurId);
 
 // je redirige sur la page du nouveau profil
-header("Location: profil_user.php?id='.$utilisateurId");
+header("Location: profil_user.php?id=$utilisateurId");
 
 ?>
