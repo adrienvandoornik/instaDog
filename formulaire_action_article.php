@@ -8,6 +8,7 @@ $appliBD = new Connexion();
 // Les variables qui récupèrent les valeurs du formulaire Poster
 $texte = $_POST['texte'];
 $datePublication = date("Y-m-d H:i:s");
+$chienId = $_POST['postId'];
 
 // On sauvegarde la photo sur le serveur dans le dossier img
 // Chaque photo aura pour nom photo-chienDDMMYYYYHHmmss.jpeg par exemple ;

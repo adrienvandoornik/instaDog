@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -35,7 +37,7 @@ include 'header.php';
   </div>
 
   <!-- //// FORMULAIRE/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
- 
+
   <div class="container containerForm bg-white mb-3">
     <form action="formulaireCible.php" method="post" class="needs-validation formPadding" novalidate>
       <div class="form-row">
@@ -122,10 +124,10 @@ include 'header.php';
 </div>
 
 <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
- 
+
  <?php
   include 'footer.php';
   ?>
-  
+
 </body>
 </html>

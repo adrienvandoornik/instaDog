@@ -28,6 +28,16 @@
             </span>Se connecter</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link text-light" href="deconnexion_session.php">
+            <span style="font-size: 1rem;">
+            <span style="color: white;">
+            <i class="fas fa-sign-in-alt"></i>
+            </span>
+          </span>Deconnexion</a>
+        </li>
+
+
         <a href="inscription.php">
           <button type="button" class="btn btn-success ml-4 mr-4">
             <i class="fas fa-user-plus"></i> S'Inscrire

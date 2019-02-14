@@ -49,7 +49,7 @@ if (isset($_SESSION['id'])){
         <div class="d-flex justify-content-center">
             <div class="card mt-5"  style="width:750px">
                 <img class="card-img-top"
-                    src= <?php echo $article->getImage();  ?>
+                    src= <?php echo $article->getImage();?>
                     alt="Lights" style="width:100%" alt="Card image">
                 <div class="card-body">
                     <h4 class="card-title"><i class="fas fa-paw"></i>Chien</h4>
@@ -93,6 +93,7 @@ if (isset($_SESSION['id'])){
             <div class="form-group">
                 <label for="commentaire"><i class="fas fa-comment-medical"></i> Comment:</label>
                 <textarea class="form-control" rows="5" id="commentaire" name="texte" placeholder="Entrer un commentaire" value="" required></textarea>
+                <input type="hidden" id="postId" name="postId"/>
             </div>
             <button type="submit" class="btn btn-primary"><i class="fas fa-comment-medical"></i> Submit</button>
         </form>
