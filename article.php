@@ -1,11 +1,11 @@
 <?php
-
+/*
 session_start();
 if (isset($_SESSION['id'])){
 
 }else {
     header ('location: se_connecter.php');
-}
+}*/
 
 ?>
 
@@ -32,7 +32,7 @@ if (isset($_SESSION['id'])){
     <?php require 'connexion.php';
     $appliBD = new Connexion();
     $article = $appliBD->getArticleById($_GET['id']);
-    $commentaire = $appliBD->getListeCommentaire($_GET['id']);
+    $commentaires = $appliBD->getListeCommentaire($_GET['id']);
 
     $article_Id = $appliBD->getListeArticle(2);
 
@@ -64,7 +64,7 @@ if (isset($_SESSION['id'])){
 <?php
     echo'<div class="container">
         <div class="container mt-5">';
-        foreach($commentaire as $value){
+        foreach($commentaires as $value){
             echo'<h3><i class="fas fa-comments"></i> Commentaires</h3>
             <div class="media border p-3 bg-white">
                 <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fbusiness-round-flat-vol-1-1%2F36%2Fuser_account_profile_avatar_person_student_male-512.png&f=1"

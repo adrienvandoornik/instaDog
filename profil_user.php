@@ -1,11 +1,11 @@
 
 <?php
-
+/*
 session_start();
 if (!isset($_SESSION['id'])){
     header ('location: se_connecter.php');
     exit;
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -143,9 +143,11 @@ if (!isset($_SESSION['id'])){
                                     <div class="invalid-feedback">Rentrer un age</div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="validationCustom02"><i class="fas fa-venus"></i> Sexe</label>
-                                <input type="text" name="sexe" class="form-control" id="validationCustom02" placeholder="Mâle ou Femelle?"
-                                    value="" required>
+                                <label for="validationCustom02"><i class="fas fa-venus"></i> Sexe</label><br>
+                                <input type="radio"  name="sexe" value="male">
+                                <label class="mr-5" for="male">Mâle</label>
+                                <input class="ml-5" type="radio" name="sexe"  value="femelle">
+                                <label for="femelle">Femelle</label>
                                     <div class="valid-feedback">Validé!</div>
                                     <div class="invalid-feedback">Rentrer si le chien est un mâle ou une femelle</div>
                             </div>

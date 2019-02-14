@@ -1,11 +1,11 @@
 <?php
-
+/*
 session_start();
 if (isset($_SESSION['id'])){
 
 }else {
     header ('location: se_connecter.php');
-}
+}*/
 
 ?>
 
@@ -123,7 +123,7 @@ if (isset($_SESSION['id'])){
 
                             <script>
                             // function application du style sur les champs de validation du formulaire
-                            (function() {
+                          /*  (function() {
                               'use strict';
                               window.addEventListener('load', function() {
                                 var forms = document.getElementsByClassName('needs-validation');
@@ -137,7 +137,7 @@ if (isset($_SESSION['id'])){
                                   }, false);
                                 });
                               }, false);
-                            })();
+                            })();*/
                             </script>
 
                         </div>

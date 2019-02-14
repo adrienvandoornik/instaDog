@@ -1,7 +1,14 @@
+
 <?php
+session_start();
 
-
-
+$profilClass = "";
+$id = "";
+if(!isset($_SESSION["id"])){
+  $profilClass = 'id="profil-non-affiche"';
+}else{
+  $id = $_SESSION["id"];
+}
 ?>
 <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark ">
@@ -17,7 +24,7 @@
             <i class="fas fa-home"></i> Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-        <?php  echo '<a class="nav-link text-light" <a href="profil_user.php?id='.$_SESSION['id'].';">'?><i class="fas fa-user-circle"></i> Profil</a>
+        <?php  echo '<a class="nav-link text-light" '.$profilClass.' <a href="profil_user.php?id='.$id.';">'?><i class="fas fa-user-circle"></i> Profil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="se_connecter.php">
@@ -44,7 +51,7 @@
           </button>
         </a>
 
-      <?php  echo '<a href="profil_user.php?id='.$_SESSION['id'].';">' ?>
+      <?php  echo '<a href="profil_user.php?id='.$id.';">' ?>
           <button type="button" class="btn btn-danger ml-4 mr-4">
             <i class="fas fa-plus-circle"></i> Ajouter Chien
           </button>

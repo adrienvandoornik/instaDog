@@ -15,6 +15,6 @@ $articleId = "";
 $appliBD->insertCommentaire($texte, $dateCommentaire, $utilisateurId, $articleId);
 
 // je redirige sur la page du nouveau profil
-header("Location: article.php?id='.$utilisateurId");
+header("Location: article.php?id=$utilisateurId");
 
 ?>

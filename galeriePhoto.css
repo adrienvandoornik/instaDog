@@ -63,3 +63,7 @@
 .hauteur{
   height: 600px;
 }
+
+#profil-non-affiche{
+  display: none;
+}
