@@ -1,5 +1,10 @@
 <?php
-session_start();
+
+if(!isset($_SESSION))
+   {
+       session_start();
+   }
+
 ?>
 <!-- ////HEADER////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-dark ">
