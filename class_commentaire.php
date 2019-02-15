@@ -8,7 +8,8 @@ class Commentaire
     private $id;
     private $texte;
     private $dateCommentaire;
-    private $login;
+    private $utilisateurId;
+    private $articleId;
 
     public function __set($name, $value){}
 
@@ -28,9 +29,14 @@ class Commentaire
         return $this->dateCommentaire;
     }
 
-    public function getLogin()
+    public function getUtilisateur()
     {
-        return $this->login;
+        return $this->utilisateurId;
+    }
+
+    public function getArticleId()
+    {
+        return $this->articleId;
     }
 }
 ?>

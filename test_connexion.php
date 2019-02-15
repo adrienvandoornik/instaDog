@@ -16,6 +16,10 @@ echo <a href="formulaire_action_user.php">link</a>*/
 require 'connexion.php';
 $appliBD = new Connexion();
 
+$commentaires = $appliBD->getListeCommentaire(18);
+
+print_r($commentaires);
+
 
 
 //$appliBD->insertCommentaire("blabla", "2019-07-07", 6, 21 );

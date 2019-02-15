@@ -7,14 +7,21 @@ session_start();
 $appliBD = new Connexion();
 
 // Les variables qui récupèrent les valeurs du formulaire Poster
-$texte = $_POST['texte'];
+
+if(isset($_GET['postId'])) {
+
+$articleId = $_GET['postId'];
+$texte = $_GET['texte'];
 $dateCommentaire = date("Y-m-d H:i:s");
 $utilisateurId =$_SESSION['id'];
-$articleId = $_POST['postId'];
+$commentaireId = $appliBD->insertCommentaire($texte, $dateCommentaire, $utilisateurId, $articleId);
+
+}
+
 
 
 // j'appelle la base de donnée et les functions pour insérer les données du nouveau commentaire
-$commentaireId = $appliBD->insertCommentaire($texte, $dateCommentaire, $utilisateurId, $articleId);
+
 
 //var_dump($articleId);
 
