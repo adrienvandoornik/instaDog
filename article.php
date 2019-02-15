@@ -103,9 +103,9 @@ if (isset($_SESSION['id'])){
                 <textarea class="form-control" rows="5" id="commentaire" name="texte" placeholder="Entrer un commentaire" value="" required></textarea>
                 <input type="hidden" name="postId" value=<?php echo $_GET['id']?>>
             </div>
-            <button type="submit" class="btn btn-primary mb-3"><i class="fas fa-comment-medical"></i> Submit</button>
+            <button type="submit" class="btn btn-primary mb-5"><i class="fas fa-comment-medical"></i> Submit</button>
         </form>
-    </div>
+    </div><br>
 
 
 <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->

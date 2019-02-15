@@ -1,12 +1,12 @@
 
 body {
-    background-color: rgb(236, 235, 232); 
+    background-color: rgb(236, 235, 232);
 }
 
 h2{
     text-align: center;
 }
-    
+
 p{
     text-align: center;
     font-size: 50px;
@@ -28,7 +28,7 @@ p{
     background-color: #eee;
     height: auto;
     border-radius: 5px;
-   
+
 }
 
 .formPadding{
@@ -36,7 +36,7 @@ p{
 }
 
 
-.jumbotron { 
+.jumbotron {
     background-color: #525050; /* Gris */
     color: #ffffff;
 }
@@ -68,7 +68,7 @@ p{
     padding-right: 0px;
     padding-left: 0px;
 }
- 
+
 .square {
     width: 100%;
     padding-bottom: 100%;
@@ -115,3 +115,7 @@ p{
     font-weight:900;
 }
 
+
+#profil-non-affiche{
+  display: none;
+}

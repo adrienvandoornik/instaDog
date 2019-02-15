@@ -86,7 +86,7 @@ if (isset($_SESSION['id'])){
     <h2 class="text-center mt-4 text-decoration"><i class="far fa-newspaper"></i> Articles</h2>
   <div class="container mt-4">
   <div class="d-flex justify-content-center">
-    <button class="btn btn-danger mb-3 mt-3" type="button" data-toggle="collapse" data-target="#footwear" aria-expanded="false" aria-controls="footwear">
+    <button class="btn btn-danger mb-5 mt-3" type="button" data-toggle="collapse" data-target="#footwear" aria-expanded="false" aria-controls="footwear">
     <i class="far fa-plus-square"></i> Ajouter un Article
 </button>
   </div>
@@ -114,7 +114,7 @@ if (isset($_SESSION['id'])){
                                     <div class="container">
                                     <div class="row">
                                         <div class="col text-center">
-                                        <button class="btn btn-primary bottonConnecter"><i class="far fa-plus-square"></i> VALIDER</button>
+                                        <button class="btn btn-primary bottonConnecter mb-5"><i class="far fa-plus-square"></i> VALIDER</button>
                                         </div>
                                     </div>
                                     </div>
