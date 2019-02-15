@@ -51,7 +51,7 @@ if(!isset($_SESSION["id"])){
           </button>
         </a>
 
-      <?php  echo '<a href="profil_user.php?id='.$id.';">' ?>
+      <?php  echo '<a '.$profilClass.'href="profil_user.php?id='.$id.';">' ?>
           <button type="button" class="btn btn-danger ml-4 mr-4">
             <i class="fas fa-plus-circle"></i> Ajouter Chien
           </button>

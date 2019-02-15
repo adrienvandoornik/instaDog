@@ -60,10 +60,11 @@
     font-weight:900;
 }
 
-.hauteur{
-  height: 600px;
-}
 
 #profil-non-affiche{
   display: none;
+}
+
+.html {
+    height: 100%;
 }

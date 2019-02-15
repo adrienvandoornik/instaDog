@@ -33,9 +33,6 @@ if (isset($_SESSION['id'])){
     $appliBD = new Connexion();
     $article = $appliBD->getArticleById($_GET['id']);
     $commentaires = $appliBD->getListeCommentaire($_GET['id']);
-
-    $article_Id = $appliBD->getListeArticle(2);
-
     ?>
 </head>
 
@@ -62,7 +59,7 @@ if (isset($_SESSION['id'])){
     </div>
 
 
-<!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////777-->
+<!--///////Afficher commentaire////////////////////////////////////////////////////////////////////////////////////////////////////////////////////777-->
 
 <?php
     echo'<div class="container">
@@ -106,26 +103,11 @@ if (isset($_SESSION['id'])){
                 <textarea class="form-control" rows="5" id="commentaire" name="texte" placeholder="Entrer un commentaire" value="" required></textarea>
                 <input type="hidden" name="postId" value=<?php echo $_GET['id']?>>
             </div>
-            <button type="submit" class="btn btn-primary"><i class="fas fa-comment-medical"></i> Submit</button>
+            <button type="submit" class="btn btn-primary mb-3"><i class="fas fa-comment-medical"></i> Submit</button>
         </form>
     </div>
 
-    <!-- ////////Autres Articles////////////////////////////////////////////////////////////////////////////////////// -->
-<?php
-  /*  echo '<div class="container mb-3">
-        <h3 class="text-center mt-3 text-decoration">Autres Articles</h3>';
 
-        echo'<div class="d-flex justify-content-center align-items-center">';
-            foreach($article_Id as $articles){
-          echo'<div class="card mt-5 mr-4" style="width:100px">
-                <img class="card-img-top"
-                     src="'.$articles->getImage().'";
-                     alt="Lights" style="width:100%" height="90" alt="Card image">
-            </div>';
-          }
-          echo' </div>
-  </div>';*/
-?>
 <!-- /////Footer////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <?php
     include 'footer.php';
