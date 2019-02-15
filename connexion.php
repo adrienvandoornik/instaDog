@@ -83,7 +83,7 @@ public function getListeCommentaire($articleId){
 
     $listeCommentaire = $requete_prepare->fetchAll(PDO::FETCH_CLASS, 'Commentaire');
 
-    return   $listeCommentaire;
+    return $listeCommentaire;
 }
 
 ///Function Insert Utilisateur/////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -107,7 +107,7 @@ if (isset($_SESSION['id'])){
                                       <label for="validationCustom02"><i class="fas fa-camera-retro"></i> Photo</label><br>
                                        <input type="hidden" name="MAX_FILE_SIZE" value="1073741824" />
                                         <input type="file" name="image" class="form-control-file border" />
-                                        <input type="hidden" name="id" value="id chien"/>
+                                        <input type="hidden" name="postId" value=<?php echo $chienById->getId();?>>
                                         <div class="valid-feedback">validé!</div>
                                         <div class="invalid-feedback">Ajouter une image</div>
                                     </div>
@@ -121,24 +121,6 @@ if (isset($_SESSION['id'])){
                                 </div>
                             </form>
 
-                            <script>
-                            // function application du style sur les champs de validation du formulaire
-                          /*  (function() {
-                              'use strict';
-                              window.addEventListener('load', function() {
-                                var forms = document.getElementsByClassName('needs-validation');
-                                var validation = Array.prototype.filter.call(forms, function(form) {
-                                  form.addEventListener('submit', function(event) {
-                                    if (form.checkValidity() === false) {
-                                      event.preventDefault();
-                                      event.stopPropagation();
-                                    }
-                                    form.classList.add('was-validated');
-                                  }, false);
-                                });
-                              }, false);
-                            })();*/
-                            </script>
 
                         </div>
                     </div>
@@ -146,23 +128,27 @@ if (isset($_SESSION['id'])){
         </div>
   </div>
 <!--///Liste Article/////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-  <div class="container mb-3">
-    <?php
+
+  <?php
+  echo'<div class="container mb-3">';
+
     foreach($articleById as $article){
-     ?>
-     <div class="d-flex justify-content-center">
-      <div class="card mt-1 mb-4" style="width:500px">
-         <a href="article.php">
-           <img class="card-img-top" src=<?php echo $article->getImage();?> alt="Lights" style="width:100%" height="350" alt="Card image">
+
+    echo'<div class="d-flex justify-content-center">
+      <div class="card mt-1 mb-4" style="width:500px">';
+         echo'<a href=article.php?id='.$article->getId().'>';
+          echo'<img class="card-img-top" src="'.$article->getImage().'" alt="Lights" style="width:100%" height="350" alt="Card image">
          </a>
        <div class="card-body">
-         <h4 class="card-title"><i class="fas fa-paw"></i> <?php echo $chienById->getSurnom();?></h4>
-         <p class="card-text"><?php echo $article->getTexte();?></p>
+         <h4 class="card-title"><i class="fas fa-paw"></i> '. $chienById->getSurnom().'</h4>
+         <p class="card-text">'.$article->getTexte().'</p>
      </div>
      </div>
-    </div>
-<?php }?>
-</div>
+    </div>';
+ }
+echo'</div>';
+
+ ?>
 <!-- /////Footer/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
      <?php
     include 'footer.php';

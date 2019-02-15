@@ -2,25 +2,6 @@
 
 <?php
 
-require 'connexion.php';
-$appliBD = new Connexion();
-
-$utilisateur_id = $appliBD->getUtilisateur($_GET['id']);
-$email = $utilisateur_id->getEmail();
-$motDePasse = $appliBD->getUtilisateurEmail($email)->getMotDePasse();
-
-if(isset($_POST['email']) && isset($_POST['motDePasse'])){
-    if ($email == $_POST['email'] && $motDePasse == $_POST['motDePasse']){
-
-        session_start();
-        $_SESSION['email'] = $_POST['email'];
-        $_SESSION['motDePasse'] = $_POST['motDePasse'];
-
-        //header ('location: profil_user.php');
-    } else {
-        header ('location: se_connecter.php');
-    }
-}
 
 
 /*
@@ -30,10 +11,14 @@ $_SESSION['email'] = "raul_seixas@gmail.com";
 $_SESSION['motDePasse'] = "raul1";
 
 echo $_SESSION['email'];
-echo <a href="formulaire_action_user.php">link</a>
+echo <a href="formulaire_action_user.php">link</a>*/
 
 require 'connexion.php';
-$appliBD = new Connexion();*/
+$appliBD = new Connexion();
+
+
+
+//$appliBD->insertCommentaire("blabla", "2019-07-07", 6, 21 );
 
 
 /*
@@ -91,8 +76,8 @@ echo "<br>";
 
 //$appliBD->insertChien($_POST["surnom"], $_POST["nomElevage"], $_POST["age"], $_POST["sexe"], $_POST["race"], $file["image"], $utilisateur_Id);
 
-$appliBD->insertChien("Pepito", "pepito", "2007-07-07", "Male", "Batard", "image/5830c711109dcfc4ec70955162ba0daf.jpg", 9);
-$appliBD->insertChien("Denis", "denis", "2007-07-07", "Male", "Bouledogue", "image/23722302_1654340134622428_2842479475226363596_n.jpg", 9);
+//$appliBD->insertChien("Pepito", "pepito", "2007-07-07", "Male", "Batard", "image/5830c711109dcfc4ec70955162ba0daf.jpg", 9);
+//$appliBD->insertChien("Denis", "denis", "2007-07-07", "Male", "Bouledogue", "image/23722302_1654340134622428_2842479475226363596_n.jpg", 9);
 
 /*$chienById = $appliBD->getChienById(2);
 echo $chienById->getSurnom();*/

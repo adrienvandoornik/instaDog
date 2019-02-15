@@ -10,11 +10,15 @@ $appliBD = new Connexion();
 $texte = $_POST['texte'];
 $dateCommentaire = date("Y-m-d H:i:s");
 $utilisateurId =$_SESSION['id'];
-$articleId = "";
+$articleId = $_POST['postId'];
+
+
 // j'appelle la base de donnée et les functions pour insérer les données du nouveau commentaire
-$appliBD->insertCommentaire($texte, $dateCommentaire, $utilisateurId, $articleId);
+$commentaireId = $appliBD->insertCommentaire($texte, $dateCommentaire, $utilisateurId, $articleId);
+
+//var_dump($articleId);
 
 // je redirige sur la page du nouveau profil
-header("Location: article.php?id=$utilisateurId");
+header("Location: article.php?id=$articleId");
 
 ?>

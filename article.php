@@ -33,6 +33,7 @@ if (isset($_SESSION['id'])){
     $appliBD = new Connexion();
     $article = $appliBD->getArticleById($_GET['id']);
     $commentaires = $appliBD->getListeCommentaire($_GET['id']);
+    //$utilisateur = $appliBD->getUtilisateur($_SESSION['id']);
 
     $article_Id = $appliBD->getListeArticle(2);
 
@@ -45,6 +46,8 @@ if (isset($_SESSION['id'])){
     include 'header.php';
     ?>
     <!-- ////Photo Article////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
     <div class="container">
         <div class="d-flex justify-content-center">
             <div class="card mt-5"  style="width:750px">
@@ -52,7 +55,7 @@ if (isset($_SESSION['id'])){
                     src= <?php echo $article->getImage();?>
                     alt="Lights" style="width:100%" alt="Card image">
                 <div class="card-body">
-                    <h4 class="card-title"><i class="fas fa-paw"></i>Chien</h4>
+                    <h4 class="card-title"><i class="fas fa-paw"></i></h4>
                     <p class="card-text"><?php echo $article->getTexte(); ?></p>
                 </div>
             </div>
@@ -61,6 +64,7 @@ if (isset($_SESSION['id'])){
 
 
 <!--///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////777-->
+
 <?php
     echo'<div class="container">
         <div class="container mt-5">';
@@ -70,9 +74,9 @@ if (isset($_SESSION['id'])){
                 <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn3.iconfinder.com%2Fdata%2Ficons%2Fbusiness-round-flat-vol-1-1%2F36%2Fuser_account_profile_avatar_person_student_male-512.png&f=1"
                     alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
                   <div class="media-body">
-                    <h4>'.$value->getLogin().';</h4>
-                    <small><i><i class="far fa-clock"></i>'.$value->getDateCommentaire().';</i></small>
-                    <p><'.$value->getTexte().';</p>
+                    <h4>'.$value->getLogin().'</h4>
+                    <small><i><i class="far fa-clock"></i>'.$value->getDateCommentaire().'</i></small>
+                    <p><'.$value->getTexte().'</p>
                 </div>
 
             </div>';
@@ -80,11 +84,12 @@ if (isset($_SESSION['id'])){
         echo'</div>
     </div>';
 ?>
-<!--///Inserer Commentaires///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
             </div>
         </div>
     </div>
+
+
     <!-- ////// Inserer Commentaires/////////////////////////////////////////////////////////////////////////////////////// -->
 
 
@@ -93,7 +98,7 @@ if (isset($_SESSION['id'])){
             <div class="form-group">
                 <label for="commentaire"><i class="fas fa-comment-medical"></i> Comment:</label>
                 <textarea class="form-control" rows="5" id="commentaire" name="texte" placeholder="Entrer un commentaire" value="" required></textarea>
-                <input type="hidden" id="postId" name="postId"/>
+                <input type="hidden" name="postId" value=<?php echo $_GET['id']?>>
             </div>
             <button type="submit" class="btn btn-primary"><i class="fas fa-comment-medical"></i> Submit</button>
         </form>

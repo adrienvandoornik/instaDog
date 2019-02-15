@@ -10,6 +10,8 @@ $texte = $_POST['texte'];
 $datePublication = date("Y-m-d H:i:s");
 $chienId = $_POST['postId'];
 
+//var_dump($chienId);
+
 // On sauvegarde la photo sur le serveur dans le dossier img
 // Chaque photo aura pour nom photo-chienDDMMYYYYHHmmss.jpeg par exemple ;
 //  on ajoute un timestamp au nom pour le rendre unique
@@ -25,13 +27,13 @@ if($_FILES['image']['error'] == 2){
 }
 
 if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$imageDestinationName)){
-    echo "<br/> fichier enregistré avec succes";
+    echo "<br/> fichier enregistré avec succes<br/> ";
 }
 
 // j'appelle la base de donnée et les functions pour insérer les données du nouveau chien
 $idArticle = $appliBD->insertArticle($imageDestinationName, $texte, $datePublication, $chienId);
-
+//var_dump($idArticle);
 // je redirige sur la page du nouveau profil
-header("Location: article.php?id=".$idArticle);
+header("Location: article.php?id=$idArticle");
 
 ?>
