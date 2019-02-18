@@ -35,6 +35,7 @@ if (!isset($_SESSION['id'])){
     $appliBD = new Connexion();
     $utilisateur_id = $appliBD->getUtilisateur($_GET['id']);
     $listeChien = $appliBD->getListeChien($_GET['id']);
+  
     ?>
 </head>
 

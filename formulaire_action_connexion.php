@@ -11,7 +11,7 @@ $motDePasse = $_POST['motDePasse'];
 
 $hash = $appliBD->getUtilisateurEmail($email)->getMotDePasse();
 $email = $appliBD->getUtilisateurEmail($email)->getEmail();
-$id_utilisateur = $appliBD->getUtilisateurEmail($email)->getId();
+$idUtilisateur = $appliBD->getUtilisateurEmail($email)->getId();
 
 // on teste le mot de passe hasché
 

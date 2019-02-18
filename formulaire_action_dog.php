@@ -29,7 +29,7 @@ if(move_uploaded_file($_FILES["image"]["tmp_name"], $destinationFolder.$imageDes
 }
 
 // j'appelle la base de donnée et les functions pour insérer les données du nouveau chien
-$appliBD->insertChien($surnom, $nomElevage, $dateAge, $sexe, $race, $imageDestinationName, $utilisateurId);
+$utilisateur_Id = $appliBD->insertChien($surnom, $nomElevage, $dateAge, $sexe, $race, $imageDestinationName, $utilisateurId);
 
 // je redirige sur la page du nouveau profil
 header("Location: profil_user.php?id=$utilisateurId");
